@@ -6,9 +6,9 @@ Claudio Paz
 
 .email[claudiojpaz@gmail.com]
 
-Agosto 2020
+Marzo 2023
 
 ---
 class: middle, center, intermediate, no-number
-.title-dark[Unidad 8]
-# Punteros en lenguaje C
+.title-dark[Unidad 1]
+# Estructura de una 
