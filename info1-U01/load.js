@@ -11,7 +11,6 @@ window.onload = function () {
     script = document.createElement("script");
     script.type = "text/javascript";
     script.src  = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
-    // script.src  = "http://0.0.0.0:8000/MathJax.js?config=TeX-AMS_HTML";
     head.appendChild(script);
   },10)
 }
