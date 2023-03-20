@@ -3,16 +3,47 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="cssfile.css">
+    <style>
+    /* Style the button */
+    button {
+      padding: 20px;
+      font-size: 20px;
+    }
     </style>
   </head>
   <body>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
     </script>
-    <!-- <script src="load.js" type="text/javascript"> -->
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
     </script>
+    <script>
+    var elem = document.documentElement;
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+
+    function closeFullscreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+      }
+    }
+    </script>
     <script type="text/javascript">
+      remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
       var slideshow = remark.create({
         sourceUrl: 'slides.md',
         highlightStyle: 'solarized-dark',
