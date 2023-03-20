@@ -3,7 +3,7 @@ class: center, middle, inverse
 
 .title[Informática I]
 
-.center[2022]
+.center[2023]
 
 <!-- ![:scale 70%](assets/memoria-000.svg) -->
 ![:scale 50%](assets/this.png)
