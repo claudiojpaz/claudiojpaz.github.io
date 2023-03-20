@@ -200,9 +200,8 @@ class: center, middle, inverse
 
 ---
 class: inverse
-# Jueves de 12 a 14h - Ed.Salcedo - Of.5
---
-count: false
+**Jueves de 12 a 14h - Ed.Salcedo - Of.5**
+
 .smaller75[Centro de Investigación en Informática para la Ingeniería (CIII)]
 <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=ciii utn&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:70%;width:100%;}</style><a href="https://embedgooglemap.2yu.co/">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
 
@@ -211,7 +210,7 @@ class: inverse
 
 **Por mail**
 <div style="position: absolute; top: 180px; height: 400px; width: 750px; padding: 1em; text-align: center;">
-<img src="assets/mail.png" height="400">
+<img src="assets/mail.png" height="150">
 </div>
 
 ---
