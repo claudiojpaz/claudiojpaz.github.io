@@ -1252,10 +1252,10 @@ count: false
     \begin{array}{ll}
         \text{Especificadores} & \text{Descripción} \\
         \hline
-        \textsf{%c}       & \text{Caracter}\\
-        \textsf{%d} \text{ o } \textsf{%i} & \text{Entero decimal con signo}\\
-        \textsf{%u}       & \text{Entero decimal sin signo}\\
-        \textsf{%f}       & \text{Decimal de punto flotante}\\
+        \textsf{\%c}       & \text{Caracter}\\
+        \textsf{\%d} \text{ o } \textsf{\%i} & \text{Entero decimal con signo}\\
+        \textsf{\%u}       & \text{Entero decimal sin signo}\\
+        \textsf{\%f}       & \text{Decimal de punto flotante}\\
     \end{array}
 </p>
 
