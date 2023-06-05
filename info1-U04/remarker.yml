@@ -1,0 +1,15 @@
+port: 6275
+dest: build
+source: unidad04.md
+title: 'Unidad 4'
+assets: ['./assets']
+script: ''
+scriptFiles: ['./load.js']
+remarkConfig:
+  highlightStyle: 'solarized-dark'
+  highlightLines: true
+remarkPath: /home/claudiojpaz/git/remark/out/remark.js
+livereload: true
+livereloadPort: 35729
+cssFiles: ['./cssfile.css']
+css:

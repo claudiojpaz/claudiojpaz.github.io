@@ -1,0 +1,17 @@
+Problema: Ingresar una nota válida (1-10) y determinar si el estudiante está aprobado o no
+
+inicio
+  hacer
+    imprimir: "Ingrese una nota"
+    leer: nota
+    si nota < 1 o nota > 10 entonces
+      imprimir: "Nota no valida"
+    fin si
+  mientras nota < 1 o nota > 10
+
+  si nota < 6 entonces
+    imprimir: "Desaprobado"
+  si no
+    imprimir: "Aprobado"
+  fin si
+fin

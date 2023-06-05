@@ -1,0 +1,25 @@
+Problema: Ingresar n notas válidas (1-10) y determinar si están aprobadas o no
+
+inicio
+  hacer
+    imprimir: "Cuantos registros cargará"
+    leer: n
+  mientras n < 1
+
+  para i desde 1 hasta n hacer
+    hacer
+      imprimir: "Ingrese una nota"
+      leer: nota
+      si nota < 1 o nota > 10 entonces
+        imprimir: "Nota no valida"
+      fin si
+    mientras nota < 1 o nota > 10
+
+    si nota < 6 entonces
+      imprimir: "Desaprobado"
+    si no
+      imprimir: "Aprobado"
+    fin si
+
+  fin para
+fin
