@@ -3208,8 +3208,7 @@ count: false
     + \quad -                                                   &   &  & \textsf{Izq. a Der.} \\
     < \quad <= \quad > \quad >=                                 &   &  & \textsf{Izq. a Der.} \\
     == \quad !=                                                 &   &  & \textsf{Izq. a Der.} \\
-    =                                                           &   &  & \textsf{Der. a Izq.} \\
-    += \quad -=  \quad /= \quad *= \quad \%=                    &   &  & \textsf{Der. a Izq.} \\
+    = \quad += \quad -=  \quad /= \quad *= \quad \%=            &   &  & \textsf{Der. a Izq.} \\
     \end{array}
 </p>
 </div>
