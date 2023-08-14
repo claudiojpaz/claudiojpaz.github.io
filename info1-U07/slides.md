@@ -656,7 +656,7 @@ Como los arreglos de 1 dimensión, se utilizan llaves por cada fila y todas las 
 --
 count: false
 
-.bigger50[
+.bigger25[
 ```C
 int mat[2][3] = {{8,5,3},{4,6,7}};
 ```
