@@ -681,7 +681,7 @@ count: false
 
 .bigger50[
 ```C
-int mat[2][3] = {{8,5},{4}};
+int mat[2][3] = { {8,5}, {4} };
 ```
 ]
 
@@ -704,7 +704,7 @@ count: false
 
 .bigger50[
 ```C
-int mat[2][3] = {{8,5}};
+int mat[2][3] = { {8,5} };
 ```
 ]
 
@@ -727,7 +727,7 @@ count: false
 
 .bigger50[
 ```C
-int mat[2][3] = {{0}};
+int mat[2][3] = { {0} };
 ```
 ]
 
