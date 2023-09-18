@@ -926,10 +926,216 @@ int main (void) {
 ]
 
 ---
+# Pasaje de arreglos a funciones
+--
+count: false
+
+A diferencia de las variables, al pasar los arreglos a las funciones, los cambios que se hagan sobre el arreglo, **afectan** al arreglo original
+
+--
+count: false
+
+En el llamado **no** deben usarse los corchetes, solo el nombre del arreglo
+
+--
+count: false
+
+En la definición el arreglo, en la lista de parámetros, debe tener corchetes
+
+
+---
+# Pasaje de arreglos a funciones
+--
+count: false
+
+
+```C
+#include <stdio.h>
+
+#define N 10
+
+void carga (int vec[N])
+{
+  for (int i = 0; i < N; i++)
+    vec[i] = i;
+}
+
+int main (void)
+{
+  int vec[N] = {0};
+
+  carga(vec);
+  for (int i = 0; i < N; i++)
+    printf("%d ", vec[i]);
+
+  return 0;
+}
+```
+--
+count: false
+
+```sh
+0 1 2 3 4 5 6 7 8 9
+```
+
+---
+count: false
+# Pasaje de arreglos a funciones
+
+```C
+#include <stdio.h>
+
+#define N 10
+
+void carga (`int vec[N]`)
+{
+  for (int i = 0; i < N; i++)
+    vec[i] = i;
+}
+
+int main (void)
+{
+  int vec[N] = {0};
+
+  carga(`vec`);
+  for (int i = 0; i < N; i++)
+    printf("%d ", vec[i]);
+
+  return 0;
+}
+```
+
+```sh
+0 1 2 3 4 5 6 7 8 9
+```
+
+---
+# Pasaje de arreglos a funciones
+--
+count: false
+
+Por motivos que se ampliarán en la unidad 8, se puede definir el arreglo en la lista de parámetros sin ningún valor entre corchetes
+
+--
+count: false
+
+```C
+void carga (int vec[])
+{
+  for (int i = 0; i < N; i++)
+    vec[i] = i;
+}
+```
+
+---
+count: false
+# Pasaje de arreglos a funciones
+
+Por motivos que se ampliarán en la unidad 8, se puede definir el arreglo en la lista de parámetros sin ningún valor entre corchetes
+
+
+```C
+void carga (`int vec[]`)
+{
+  for (int i = 0; i < N; i++)
+    vec[i] = i;
+}
+```
+
+---
+# Pasaje de arreglos a funciones
+--
+count: false
+
+Una buena práctica de programación consiste en **no** incluir ningún valor "global" en la función
+
+--
+count: false
+
+
+```C
+void carga (int vec[], int n)
+{
+  for (int i = 0; i < n; i++)
+    vec[i] = i;
+}
+```
+
+--
+count: false
+
+Entonces, los parámetros de la función son: el arreglo, con corchetes sin valores, y la dimensión del mismo, pero como variable
+
+---
+# Pasaje de arreglos a funciones
+--
+count: false
+
+```C
+#include <stdio.h>
+
+#define N 10
+
+void carga (int vec[], int n)
+{
+  for (int i = 0; i < n; i++)
+    vec[i] = i;
+}
+
+int main (void)
+{
+  int vec[N] = {0};
+
+  carga(vec, N);
+  for (int i = 0; i < N; i++)
+    printf("%d ", vec[i]);
+
+  return 0;
+}
+```
+
+---
+# Pasaje de arreglos a funciones
+--
+count: false
+
+En el caso de arreglos de más dimensiones, el procedimiento es el mismo, con la salvedad que solo puede omitirse el primer límite del arreglo en la definición
+
+```C
+void carga (int mat[][M], int n, int m)
+{
+  int c = 0;
+
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < m; j++)
+      mat[i][j] = c++;
+
+}
+```
+
+---
+count: false
+# Pasaje de arreglos a funciones
+
+En el caso de arreglos de más dimensiones, el procedimiento es el mismo, con la salvedad que solo puede omitirse el primer límite del arreglo en la definición
+
+```C
+void carga (`int mat[][M]`, int n, int m)
+{
+  int c = 0;
+
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < m; j++)
+      mat[i][j] = c++;
+
+}
+```
+
+
+---
 
 class: middle, center, intermediate
 .title-dark[Algoritmos]
-
 
 ---
 # Intercambio
@@ -1456,8 +1662,6 @@ int main (void) {
 En este caso, al final del bucle, la variable `max` almacena el máximo **valor** (y puede se mostrar)
 ]
 
-
-
 ---
 # Ordenamiento. Método de la burbuja
 --
@@ -1468,9 +1672,3415 @@ Consiste en comparar cada elemento con el siguiente e intercambiarlos si corresp
 --
 count: false
 
-Por ejemplo, si se propone ordenar de menor a mayor el siguiente arreglo
+Por ejemplo, si se propone ordenar **de menor a mayor** el siguiente arreglo
 ```C
-  int arreglo[5] = {4,1,6,5,3};
+  int vec[8] = {4,1,6,5,3,10,7,2};
+```
+---
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|.white[->]  | &nbsp; 4|
+|   | &nbsp; 1|
+|   | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se compara el elemento 0 con el 1, si el 0 es mayor que el 1, se intercambian
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|.white[->]  | &nbsp; 4|
+|   | &nbsp; 1|
+|   | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se compara el elemento 0 con el 1, si el 0 es mayor que el 1, se intercambian
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|-> | &nbsp; 4|
+|-> | &nbsp; 1|
+|   | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se compara el elemento 0 con el 1, si el 0 es mayor que el 1, se intercambian
+```C
+if (vec[0] > vec[1]) {
+    int tmp = vec[0];
+    vec[0] = vec[1];
+    vec[1] = tmp;
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|-> | &nbsp; 4|
+|-> | &nbsp; 1|
+|   | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se compara el elemento 0 con el 1, si el 0 es mayor que el 1, se intercambian
+```C
+if (vec[0] > vec[1]) {
+    int tmp = vec[0];
+    vec[0] = vec[1];
+    vec[1] = tmp;
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|-> | &nbsp; 1|
+|-> | &nbsp; 4|
+|   | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|-> | &nbsp; 1|
+|-> | &nbsp; 4|
+|   | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se adelantan una posición ambos índices
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|-> | &nbsp; 1|
+|-> | &nbsp; 4|
+|   | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se adelantan una posición ambos índices
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|-> | &nbsp; 4|
+|-> | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|-> | &nbsp; 4|
+|-> | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se compara el elemento 1 con el 2, si el 1 es mayor que el 2, se intercambian
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|-> | &nbsp; 4|
+|-> | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|-> | &nbsp; 4|
+|-> | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se adelantan una posición ambos índices
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|-> | &nbsp; 4|
+|-> | &nbsp; 6|
+|   | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Se adelantan una posición ambos índices
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Esto se hace para todo el arreglo, así que se puede usar una variable para los índices de los elementos...
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Esto se hace para todo el arreglo, así que se puede usar una variable para los índices de los elementos...
+```C
+
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+&nbsp;  
+&nbsp;  
+&nbsp;
+```C
+
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+y un for para controlar esa variable...
+&nbsp;  
+&nbsp;
+```C
+
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+|   | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+y un for para controlar esa variable...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+|   | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+y un for para controlar esa variable...  
+pero OJO!  
+&nbsp;
+```C
+for (int i = 0; i < N; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+|   | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+y un for para controlar esa variable...  
+pero OJO!  
+al final del for hay un error lógico
+```C
+for (int i = 0; i < N; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|   | &nbsp; 2|
+|   | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+y un for para controlar esa variable...  
+pero OJO!  
+al final del for hay un error lógico
+```C
+for (int i = 0; i < N; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|.red[->]   | &nbsp; 2|
+|.red[->]   | &nbsp; |
+]
+
+--
+
+&nbsp;  
+Para solucionar este error el for debe hacer una repetición menos
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+y un for para controlar esa variable...  
+pero OJO!  
+al final del for hay un error lógico
+```C
+for (int i = 0; `i < N-1;` i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|   | &nbsp; 7|
+|.red[->]   | &nbsp; 2|
+|.red[->]   | &nbsp; |
+]
+
+&nbsp;  
+Para solucionar este error el for debe hacer una repetición menos
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+y un for para controlar esa variable...  
+pero OJO!  
+al final del for hay un error lógico
+```C
+for (int i = 0; `i < N-1;` i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+|.red[->]   | &nbsp; 7|
+|.red[->]   | &nbsp; 2|
+|| &nbsp; |
+]
+
+&nbsp;  
+Para solucionar este error el for debe hacer una repetición menos
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 6|
+|-> | &nbsp; 5|
+|   | &nbsp; 3|
+|   | 10|
+| | &nbsp; 7|
+| | &nbsp; 2|
+|| &nbsp; |
+]
+
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|-> | &nbsp; 5|
+|-> | &nbsp; 6|
+|   | &nbsp; 3|
+|   | 10|
+| | &nbsp; 7|
+| | &nbsp; 2|
+|| &nbsp; |
+]
+
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|-> | &nbsp; 6|
+|-> | &nbsp; 3|
+|   | 10|
+| | &nbsp; 7|
+| | &nbsp; 2|
+|| &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|-> | &nbsp; 3|
+|-> | &nbsp; 6|
+|   | 10|
+| | &nbsp; 7|
+| | &nbsp; 2|
+|| &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|-> | &nbsp; 6|
+|-> | 10|
+| | &nbsp; 7|
+| | &nbsp; 2|
+|| &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+|-> | 10|
+|-> | &nbsp; 7|
+| | &nbsp; 2|
+|| &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+|-> | &nbsp; 7|
+|-> | 10|
+| | &nbsp; 2|
+|| &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+|-> | 10|
+|-> | &nbsp; 2|
+|| &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+completando el for...  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+|-> | &nbsp; 2|
+|-> | 10|
+|| &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+&nbsp;  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Así siempre el mayor queda al final del arreglo  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+Pero el arreglo no está ordenado  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+&nbsp;  
+&nbsp;  
+&nbsp;
+```C
+for (int i = 0; i < N-1; i++) {
+    if (vec[i] > vec[i+1]) {
+        int tmp = vec[i];
+        vec[i] = vec[i+1];
+        vec[i+1] = tmp;
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+En el peor caso, donde el elemento más pequeño está en la última posición,
+se deben hacer N-1 repeticiones
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|->   | &nbsp; 1|
+|->   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|->   | &nbsp; 4|
+|->   | &nbsp; 5|
+|| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|->   | &nbsp; 5|
+|->| &nbsp; 3|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|->| &nbsp; 3|
+|->   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|| &nbsp; 3|
+|->   | &nbsp; 5|
+|->| &nbsp; 6|
+| | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|| &nbsp; 3|
+|   | &nbsp; 5|
+|->| &nbsp; 6|
+|-> | &nbsp; 7|
+| | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|| &nbsp; 3|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+|-> | &nbsp; 7|
+|-> | &nbsp; 2|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|| &nbsp; 3|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+|-> | &nbsp; 2|
+|-> | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|| &nbsp; 3|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 2|
+|-> | &nbsp; 7|
+|-> | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|   | &nbsp; 4|
+|| &nbsp; 3|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 2|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|->   | &nbsp; 1|
+|->   | &nbsp; 4|
+|| &nbsp; 3|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 2|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|->   | &nbsp; 4|
+|->| &nbsp; 3|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 2|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|->| &nbsp; 3|
+|->   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 2|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|| &nbsp; 3|
+|->   | &nbsp; 4|
+|->   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 2|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|| &nbsp; 3|
+|   | &nbsp; 4|
+|->   | &nbsp; 5|
+|->| &nbsp; 6|
+| | &nbsp; 2|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|| &nbsp; 3|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|->| &nbsp; 6|
+|-> | &nbsp; 2|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|| &nbsp; 3|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|-> | &nbsp; 2|
+|->| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|| &nbsp; 3|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+| | &nbsp; 2|
+|->| &nbsp; 6|
+|-> | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|| &nbsp; 3|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+| | &nbsp; 2|
+|| &nbsp; 6|
+|-> | &nbsp; 7|
+|-> | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|| &nbsp; 3|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+| | &nbsp; 2|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|->   | &nbsp; 1|
+|->| &nbsp; 3|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+| | &nbsp; 2|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|->| &nbsp; 3|
+|->   | &nbsp; 4|
+|   | &nbsp; 5|
+| | &nbsp; 2|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|->   | &nbsp; 4|
+|->   | &nbsp; 5|
+| | &nbsp; 2|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|   | &nbsp; 4|
+|->   | &nbsp; 5|
+|-> | &nbsp; 2|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|   | &nbsp; 4|
+|-> | &nbsp; 2|
+|->   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|   | &nbsp; 4|
+| | &nbsp; 2|
+|->   | &nbsp; 5|
+|->| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|   | &nbsp; 4|
+| | &nbsp; 2|
+|   | &nbsp; 5|
+|->| &nbsp; 6|
+|-> | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|   | &nbsp; 4|
+| | &nbsp; 2|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+|-> | &nbsp; 7|
+|-> | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|   | &nbsp; 4|
+| | &nbsp; 2|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|->   | &nbsp; 1|
+|-> | &nbsp; 3|
+|   | &nbsp; 4|
+| | &nbsp; 2|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+|-> | &nbsp; 3|
+|->   | &nbsp; 4|
+| | &nbsp; 2|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|->   | &nbsp; 4|
+|-> | &nbsp; 2|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+|-> | &nbsp; 2|
+|->   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+| | &nbsp; 2|
+|->   | &nbsp; 4|
+|->   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+| | &nbsp; 2|
+|   | &nbsp; 4|
+|->   | &nbsp; 5|
+|->| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+| | &nbsp; 2|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|->| &nbsp; 6|
+|-> | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+| | &nbsp; 2|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+|-> | &nbsp; 7|
+|-> | 10|
+|.white[->]  | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|   | &nbsp; 1|
+| | &nbsp; 3|
+| | &nbsp; 2|
+|   | &nbsp; 4|
+|   | &nbsp; 5|
+|| &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 3|
+| | &nbsp; 2|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+|-> | &nbsp; 1|
+|-> | &nbsp; 3|
+| | &nbsp; 2|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+|-> | &nbsp; 3|
+|-> | &nbsp; 2|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+|-> | &nbsp; 2|
+|-> | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+|-> | &nbsp; 3|
+|-> | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+|-> | &nbsp; 4|
+|-> | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+|-> | &nbsp; 5|
+|-> | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+|-> | &nbsp; 6|
+|-> | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+|-> | &nbsp; 7|
+|-> | 10|
+|.white[->]  | &nbsp; |
+]
+
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+--
+
+&nbsp;  
+Se puede ver que en la primera pasada el elemento más grande del arreglo queda en su posición...
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+--
+
+&nbsp;  
+...entonces en la segunda pasada, la última pregunta no hace falta, porque la respuesta nunca será verdad...
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+--
+
+&nbsp;  
+...en la tercera pasada, las **dos** últimas preguntas no hace falta, porque las respuestas nunca serán verdad...
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+--
+
+&nbsp;  
+...entonces se puede _mejorar_ el algoritmo para que el alcance del lazo interno dependa del número de pasada...
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; `i < N-1-j`; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+---
+count:false
+# Ordenamiento. Método de la burbuja
+.left-70-column[
+```C
+for (int j = 0; j < N-1; j++) {
+    for (int i = 0; i < N-1-j; i++) {
+        if (vec[i] > vec[i+1]) {
+            int tmp = vec[i];
+            vec[i] = vec[i+1];
+            vec[i+1] = tmp;
+        }
+    }
+}
+```
+]
+.right-30-column[
+|   |   |
+|--:|:--|
+| | &nbsp; 1|
+| | &nbsp; 2|
+| | &nbsp; 3|
+| | &nbsp; 4|
+| | &nbsp; 5|
+| | &nbsp; 6|
+| | &nbsp; 7|
+| | 10|
+|.white[->]  | &nbsp; |
+]
+
+
+---
+# Ordenamiento. Método de la burbuja
+--
+count:false
+```C
+void ordenar_menor_a_mayor (int vec[], int n) {
+    for (int j = 0; j < n-1; j++) {
+        for (int i = 0; i < n-1-j; i++) {
+            if (vec[i] > vec[i+1]) {
+                int tmp = vec[i];
+                vec[i] = vec[i+1];
+                vec[i+1] = tmp;
+            }
+        }
+    }
+}
+```
+
+--
+count:false
+```C
+void imprimir_arreglo (int vec[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%5d", vec[i]);
+    }
+    printf("\n");
+}
+```
+---
+# Ordenamiento. Método de la burbuja
+--
+count:false
+```C
+#include <stdio.h>
+#define N 8
+
+void ordenar_menor_a_mayor (int [], int);
+void imprimir_arreglo (int [], int);
+
+int main (void) {
+    int vec[8] = {4,1,6,5,3,10,7,2};
+
+    imprimir_arreglo(vec, N);
+    ordenar_menor_a_mayor(vec, N);
+    imprimir_arreglo(vec, N);
+
+    return 0;
+}
+```
+
+---
+# Ordenamiento. Método de inserción
+
+--
+count: false
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+--
+count: false
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+--
+count: false
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+--
+count: false
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; | | | | | | | |
+| 1 | 4 | 5 | 6 | .red[**3**] | 10 | 7 | 2 |
+
+---
+count: false
+# Ordenamiento. Método de inserción
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; |  |  |  | .red[**3**] | | | |
+| 1 | 4 | 5 | 6 | .white[3] | 10 | 7 | 2 |
+
+---
+count: false
+# Ordenamiento. Método de inserción
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; |  |  |  | .red[**3**] | | | |
+| 1 | 4 | 5 |.white[5] | 6| 10 | 7 | 2 |
+
+---
+count: false
+# Ordenamiento. Método de inserción
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; |  |  |  | .red[**3**] | | | |
+| 1 | 4 |.white[4]  | 5 | 6| 10 | 7 | 2 |
+
+---
+count: false
+# Ordenamiento. Método de inserción
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; |  |  |  | .red[**3**] | | | |
+| 1 | .white[3] | 4  | 5 | 6| 10 | 7 | 2 |
+
+---
+count: false
+# Ordenamiento. Método de inserción
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; | .red[**3**] |  |  |  | | | |
+| 1 | .white[3] |4 | 5 | 6| 10 | 7 | 2 |
+
+---
+count: false
+# Ordenamiento. Método de inserción
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; | .white[**3**] |  |  |  | | | |
+| 1 | .red[**3**] |4 | 5 | 6| 10 | 7 | 2 |
+
+---
+count: false
+# Ordenamiento. Método de inserción
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; | .white[**3**] |  |  |  | | | |
+| 1 | 3 |4 | 5 | 6| 10 | 7 | 2 |
+
+---
+count: false
+# Ordenamiento. Método de inserción
+
+Consiste en ordenar cada elemento respecto de los elementos previamente ordenados
+
+Supongamos un conjunto donde todos los elementos a la izq. del elemento en rojo están ordenados de menor a mayor
+
+Buscaremos la posición del elemento rojo en la lista ordenada
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; | .white[**3**] |  |  |  | | | |
+| 1 | 3 |4 | 5 | 6| .red[**10**] | 7 | 2 |
+
+---
+# Ordenamiento. Método de inserción
+--
+count: false
+
+Si se supone que el conjunto a la izq ya está ordenado, solo es necesario preguntar por elemento más a la derecha del conjunto.
+
+--
+count: false
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; | .white[**3**] |  |  |  | | | |
+| 1 | 3 |4 | 5 | .blue[**6**]| .red[**10**] | 7 | 2 |
+
+--
+count: false
+
+Si no es mayor el rojo se mueve a la derecha y se vuelve a comenzar
+
+--
+count: false
+
+|  |  |
+|--|--|--|--|--|--|--|--|
+| &nbsp; | .white[**3**] |  |  |  | | | |
+| 1 | 3 |4 | 5 | 6| 10|  .red[**7**] | 2 |
+
+---
+# Ordenamiento. Método de inserción
+--
+count: false
+
+```C
+void ordenar_menor_a_mayor_insercion (int vec[], int n) {
+  for(int j = 1; j < n; j++) {
+    int tmp = vec[j];
+    int i = j;
+    while(i > 0 && vec[i-1] > tmp ) {
+      vec[i] = vec[i-1];
+      i--;
+    }
+
+    vec[i] = tmp;
+  }
+}
+```
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+--
+count: false
+
+La idea del QS es tomar el primer elemento del arreglo y colocarlo en su lugar final, o sea, en una posición en la que todos los elementos a su izq sean menores y todos los elementos a su derecha sean mayores.
+
+--
+count: false
+
+Los dos grupos están desordenados, pero en cada uno se puede hacer lo mismo, tomar el primer elemento y colocarlo en su posición final.
+
+--
+count: false
+
+Se repite esto con cada subconjunto que se va generando.
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+--
+count: false
+
+¿Hasta cuándo hacemos esto?
+
+--
+count: false
+
+Hasta que cada subconjunto tenga **un** solo elemento, entonces cada elemento estará en su lugar y el arreglo completo estará ordenado.
+
+--
+count: false
+
+¿Cuál es la parte difícil?
+
+--
+count: false
+
+Justamente determinar cual es la posición final de un elemento aunque el arreglo esté desordenado.
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+--
+count: false
+
+.top[
+Supongamos el siguiente arreglo desordenado
+]
+
+--
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|37| 2 |6 |4 |89 |8 |10 |12 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+1) Tomamos el primer elemento de la izq
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|37| 2 |6 |4 |89 |8 |10 |12 |68 |45
+]
+
+---
+count:false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+1) Tomamos el primer elemento de la izq
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|.red[**37**]| 2 |6 |4 |89 |8 |10 |12 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|.red[**37**]| 2 |6 |4 |89 |8 |10 |12 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+2) Buscamos desde la derecha el primer elemento que sea menor que el seleccionado
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|.red[**37**]| 2 |6 |4 |89 |8 |10 |12 |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+2) Buscamos desde la derecha el primer elemento que sea menor que el seleccionado
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|.red[**37**]| 2 |6 |4 |89 |8 |10 | .blue[**12**] |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+3) Intercambiamos estos elementos
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|.red[**37**]| 2 |6 |4 |89 |8 |10 | .blue[**12**] |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+3) Intercambiamos estos elementos
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|.blue[**12**]| 2 |6 |4 |89 |8 |10 | .red[**37**] |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |89 |8 |10 | .red[**37**] |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+4) Desde la izq, pero comenzando con el elemento siguiente al recién colocado, se busca el primer elemento mayor al seleccionado
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |89 |8 |10 | .red[**37**] |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+4) Desde la izq, pero comenzando con el elemento siguiente al recién colocado, se busca el primer elemento mayor al seleccionado
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.blue[**89**] |8 |10 | .red[**37**] |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.blue[**89**] |8 |10 | .red[**37**] |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+
+.top[
+5) Intercambiamos estos elementos
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.blue[**89**] |8 |10 | .red[**37**] |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+5) Intercambiamos estos elementos
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.red[**37**] |8 |10 | .blue[**89**] |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.red[**37**] |8 |10 | 89 |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+6) Desde la derecha, pero comenzando con el siguiente elemento al recién colocado, buscamos el primer elemento menor al seleccionado
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.red[**37**] |8 |10 | 89 |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+6) Desde la derecha, pero comenzando con el siguiente elemento al recién colocado, buscamos el primer elemento menor al seleccionado
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.red[**37**] |8 |.blue[**10**] | 89 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.red[**37**] |8 |.blue[**10**] | 89 |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+7) Intercambiamos estos elementos
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.red[**37**] |8 |.blue[**10**] | 89 |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+7) Intercambiamos estos elementos
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |.blue[**10**] |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |10 |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+8) Desde la derecha, no hay elementos menores (el elemento que sigue **es** el seleccionado)
+
+9) Desde la izquierda, no hay elementos mayores al elemento seleccionado
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |10 |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |10 |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+count:false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+Ahora todos los elementos a la derecha del elemento seleccionado son mayores, y todos los elemenos a la izquierda son menores, aunque estos subconjuntos no están ordenados.
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |10 |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |10 |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+Se puede hacer lo mismo con cada subconjunto usando una función recursiva.
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |10 |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |10 |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+count: false
+# Ordenamiento. Ordenamiento rápido (QuickSort)
+
+.top[
+La condición de corte será cuando el elemento seleccionado es el único del subconjunto
+]
+
+.bottom[
+|  |  |
+|--|--|--|--|--|--|--|--|--|--|
+|12| 2 |6 |4 |10 |8 |.red[**37**] | 89 |68 |45
+]
+
+---
+--
+```C
+void quicksort (int item[], int left, int right) {
+  int i, j, temp;
+
+  i = left; j = right;
+
+  do {
+    while (item[i] < item[j] && i < j) j--;
+
+    if (i < j) {
+      temp = item[i];
+      item[i] = item[j];
+      item[j] = temp;
+      i++;
+    }
+
+    while ( item[i] < item[j] && i < j) i++;
+
+    if(i < j) {
+      temp = item[i];
+      item[i] = item[j];
+      item[j] = temp;
+      j--;
+    }
+  } while (i < j);
+
+  if (left < j) quicksort(item, left, j-1);
+  if (i < right) quicksort (item, i+1, right);
+}
+```
+
+---
+# Busqueda binaria
+--
+count: false
+
+A partir de un conjunto ordenado, se utiliza la estrategia divide y vencerás, para tratar de encontrar un elemento dentro del conjunto
+
+--
+count: false
+
+Se selecciona un elemento central y se evalúa si es el elemento buscado, es mayor o es menor.
+
+--
+count: false
+
+Se puede eliminar la mitad en la que no se encuentra el valor buscado, lo que lo hace muy veloz
+
+
+---
+# Busqueda binaria
+--
+count: false
+```C
+int busqueda_binaria(int a[], int n) {
+    int middle;
+    int low = 0;
+    int high = n-1;
+    int result = -1; // valor no encontrado
+
+    while (low <= high && result == -1){
+        middle = (low+high) / 2;
+
+        if (key == a[middle])
+           result = middle;
+
+        if (key < a[middle])
+           high = middle - 1;
+        else
+           low = middle + 1;
+    }
+
+    return result;
+}
 ```
 
 

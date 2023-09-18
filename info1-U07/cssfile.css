@@ -75,6 +75,7 @@ td:empty {
 .remark-slide-content ul, ol {
   line-height: 1.5em;
 }
+.white {color: white;}
 .red {color: red;}
 .orange {color: orange;}
 .yellow {color: yellow;}
@@ -95,6 +96,10 @@ td:empty {
 .footnote {
   position: absolute;
   bottom: 2em;
+}
+.footer {
+  bottom: 0%;
+  position: fixed;
 }
 .smaller10 {
   font-size: .9em;
@@ -188,4 +193,10 @@ td:empty {
   font-style: italic;
   white-space: pre;
 }
+.top {
+  height: 50vh;
+}
 
+.bottom {
+  height: 25vh;
+}
