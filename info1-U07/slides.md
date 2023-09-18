@@ -5061,7 +5061,7 @@ Se puede eliminar la mitad en la que no se encuentra el valor buscado, lo que lo
 --
 count: false
 ```C
-int busqueda_binaria(int a[], int n) {
+int busqueda_binaria(int a[], int n, int key) {
     int middle;
     int low = 0;
     int high = n-1;
