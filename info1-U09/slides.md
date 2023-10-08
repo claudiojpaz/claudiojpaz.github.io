@@ -1173,7 +1173,7 @@ struct punto_2d {
 };
 
 int main (void) {
-  struct punto_2d puntos[5] = {{0,0},{6,7}};
+  struct punto_2d puntos[5] = { {0,0},{6,7} };
   int i;
 
   puntos[0].x = 3; puntos[0].y = 3;
