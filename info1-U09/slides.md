@@ -1594,7 +1594,7 @@ count: false
    printf("Ingrese su DNI: ");
    scanf("%d", &r.dni);
    printf("Ingrese su nombre: ");
-   scanf("%s", r.nombre);
+   scanf(" %s", r.nombre);
 
    return r;
  }
