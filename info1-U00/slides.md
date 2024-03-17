@@ -3,7 +3,7 @@ class: center, middle, inverse
 
 .title[Informática I]
 
-.center[2023]
+.center[2024]
 
 <!-- ![:scale 70%](assets/memoria-000.svg) -->
 ![:scale 50%](assets/this.png)
@@ -27,35 +27,18 @@ count: false
 
 ## Prof. Asoc.: Claudio J. Paz
 
-## Prof. Adj.: Silvia J. Arias
-
-## JTP: Silvia A. Carrera
-
-## Aux: Martín Nievas
+## JTP: Martín Nievas
 ---
 class: middle, center, inverse
 .title[Cuándo]
 ---
 class: inverse
-# Horarios 1R3
-
- Teórico: Lunes 8:00hs. a 9:30hs. (Paz)  
- Práctico: Jueves 10:25hs. a 12:50hs. ()
-
 --
 count: false
 # Horarios 1R5
 
  Teórico: Lunes 11:20hs. a 12:50hs. (Paz)  
- Práctico: Jueves 8:00hs. a 10:25hs. ()
-
---
-count: false
-# Horarios 1R4
-
- Teórico: Lunes 13:15hs. a 14:45hs. (Paz)  
- Práctico: Lunes 14:55hs. a 16:25hs. (Carrera)
- Práctico: Martes 13:15hs. a 14:00. (Carrera)
+ Práctico: Jueves 8:00hs. a 10:25hs. (Nievas)
 
 ---
 class: inverse
@@ -87,19 +70,20 @@ count: false
 # Parciales. Regularización
 --
 count: false
-Tienen dos partes, una práctica y otra teórica (Pero es el mismo parcial)
+
+3 parciales
 
 --
 count: false
-Para **Regularizar** la materia se necesita que el promedio de las partes (la teórica y la práctica) sea mayor o igual a 6.
+Cada uno tiene dos partes, una práctica y otra teórica (Pero es el mismo parcial)
 
 --
 count: false
-El 6 corresponde a un 60%, o sea, si el promedio no alcanza al 60% no se redondea (ej. 58 pasa a 5)
+Para **Regularizar** la materia se necesita que en cada parcial, el promedio de las partes (la teórica y la práctica) sea mayor o igual a 6.
 
 --
 count: false
-Una vez que se supera el 60% si se aplica el redondeo, siempre se redondea al número más cercano (ej. 65% pasa a 7)
+El 6 corresponde a un 60%
 
 ---
 template: parciales
@@ -117,7 +101,7 @@ El parcial se recupera completo **siempre** (parte teórica y práctica)
 
 --
 count: false
-Si no se alcanza el 60% en ningún parcial, se pueden recuperar a fin de año en un único recuperatorio integral.
+Si no se alcanza el 60% en dos o los tres parciales, se pueden recuperar a fin de año en un único recuperatorio integral.
 
 ---
 template: parciales
@@ -137,7 +121,7 @@ Y además se entregaron el 100% de los Trabajos Prácticos
 
 --
 count: false
-Para **Aprobar Directamente** la materia se necesita que las partes (teórica y práctica) de cada parcial (1er y 2do) sea mayor o igual a 6.
+Para **Aprobar Directamente** la materia se necesita que las partes (teórica y práctica) de cada parcial (1er, 2do y 3ro) sea mayor o igual a 6.
 
 
 --
@@ -155,7 +139,7 @@ Si no se alcanza esa condición en algún parcial se puede recuperar a fin de a�
 
 --
 count: false
-Si no se alcanza esa condición en ninguno de los parciales (1ro y 2do) no se puede Aprobar Directamente, solo se podrá regularizar.
+Si no se alcanza esa condición en más de uno los parciales no se puede Aprobar Directamente, solo se podrá regularizar.
 
 ---
 class: inverse
@@ -167,19 +151,22 @@ count: false
 --
 count: false
 <br/>
-## 1er Parcial: Fecha a confirmar (luego del receso)
+## 1er Parcial: Miércoles 22/5/2024 20h
 --
 count: false
-## 2do parcial: Fecha a confirmar (últimos días de octubre)
+## 2do parcial: Miércoles 28/8/2024 20h
 --
 count: false
-## Recuperatorios: Fecha a confirmar (primeros días de noviembre)
+## 3er parcial: Miércoles 30/10/2024 20h
+--
+count: false
+## Recuperatorios: Miércoles 20/11/2024 20h
 
 <br/>
 <br/>
 --
 count: false
-## Aulas y horarios a definir
+## Aulas a definir
 ---
 class: inverse
 # Trabajos Prácticos
