@@ -7,7 +7,7 @@ Claudio Paz
 
 <!-- .email[claudiojpaz@gmail.com] -->
 
-Abril 2023
+Abril 2024
 
 ![:scale 50%](assets/this.png)
 
@@ -16,23 +16,22 @@ Abril 2023
 <input type="image" src="assets/smallscreen.png" onclick="closeFullscreen()" style="height: 15%; width: 15%;">
 </div>
 
-
 ---
 class: middle, center, intermediate
 .title-dark[Unidad 2]
 # Sistemas de numeración
----
-class: middle
-???
-Que es un sistema de numeración
-
-símbolos y reglas
-
-Historia:
-contar ganado
 
 ---
+name: screen
+<div style="position: absolute; left: 5%; top: 85%; height: 50%; width: 50%; padding: 1em; text-align: left;">
+<input type="image" src="assets/fullscreengrey.png" onclick="openFullscreen()" style="height: 15%; width: 15%;">
+<input type="image" src="assets/smallscreengrey.png" onclick="closeFullscreen()" style="height: 15%; width: 15%;">
+</div>
+
+---
+template: screen
 # Sistemas de numeración
+
 --
 count: false
 
@@ -54,6 +53,7 @@ count: false
 ¿Por qué las computadoras usan el sistema binario?
 
 ---
+template: screen
 # Sistemas de numeración
 --
 count: false
@@ -65,6 +65,7 @@ count: false
 $1324$
 
 ---
+template: screen
 count: false
 # Sistemas de numeración
 En la primaria vimos como descomponer un número en unidad, decena, centena, etc.
@@ -92,6 +93,7 @@ $1324 = 1 \times 10^3 + 3 \times 10^2 + 2 \times 10^1 + 4 \times 10^0 %$
 
 
 ---
+template: screen
 # Sistemas de numeración
 --
 count: false
@@ -119,6 +121,7 @@ count: false
 Existen los sistemas posicionales, como el decimal, y no posicionales como el sistema romano
 
 ---
+template: screen
 # Teorema Fundamental de la Numeración
 --
 count: false
@@ -131,6 +134,7 @@ Considérese un sistema de numeración posicional de base $b$, siendo $b$ númer
     siendo $a_n,\, a_{n-1},\, \dots ,\,  a_2,\, a_1 ,\, a_0$ alguno de los símbolos que forman la base del sistema y $n+1$ la cantidad de cifras del número $N$.
 </p>
 ---
+template: screen
 # Teorema Fundamental de la Numeración
 --
 count: false
@@ -142,6 +146,7 @@ count: false
 </p>
 
 ---
+template: screen
 # Sistema de numeración decimal
 --
 count: false
@@ -170,6 +175,7 @@ count: false
 \end{align}
 </p>
 ---
+template: screen
 # Sistema de numeración binario
 --
 count: false
@@ -199,6 +205,7 @@ count: false
 \end{align}
 </p>
 ---
+template: screen
 # Sistema de numeración hexadecimal
 --
 count: false
@@ -227,6 +234,7 @@ count: false
 \end{align}
 </p>
 ---
+template: screen
 # Sistema de numeración octal
 --
 count: false
@@ -255,6 +263,7 @@ count: false
 \end{align}
 </p>
 ---
+template: screen
 class: middle
 
 $1000_{(10)} = $
@@ -265,6 +274,7 @@ $1000_{(8)} = $
 
 $1000_{(16)} = $
 ---
+template: screen
 class: middle
 count: false
 
@@ -300,6 +310,7 @@ Sistema binario | Sistema decimal | Sistema hexadecimal | Sistema octal
 1 1 1 1         |      15         |         F           |        17
 
 ---
+template: screen
 # Conversión de decimal a binario
 ## Ejemplo 345
 --
@@ -308,6 +319,7 @@ count: false
 .center[![una imagen](assets/pasaje-decimal-binario-division-larga-01.svg)]
 
 ---
+template: screen
 count: false
 # Conversión de decimal a binario
 ## Ejemplo 345
@@ -315,6 +327,7 @@ count: false
 .center[![una imagen](assets/pasaje-decimal-binario-division-larga-02.svg)]
 
 ---
+template: screen
 count: false
 # Conversión de decimal a binario
 ## Ejemplo 345
@@ -322,6 +335,7 @@ count: false
 .center[![una imagen](assets/pasaje-decimal-binario-division-larga-03.svg)]
 
 ---
+template: screen
 count: false
 # Conversión de decimal a binario
 ## Ejemplo 345
@@ -329,6 +343,7 @@ count: false
 .center[![una imagen](assets/pasaje-decimal-binario-division-larga-04.svg)]
 
 ---
+template: screen
 count: false
 # Conversión de decimal a binario
 ## Ejemplo 345
@@ -336,6 +351,7 @@ count: false
 .center[![una imagen](assets/pasaje-decimal-binario-division-larga-05.svg)]
 
 ---
+template: screen
 count: false
 # Conversión de decimal a binario
 ## Ejemplo 345
@@ -343,6 +359,7 @@ count: false
 .center[![una imagen](assets/pasaje-decimal-binario-division-larga-06.svg)]
 
 ---
+template: screen
 count: false
 # Conversión de decimal a binario
 ## Ejemplo 345
@@ -350,6 +367,7 @@ count: false
 .center[![una imagen](assets/pasaje-decimal-binario-division-larga-07.svg)]
 
 ---
+template: screen
 count: false
 # Conversión de decimal a binario
 ## Ejemplo 345
@@ -357,6 +375,7 @@ count: false
 .center[![una imagen](assets/pasaje-decimal-binario-division-larga-08.svg)]
 
 ---
+template: screen
 count: false
 # Conversión de decimal a binario
 ## Ejemplo 345
@@ -379,6 +398,7 @@ $345_{(10)} = 101011001_{(2)}$
 </p>
 </div>
 ---
+template: screen
 # Distintos sistemas: números enteros y positivos
 ## Pasaje directo
 
@@ -398,6 +418,7 @@ count: false
 Cada cifra del sistema octal se puede representar con 3 del sistema binario.
 
 ---
+template: screen
 count: false
 # Distintos sistemas: números enteros y positivos
 ## Pasaje directo
@@ -427,6 +448,7 @@ count: false
 </p>
 
 ---
+template: screen
 count: false
 # Distintos sistemas: números enteros y positivos
 ## Pasaje directo
@@ -450,6 +472,7 @@ count: false
 </p>
 
 ---
+template: screen
 count: false
 # Distintos sistemas: números enteros y positivos
 ## Pasaje directo
@@ -460,6 +483,7 @@ $\small{53048=1100111100111000_{(2)}}$
 </p>
 
 ---
+template: screen
 count: false
 # Distintos sistemas: números enteros y positivos
 ## Pasaje directo
@@ -470,6 +494,7 @@ $\small{53048=1100111100111000_{(2)} = CF38_{(16)} = 147470_{(8)}}$
 </p>
 
 ---
+template: screen
 # Operaciones aritméticas con números binarios
 --
 count:false
@@ -498,6 +523,7 @@ $1 + 1 = 0$ (pero hay acarreo), o sea .italic[me llevo uno]
 </p>
 
 ---
+template: screen
 # Operaciones aritméticas con números binarios
 
 ## Suma
@@ -529,6 +555,7 @@ count: false
 ]
 
 ---
+template: screen
 # Operaciones aritméticas con números binarios
 --
 count:false
@@ -557,6 +584,7 @@ $1 \times 1 = 1$
 </p>
 
 ---
+template: screen
 # Operaciones aritméticas con números binarios
 
 ## Producto
@@ -591,6 +619,7 @@ count: false
 </p>
 ]
 ---
+template: screen
 # Operaciones aritméticas con números binarios
 
 ## Producto
@@ -641,6 +670,7 @@ count: false
 La representación binaria será posible dependiendo de la cantidad de bits usados
 
 ---
+template: screen
 # Operaciones aritméticas con números binarios
 --
 count:false
@@ -666,6 +696,7 @@ $1 - 1 = 0$
 </p>
 
 ---
+template: screen
 # Operaciones aritméticas con números binarios
 
 ## Resta
@@ -697,6 +728,7 @@ count: false
 ]
 
 ---
+template: screen
 # Operaciones aritméticas con números binarios
 
 ## Resta
@@ -709,6 +741,7 @@ $0 - 1 = ?$
 
 
 ---
+template: screen
 # Representación de Números signados
 --
 count: false
@@ -720,6 +753,7 @@ count: false
  Soluciones: ?
 
 ---
+template: screen
 # Convenio de signo y magnitud
 --
 count: false
@@ -772,6 +806,7 @@ count: false
 count: false
 A diferencia del análisis matemático, en informática es el mismo número (+0 es igual a -0)
 ---
+template: screen
 # Convenio de complemento a uno
 
 --
@@ -799,6 +834,7 @@ count: false
 -|-|-|-|-|-|-|-
 
 ---
+template: screen
 # Convenio de complemento a uno
 
 ## Ejemplo con 8 bits
@@ -858,6 +894,7 @@ count: false
 -|-|-|-|-|-|-|-
 
 ---
+template: screen
 # Convenio de complemento a dos
 
 ## Ejemplo con 8 bits
@@ -886,6 +923,7 @@ count: false
 -|-|-|-|-|-|-|-
 
 ---
+template: screen
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
 --
@@ -903,6 +941,7 @@ count: false
 </div>
 
 ---
+template: screen
 count: false
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
@@ -930,6 +969,7 @@ count: false
 Hay que _deshacer_ el complemento a 2 y se obtiene el valor absoluto del número negativo
 
 ---
+template: screen
 count: false
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
@@ -949,6 +989,7 @@ count: false
 </div>
 
 ---
+template: screen
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
 --
@@ -987,6 +1028,7 @@ count: false
 </div>
 
 ---
+template: screen
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
 <div style="font-size: 80%;">
@@ -1006,6 +1048,7 @@ count: false
 El acarreo se ignora
 
 ---
+template: screen
 # Representación de números fraccionales
 --
 count: false
@@ -1017,6 +1060,7 @@ count: false
 Se repite el proceso continuamente hasta obtener cero en la parte decimal o llenar los bits requeridos
 
 ---
+template: screen
 # Representación de números fraccionales
 ## Ejemplo 0.6875
 
@@ -1054,6 +1098,7 @@ $$
 </div>
 
 ---
+template: screen
 # Representación de números fraccionales
 --
 count: false
@@ -1084,6 +1129,7 @@ $$
 </p>
 
 ---
+template: screen
 # Representación de números fraccionales
 --
 count: false
@@ -1105,6 +1151,7 @@ count: false
 donde $m$ es la cantidad de bits que tenemos para representar la parte fraccional.
 
 ---
+template: screen
 # Representación de números fraccionales
 --
 count: false
@@ -1126,6 +1173,7 @@ count: false
 
 
 ---
+template: screen
 # Representación de números fraccionales
 
 ???
@@ -1173,6 +1221,7 @@ $$
 ]
 
 ---
+template: screen
 count: false
 # Representación de números fraccionales
 
@@ -1227,6 +1276,7 @@ $0.56 \times 2 = \color{red}{1}.12$
 </div>
 
 ---
+template: screen
 count: false
 # Representación de números fraccionales
 
@@ -1286,6 +1336,7 @@ $0.56 \times 2 = \color{red}{1}.12$
 </div>
 
 ---
+template: screen
 # Representación de números fraccionales
 
 <p>
@@ -1326,6 +1377,7 @@ $\small{0 \times 0.5 + 0 \times 0.25 + 1 \times 0.125 + 1 \times 0.0625 = 0.1875
 </p>
 
 ---
+template: screen
 # Representación de números fraccionales
 
 <p>
@@ -1349,6 +1401,7 @@ Respuesta corta:
 
 $0.195$ tiene una expansión binaria infinita
 ---
+template: screen
 # Representación de números fraccionales
 --
 count: false
@@ -1385,6 +1438,7 @@ $0.625 \xrightarrow[]{\text{a binario}} 0.101$
 ]
 
 ---
+template: screen
 # Representación de números fraccionales
 --
 count: false
@@ -1419,6 +1473,7 @@ $0.1 \xrightarrow[]{\text{a binario}} 0.0\overline{0011}$
 ]
 
 ---
+template: screen
 # Errores en la representación
 --
 count: false
@@ -1435,6 +1490,7 @@ count: false
  Ejemplo: si tenemos 4 bits para para representar un número fraccionario, el último bit puede estar _prendido_ o _apagado_, y eso significa agregar o no un 1/16 al número en base decimal
 
 ---
+template: screen
 # Errores en la representación
 --
 count: false
@@ -1457,6 +1513,7 @@ Todos los números entre $0.875$ y $0.9375$ tienen la misma representación
 
 
 ---
+template: screen
 # Errores en la representación
 --
 count: false
@@ -1469,6 +1526,7 @@ count: false
 $e_A = \pm \frac{1}{2} LSB = \pm \frac{1}{2} 2^{-4} = \pm 2^{-5}$
 
 ---
+template: screen
 # Errores en la representación
 --
 count: false
@@ -1481,6 +1539,7 @@ count: false
 $e_r \; [\%] = \cfrac{e_A}{N} \times 100$
 
 ---
+template: screen
 # Notación punto fijo y punto flotante
 ## Punto fijo
 
@@ -1502,6 +1561,7 @@ count: false
 </div>
 
 ---
+template: screen
 # Notación punto fijo y punto flotante
 ## Punto flotante
 
@@ -1525,6 +1585,7 @@ $ 2.1 = 21 \times 10^{-1}$
 </p>
 
 ---
+template: screen
 count: false
 # Notación punto fijo y punto flotante
 ## Punto flotante
@@ -1546,6 +1607,7 @@ $ 2.1 = 0.21 \times 10^{1}$
 </p>
 
 ---
+template: screen
 count: false
 # Notación punto fijo y punto flotante
 ## Punto flotante
@@ -1567,6 +1629,7 @@ $ 2.1 = 2100 \times 10^{-3}$
 </p>
 
 ---
+template: screen
 # Notación punto fijo y punto flotante
 ## Punto flotante
 
@@ -1586,6 +1649,7 @@ count: false
 En computación se utiliza el estándar IEEE 754.
 
 ---
+template: screen
 # Representación según formato IEEE 754
 --
 count: false
@@ -1606,6 +1670,7 @@ Exponente desplazado (E): 8 bits.
 Significando o Mantisa (T): 23 bits.
 
 ---
+template: screen
 # Representación según formato IEEE 754
 
 El estándar determina que se utilizan 32 bits para los números de punto flotante de simple precisión y 64 bits para los de doble precisión.
@@ -1878,6 +1943,7 @@ $0.15625\xrightarrow[]{\text{a IEEE 754}} 0\;01111100\;01000000000000000000000 $
 </div>
 
 ---
+template: screen
 # Errores en notación de punto flotante
 --
 count: false
@@ -1904,6 +1970,7 @@ count: false
 $0.100000001490116119384765625$
 
 ---
+template: screen
 # Errores en notación de punto flotante
 --
 count: false
@@ -1916,6 +1983,7 @@ count: false
 Por este motivo, **nunca** deben compararse por igual dos números de punto flotante
 
 ---
+template: screen
 # Representación de caracteres: Decimal Codificado en Binario (BCD).
 
 Representación de números decimales donde cada dígito del número en base 10 se representa en base 2
@@ -1928,6 +1996,7 @@ count: false
 |0000|0001|0010|0011|0100|0101|0110|0111|1000|1001|
 
 ---
+template: screen
 # Representación de caracteres: Decimal Codificado en Binario (BCD).
 
 --
@@ -1948,9 +2017,11 @@ $2019 = 0010000000011001$
 
 
 ---
+template: screen
 # Representación de caracteres: ASCII.
 
 ---
+template: screen
 ## Caracteres de Control
 
 <div style="font-size: 50%;">
@@ -1979,6 +2050,7 @@ $2019 = 0010000000011001$
 </div>
 
 ---
+template: screen
 ## Caracteres de Control (cont.)
 
 <div style="font-size: 50%;">
@@ -2008,6 +2080,7 @@ $2019 = 0010000000011001$
 </div>
 
 ---
+template: screen
 ## Caracteres Imprimibles
 
 .left-column[
@@ -2064,6 +2137,7 @@ $2019 = 0010000000011001$
 ]
 
 ---
+template: screen
 
 ## Caracteres Imprimibles
 
@@ -2122,6 +2196,7 @@ $2019 = 0010000000011001$
 ]
 
 ---
+template: screen
 
 ## Caracteres Imprimibles
 
@@ -2179,3 +2254,4 @@ $2019 = 0010000000011001$
 ]
 
 ---
+template: screen
