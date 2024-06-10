@@ -7,7 +7,7 @@ Claudio Paz
 
 <!-- .email[claudiojpaz@gmail.com] -->
 
-Junio 2023
+Junio 2024
 
 ![:scale 50%](assets/this.png)
 
@@ -370,7 +370,7 @@ La _Lista de Argumentos_ debe coincidir con la _Lista de Parámetros_ en tipo y 
 --
 count: false
 
-Cada elemento de la _Lista de Argumentos_ se copia en los elementos de la _Lista de Parámetros_
+Cada elemento de la _Lista de Argumentos_ **se copia** en los elementos de la _Lista de Parámetros_
 
 --
 count: false
@@ -675,10 +675,6 @@ La ventaja de usar prototipos es que no hace falta preocuparse cual función es 
 count: false
 
 Los prototipos van antes de las definiciones de las funciones, usualmente los prototipos van antes que `main` y las definiciones después de `main`
-
----
-class: middle, center, intermediate
-# Segunda Parte
 
 ---
 # Clases de Almacenamiento
@@ -1202,10 +1198,6 @@ count: false
 Las variables locales (automáticas por defecto) solo pueden ser accedidas desde la función donde _"viven"_ y cuando la función termina, las variables _"mueren"_
 
 .footnote[.smaller50[Las palabras "viven" y "mueren" son metafóricas y no son parte del vocabulario del lenguaje]]
-
----
-class: middle, center, intermediate
-# Tercera Parte
 
 ---
 # Funciones con más de un return
