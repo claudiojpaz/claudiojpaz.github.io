@@ -2904,137 +2904,137 @@ int main (void) {
   return 0;
 }
 ```
----
-# Punteros a función
---
-count: false
-## Ejemplo de ordenamiento
---
-count: false
+<!-- --- -->
+<!-- # Punteros a función -->
+<!-- -- -->
+<!-- count: false -->
+<!-- ## Ejemplo de ordenamiento -->
+<!-- -- -->
+<!-- count: false -->
 
-Se quiere ordenar un arreglo de enteros, con la posibilidad de que sea ascendente o descendente según se pida
+<!-- Se quiere ordenar un arreglo de enteros, con la posibilidad de que sea ascendente o descendente según se pida -->
 
---
-count: false
-Primero, se define la función donde se van a intercambiar los valores (independientemente de que sea ascendente o descendente)
+<!-- -- -->
+<!-- count: false -->
+<!-- Primero, se define la función donde se van a intercambiar los valores (independientemente de que sea ascendente o descendente) -->
 
---
-count: false
+<!-- -- -->
+<!-- count: false -->
 
-```C
-void swap(int *p, int *q) {
-  int temp = *p;
-  *p = *q;
-  *q = temp;
-}
-```
+<!-- ```C -->
+<!-- void swap(int *p, int *q) { -->
+  <!-- int temp = *p; -->
+  <!-- *p = *q; -->
+  <!-- *q = temp; -->
+<!-- } -->
+<!-- ``` -->
 
----
-# Punteros a función
-## Ejemplo de ordenamiento
---
-count: false
+<!-- --- -->
+<!-- # Punteros a función -->
+<!-- ## Ejemplo de ordenamiento -->
+<!-- -- -->
+<!-- count: false -->
 
-Luego las funciones para cada caso
-```C
-void ascendente (int *p, int *q) {
-  if (*p > *q)
-    swap(p, q);
-}
+<!-- Luego las funciones para cada caso -->
+<!-- ```C -->
+<!-- void ascendente (int *p, int *q) { -->
+  <!-- if (*p > *q) -->
+    <!-- swap(p, q); -->
+<!-- } -->
 
-void descendente (int *p, int *q) {
-  if (*p < *q)
-    swap(p, q);
-}
-```
---
-count: false
-En las funciones solo cambia el signo del condicional. En los punteros `p` y `q` vendrán direcciones de dos elementos consecutivos del arreglo
+<!-- void descendente (int *p, int *q) { -->
+  <!-- if (*p < *q) -->
+    <!-- swap(p, q); -->
+<!-- } -->
+<!-- ``` -->
+<!-- -- -->
+<!-- count: false -->
+<!-- En las funciones solo cambia el signo del condicional. En los punteros `p` y `q` vendrán direcciones de dos elementos consecutivos del arreglo -->
 
----
-# Punteros a función
-## Ejemplo de ordenamiento
---
-count: false
+<!-- --- -->
+<!-- # Punteros a función -->
+<!-- ## Ejemplo de ordenamiento -->
+<!-- -- -->
+<!-- count: false -->
 
-La función clave es donde se realiza el método de la burbuja, que recibe la dirección de la función elegida para hacer el ordenamiento, la cual es llamada pasando dos elementos consecutivos del arreglo
+<!-- La función clave es donde se realiza el método de la burbuja, que recibe la dirección de la función elegida para hacer el ordenamiento, la cual es llamada pasando dos elementos consecutivos del arreglo -->
 
---
-count: false
+<!-- -- -->
+<!-- count: false -->
 
-```C
-void burbuja(int arr[], int n, void (*compara)(int*,int*)) {
-  for (int j = 0; j < n-1; j++)
-    for (int i = 0; i < n-1-j; i++)
-      (*compara)(&arr[i], &arr[i+1]);
-}
-```
+<!-- ```C -->
+<!-- void burbuja(int arr[], int n, void (*compara)(int*,int*)) { -->
+  <!-- for (int j = 0; j < n-1; j++) -->
+    <!-- for (int i = 0; i < n-1-j; i++) -->
+      <!-- (*compara)(&arr[i], &arr[i+1]); -->
+<!-- } -->
+<!-- ``` -->
 
----
-# Punteros a función
-## Ejemplo de ordenamiento
---
-count: false
-En el `main` simplemente se llama a la función `burbuja` pasándole el arreglo y la función que se elige para ordenar
---
-count: false
+<!-- --- -->
+<!-- # Punteros a función -->
+<!-- ## Ejemplo de ordenamiento -->
+<!-- -- -->
+<!-- count: false -->
+<!-- En el `main` simplemente se llama a la función `burbuja` pasándole el arreglo y la función que se elige para ordenar -->
+<!-- -- -->
+<!-- count: false -->
 
-```C
-int main (void) {
-  int vec[N] = {1,9,4,8,6,0,3,5,7,2};
+<!-- ```C -->
+<!-- int main (void) { -->
+  <!-- int vec[N] = {1,9,4,8,6,0,3,5,7,2}; -->
 
-  burbuja(vec, N, ascendente);
-  imprimir(vec, N);
+  <!-- burbuja(vec, N, ascendente); -->
+  <!-- imprimir(vec, N); -->
 
-  return 0;
-}
-```
---
-count: false
-Se agrega la función ya usada para imprimir arreglos
+  <!-- return 0; -->
+<!-- } -->
+<!-- ``` -->
+<!-- -- -->
+<!-- count: false -->
+<!-- Se agrega la función ya usada para imprimir arreglos -->
 
----
-# Punteros a función
-## Ejemplo de ordenamiento
---
-count: false
+<!-- --- -->
+<!-- # Punteros a función -->
+<!-- ## Ejemplo de ordenamiento -->
+<!-- -- -->
+<!-- count: false -->
 
-```C
-void imprimir(int arr[], int n) {
-  for (int i = 0; i < n; i++) {
-    printf("%d ",  arr[i]);
-  }
-  printf("\n");
-}
-```
+<!-- ```C -->
+<!-- void imprimir(int arr[], int n) { -->
+  <!-- for (int i = 0; i < n; i++) { -->
+    <!-- printf("%d ",  arr[i]); -->
+  <!-- } -->
+  <!-- printf("\n"); -->
+<!-- } -->
+<!-- ``` -->
 
----
-# Arreglo de punteros a función
---
-count: false
+<!-- --- -->
+<!-- # Arreglo de punteros a función -->
+<!-- -- -->
+<!-- count: false -->
 
-Como con los demás tipos de variables, se puede hacer un arreglo de punteros a función
+<!-- Como con los demás tipos de variables, se puede hacer un arreglo de punteros a función -->
 
-```C
-int (*p[4])(int,int);
-```
---
-count: false
-Por ejemplo, si se tienen 4 funciones definidas como
-```C
-int suma (int a, int b) {
-  return a+b;
-}
-int resta (int a, int b) {
-  return a-b;
-}
-int mult (int a, int b) {
-  return a*b;
-}
-int divi (int a, int b) {
-  return b!=0?a/b:0;
-}
-```
+<!-- ```C -->
+<!-- int (*p[4])(int,int); -->
+<!-- ``` -->
+<!-- -- -->
+<!-- count: false -->
+<!-- Por ejemplo, si se tienen 4 funciones definidas como -->
+<!-- ```C -->
+<!-- int suma (int a, int b) { -->
+  <!-- return a+b; -->
+<!-- } -->
+<!-- int resta (int a, int b) { -->
+  <!-- return a-b; -->
+<!-- } -->
+<!-- int mult (int a, int b) { -->
+  <!-- return a*b; -->
+<!-- } -->
+<!-- int divi (int a, int b) { -->
+  <!-- return b!=0?a/b:0; -->
+<!-- } -->
+<!-- ``` -->
 ---
 # Arreglo de punteros a función
 --
