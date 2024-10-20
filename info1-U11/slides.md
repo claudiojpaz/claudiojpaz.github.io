@@ -1,4 +1,5 @@
 class: center, middle, inverse
+<title>Unidad 11</title>
 
 .title[Informática I]
 
@@ -6,7 +7,14 @@ Claudio Paz
 
 .email[claudiojpaz@gmail.com]
 
-Noviembre 2023
+Octubre 2024
+
+![:scale 50%](assets/this.png)
+
+<div style="position: absolute; left: 5%; top: 85%; height: 50%; width: 50%; padding: 1em; text-align: left;">
+<input type="image" src="assets/fullscreen.png" onclick="openFullscreen()" style="height: 15%; width: 15%;">
+<input type="image" src="assets/smallscreen.png" onclick="closeFullscreen()" style="height: 15%; width: 15%;">
+</div>
 
 ---
 class: middle, center, intermediate

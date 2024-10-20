@@ -57,6 +57,12 @@
         highlightStyle: 'solarized-dark',
         highlightLines: true,
         highlightSpans: true
+        // Customize slide number label, either using a format string..
+        slideNumberFormat: '%total%',
+        // .. or by using a format function
+        slideNumberFormat: function (current, total) {
+          return current;
+        },
       });
     </script>
   </body>
