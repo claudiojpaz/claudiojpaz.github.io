@@ -5,7 +5,7 @@ class: center, middle, inverse
 
 Claudio Paz
 
-.email[claudiojpaz@gmail.com]
+<!-- .email[claudiojpaz@gmail.com] -->
 
 Octubre 2024
 
