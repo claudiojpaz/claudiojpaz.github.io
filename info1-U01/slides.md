@@ -727,6 +727,21 @@ count: false
 * etc.
 
 ---
+# Sistemas Operativos
+
+Los principales GNU/Linux (por popularidad) en 2025
+
+1. Mint
+2. MX Linux
+3. EndeavourOS
+4. Debian
+5. CachyOS
+6. Pop/!_OS
+7. Manjaro
+8. Ubuntu
+9. Fedora
+10. openSUSE
+
 ---
 # Sistemas Operativos
 
@@ -737,16 +752,16 @@ count: false
 </div>
 --
 count: false
-* Iniciado en 1991 por Linus Torvalds (~ 10000 lineas de código)
+* Iniciado en 1991 por Linus Torvalds (~ 10000 líneas de código)
 --
 count: false
 * Escrito completamente en C (y algo de ASM)
 --
 count: false
-* Hoy tiene 25 millones de líneas de código
+* Hoy tiene más de 30 millones de líneas de código
 --
 count: false
-* y más de 19000 desarrolladores
+* y miles de desarrolladores por todo el mundo
 --
 count: false
 * es el proyecto de sofware más grande de la historia
