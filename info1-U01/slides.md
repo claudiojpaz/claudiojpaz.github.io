@@ -729,14 +729,16 @@ count: false
 ---
 # Sistemas Operativos
 
-Los principales GNU/Linux (por popularidad) en 2025
+.header[.title-color[GNU/Linux]]
+
+Los principales (por popularidad) en 2025:
 
 1. Mint
 2. MX Linux
 3. EndeavourOS
 4. Debian
 5. CachyOS
-6. Pop/!_OS
+6. Pop_OS
 7. Manjaro
 8. Ubuntu
 9. Fedora
