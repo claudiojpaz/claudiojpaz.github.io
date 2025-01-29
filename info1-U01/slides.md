@@ -287,6 +287,9 @@ Altos o bajos, 0 o 1
 
 ---
 # Unidades fundamentales
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 > El _bit_ es el elemento más pequeño que reconoce la computadora. Tiene solo dos valores posibles, 0 y 1.
@@ -297,7 +300,7 @@ count: false
 
 --
 count: false
-> Una _palabra_ (o _word_ en inglés) está formada por 2 o 4 bytes (esto depende del sistema).
+> Una _palabra_ (o _word_ en inglés) está formada por 1, 2, 4 u 8 bytes (esto depende del sistema).
 
 ---
 name: bit-byte-word
@@ -350,18 +353,174 @@ count: false
 
 <div style="font-size: 70%; position: relative; left: -50px">
 <p>
-    \begin{array}{lll}
-    \textsf{Unidad} &  \textsf{bytes}  & \textsf{Aproximadamente} \\ \hline
-    \textsf{1 kilobyte (kB)} & \textsf{1024 bytes} & \textsf{1000 bytes} \\
-    \textsf{1 megabyte (MB)} & \textsf{1024 kilobytes} & 10^6 = \textsf{1000000 bytes} \\
-    \textsf{1 gigabyte (GB)} & \textsf{1024 megabytes} & 10^9 = \textsf{1000000000 bytes} \\
-    \textsf{1 terabyte (TB)} & \textsf{1024 gigabytes} & 10^{12} = \textsf{1000000000000 bytes} \\
-    \textsf{1 petabyte (PB)} & \textsf{1024 terabytes} & 10^{15} = \textsf{1000000000000000 bytes} \\
-    \textsf{1 exabyte (EB)} & \textsf{1024 petabytes} & 10^{18} = \textsf{1000000000000000000 bytes} \\
-    \textsf{1 zetabyte (ZB)} & \textsf{1024 exabytes} & 10^{21} = \textsf{1000000000000000000000 bytes} \\
-    \end{array}
+\begin{array}{llll}
+    \textbf{Unidad} & \textbf{Símbolo} & \textbf{Valor en Bytes} & \textbf{Expresión Matemática} \\
+    \hline
+    \text{Kilobyte} & \text{kB} & 1\,000 & 10^3 \\
+    \text{Megabyte} & \text{MB} & 1\,000\,000 & 10^6 \\
+    \text{Gigabyte} & \text{GB} & 1\,000\,000\,000 & 10^9 \\
+    \text{Terabyte} & \text{TB} & 1\,000\,000\,000\,000 & 10^{12} \\
+\end{array}
 </p>
 </div>
+--
+count: false
+
+<div style="font-size: 70%; position: relative; left: -50px">
+<p>
+\[
+\begin{array}{llll}
+    \textbf{Unidad} & \textbf{Símbolo} & \textbf{Valor en Bytes} & \textbf{Expresión Matemática} \\
+    \hline
+    \text{Kibibyte} & \text{KiB} & 1\,024 & 2^{10} \\
+    \text{Mebibyte} & \text{MiB} & 1\,048\,576 & 2^{20} \\
+    \text{Gibibyte} & \text{GiB} & 1\,073\,741\,824 & 2^{30} \\
+    \text{Tebibyte} & \text{TiB} & 1\,099\,511\,627\,776 & 2^{40} \\
+\end{array}
+\]
+
+</p>
+</div>
+
+---
+# Múltiplos
+--
+count: false
+
+## Ejemplo
+
+Compro un disco de 1TB, lo conecto, le instalo el Sistema Operativo y me fijo como quedaron las particiones
+--
+count: false
+
+```sh
+$ sudo parted /dev/sda print
+```
+---
+count: false
+# Múltiplos
+
+## Ejemplo
+
+Compro un disco de 1TB, lo conecto, le instalo el Sistema Operativo y me fijo como quedaron las particiones
+
+```sh
+$ sudo parted /dev/sda print
+Model: ATA WDC WD10SPZX-60Z (scsi)
+Disk /dev/sda: 1000GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End     Size    Type     File system     Flags
+ 1      1049kB  281GB   281GB   primary  ext4            boot
+ 4      281GB   288GB   7956MB  primary  linux-swap(v1)  swap
+ 3      288GB   1000GB  712GB   primary  ext4
+
+$
+```
+
+---
+# Múltiplos
+## Ejemplo
+--
+count: false
+
+...busco otro comando para ver como es la jerarquía de las particiones...
+
+--
+count: false
+
+```sh
+$ lsblk
+```
+
+---
+count: false
+# Múltiplos
+## Ejemplo
+
+...busco otro comando para ver como es la jerarquía de las particiones...
+
+```sh
+$ lsblk
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0 931,5G  0 disk
+├─sda1   8:1    0 261,2G  0 part /
+├─sda3   8:3    0 662,9G  0 part /home
+└─sda4   8:4    0   7,4G  0 part [SWAP]
+$
+```
+--
+count: false
+
+...faltan 68.5GB?
+
+---
+# Múltiplos
+## Ejemplo
+--
+count: false
+
+...busco otro comando para ver más información
+
+--
+count: false
+
+```sh
+$ sudo fdisk -l
+```
+---
+count: false
+
+# Múltiplos
+## Ejemplo
+
+...busco otro comando para ver más información
+
+```sh
+$ sudo fdisk -l
+Disco /dev/sda: 931,51 GiB, 1000204886016 bytes, 1953525168 sectores
+Modelo de disco: WDC WD10SPZX-60Z
+Unidades: sectores de 1 * 512 = 512 bytes
+Tamaño de sector (lógico/físico): 512 bytes / 4096 bytes
+Tamaño de E/S (mínimo/óptimo): 4096 bytes / 4096 bytes
+Tipo de etiqueta de disco: dos
+Identificador del disco: 0x899f702e
+
+Disposit.  Inicio  Comienzo      Final   Sectores Tamaño Id Tipo
+/dev/sda1  *           2048  547874815  547872768 261,2G 83 Linux
+/dev/sda3         563412992 1953523711 1390110720 662,9G 83 Linux
+/dev/sda4         547874816  563412991   15538176   7,4G 82 Linux swap
+
+Las entradas de la tabla de particiones no están en el orden del disco.
+
+$
+```
+
+---
+# Múltiplos
+## Ejemplo
+--
+count: false
+
+Cuando se compra un disco, lo venden (en realidad se fabrica) usando base 10, o sea para 1TB, aproximadamamente 1 000 000 000 000 bytes
+
+--
+count: false
+
+Pero el sistema operativo presenta el tamaño en base 2
+<div style="font-size: 70%; position: relative; left: -50px">
+<p>
+\[
+\text{1 GiB} = 1\,073\,741\,824 \, \text{bytes}
+\]
+\[
+\implies \text{1 TB} = \frac{1\,000\,000\,000\,000 \, \text{bytes}}{1\,073\,741\,824 \, \text{bytes/GiB}} \approx 931.3 \, \text{GiB}
+\]
+</p>
+</div>
+
 
 ---
 # Memoria Principal
@@ -373,6 +532,9 @@ count: false
 
 ---
 # Memoria Principal
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -391,7 +553,7 @@ Retiene datos procesados hasta que puedan ser puestos en los dispositivos de sal
 --
 count: false
 
-Incluso almacena los programas que están en ejecución.
+Almacena los programas que están en ejecución.
 
 ---
 # Registros
@@ -403,6 +565,9 @@ count: false
 
 ---
 # Registros
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -425,6 +590,9 @@ Dependiendo de la arquitectura, cuantos registros tendrá el CPU.
 
 ---
 # Registros Vs. Memoria
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -456,6 +624,9 @@ count: false
 
 ---
 # Memoria caché
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -503,6 +674,9 @@ count: false
 
 ---
 # Jerarquía de memoria.
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -519,6 +693,9 @@ count: false
 
 ---
 # Unidad Central de Procesamiento o CPU
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -546,6 +723,9 @@ count: false
 
 ---
 # Unidad Central de Procesamiento o CPU
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -559,13 +739,57 @@ Todas a cargo de la _Unidad Aritmética/Lógica_ o por sus siglas en inglés (AL
 --
 count: false
 
-Alguna de las operaciones son: carga (_load_), almacenamiento (_store_), operación (_operate_), salto (_jump_)
+Alguna operaciones podrían ser: carga (_load_), almacenamiento (_store_), operación (_operate_), salto (_jump_), etc.
 
 --
 count: false
 
 Todas las operaciones van de la memoria a los registros, la ALU y de vuelta, todo el tiempo.
 
+---
+# Unidad Central de Procesamiento o CPU
+## Ejemplo
+--
+count: false
+
+Tenemos dos números almacenados en dos variables y queremos almacenar su suma en otra variable
+
+--
+count: false
+
+Algo tan simple como
+
+.bigger50[
+```c
+c = a + b
+```
+]
+
+---
+# Unidad Central de Procesamiento o CPU
+## Ejemplo
+--
+count: false
+
+Para que las instrucciones almacenadas en memoria puedan ejecutarse, deben tener una estructura determinada, definida por la arquitectura del procesador.
+
+--
+count: false
+
+Por ejemplo, para un microprocesador ARMv7 cada instrucción en memoria se podría ver algo así
+
+--
+count: false
+
+<div style="font-size: 70%; position: relative; left: -50px">
+<p>
+\begin{array}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \text{Cond} & 00 &\text{I} & \text{OPCODE} & \text{S} & \text{Rn} & \text{Rd} & \text{Operand2} \\
+    \hline
+\end{array}
+</p>
+</div>
 
 ---
 # Sistemas Operativos

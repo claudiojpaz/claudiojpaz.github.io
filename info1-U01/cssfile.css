@@ -181,3 +181,10 @@ td:empty {
   white-space: pre;
 }
 
+.warning {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+}
