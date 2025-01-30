@@ -776,7 +776,7 @@ Para que las instrucciones almacenadas en memoria puedan ejecutarse, deben tener
 --
 count: false
 
-Por ejemplo, para un microprocesador ARMv7 cada instrucción en memoria se podría ver algo así
+Por ejemplo, para un microprocesador ARMv7 cada instrucción en memoria se tendría que ver algo así
 
 --
 count: false
@@ -785,11 +785,124 @@ count: false
 <p>
 \begin{array}{|c|c|c|c|c|c|c|c|}
     \hline
-    \text{Cond} & 00 &\text{I} & \text{OPCODE} & \text{S} & \text{Rn} & \text{Rd} & \text{Operand2} \\
+    1110 & 00 & 0 & 0100 & 0 & 0000 & 0010 & 000000000001 \\
     \hline
 \end{array}
 </p>
 </div>
+
+--
+count: false
+
+¿Pero qué es esto?
+
+---
+# Unidad Central de Procesamiento o CPU
+## Ejemplo
+--
+count: false
+
+Para un microprocesador ARMv7 cada instrucción en memoria se tendría que ver algo así
+
+<div style="font-size: 70%; position: relative; left: -50px">
+<p>
+\begin{array}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \text{Cond} & 00 &\text{I} & \text{OPCODE} & \text{S} & \text{Rn} & \text{Rd} & \text{Operand2} \\
+    \hline
+    1110 & 00 & 0 & 0100 & 0 & 0000 & 0010 & 000000000001 \\
+    \hline
+\end{array}
+</p>
+</div>
+
+--
+count: false
+
+estos son los bits correspondientes a una operación de suma entre dos registros (R0 y R1). Esta operación deja el resultado de la suma en otro registro (R2). Pero todavía falta más...
+
+---
+# Unidad Central de Procesamiento o CPU
+## Ejemplo
+--
+count: false
+
+para ARM las operaciones como la suma no pueden operar sobre las variables directamente, hay que cargar los valores en los registros, lo que sería algo así
+
+--
+count: false
+
+<div style="font-size: 70%; position: relative; left: -200px">
+<p>
+\begin{array}{l}
+11100101100111110000000000000000 \\
+11100101100100000000000000000000 \\
+11100101100111110001000000000100 \\
+11100101100100010000000000000000 \\
+11100000100000000010000000000001 \\
+11100101100111110011000000001000 \\
+11100101100000110010000000000000
+\end{array}
+</p>
+</div>
+
+---
+# Unidad Central de Procesamiento o CPU
+## Ejemplo
+--
+count: false
+
+Mismo código con _Assembly_
+
+--
+count: false
+
+<div style="font-size: 70%; position: relative; left: -150px">
+<p>
+\begin{array}{l|l}
+11100101100111110000000000000000 & \text{LDR r0, =a}    \\
+11100101100100000000000000000000 & \text{LDR r0, [r0]}  \\
+11100101100111110001000000000100 & \text{LDR r1, =b}    \\
+11100101100100010000000000000000 & \text{LDR r1, [r1]}  \\
+11100000100000000010000000000001 & \text{ADD r2, r0, r1}\\
+11100101100111110011000000001000 & \text{LDR r3, =c}    \\
+11100101100000110010000000000000 & \text{STR r2, [r3]}
+\end{array}
+</p>
+</div>
+
+---
+# Unidad Central de Procesamiento o CPU
+## Ejemplo
+--
+count: false
+
+Mismo código con _Lenguaje C_
+
+--
+count: false
+
+<div style="font-size: 70%; position: relative; left: -50px">
+<p>
+\begin{array}{l|l|l}
+11100101100111110000000000000000 & \text{LDR r0, =a}     & \\
+11100101100100000000000000000000 & \text{LDR r0, [r0]}   & \\
+11100101100111110001000000000100 & \text{LDR r1, =b}     & \\
+11100101100100010000000000000000 & \text{LDR r1, [r1]}   & \\
+11100000100000000010000000000001 & \text{ADD r2, r0, r1} & \texttt{c = a + b;} \\
+11100101100111110011000000001000 & \text{LDR r3, =c}     & \\
+11100101100000110010000000000000 & \text{STR r2, [r3]}   &
+\end{array}
+</p>
+</div>
+
+--
+count: false
+
+ Conclusión:
+--
+count: false
+Por suerte, en Informática 1 vamos a aprender Lenguaje C
 
 ---
 # Sistemas Operativos
@@ -1254,6 +1367,12 @@ count: false
 
 .center[![una imagen](assets/computer-system-2011-pag8-display-hello-011.svg)]
 .smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2011, Cap.1, pág.8 ]]
+
+
+---
+
+class: middle, center, intermediate
+.title[Extra: Se verá en detalle en la unidad 3]
 
 ---
 # Fases de compilación
