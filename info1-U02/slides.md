@@ -7,7 +7,7 @@ Claudio Paz
 
 <!-- .email[claudiojpaz@gmail.com] -->
 
-Abril 2024
+Abril 2025
 
 ![:scale 50%](assets/this.png)
 
@@ -17,8 +17,8 @@ Abril 2024
 </div>
 
 ---
-class: middle, center, intermediate
-.title-dark[Unidad 2]
+class: middle, center
+.title[Unidad 2]
 # Sistemas de numeración
 
 ---
@@ -1509,7 +1509,7 @@ con 4 bits
 --
 count: false
 
-Todos los números entre $0.875$ y $0.9375$ tienen la misma representación
+Entonces, todos los números entre $0.875$ y $0.9375$ tienen la misma representación para 4 bits
 
 
 ---
@@ -1689,7 +1689,7 @@ Significando o Mantisa (T): 52 bits.
 ---
 # Representación según formato IEEE 754
 
-<div style="position: absolute; left: 40px; top: 140px; height: 200px; width: 100px; ">
+<div style="position: absolute; left: 60px; top: 140px; height: 200px; width: 100px; ">
 <img src="assets/Float_example.svg" width="800">
 </div>
 .footnote[
