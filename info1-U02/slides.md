@@ -123,6 +123,9 @@ Existen los sistemas posicionales, como el decimal, y no posicionales como el si
 ---
 template: screen
 # Teorema Fundamental de la Numeración
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 <p>
@@ -148,6 +151,9 @@ count: false
 ---
 template: screen
 # Sistema de numeración decimal
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 <p>
@@ -177,6 +183,9 @@ count: false
 ---
 template: screen
 # Sistema de numeración binario
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -207,6 +216,9 @@ count: false
 ---
 template: screen
 # Sistema de numeración hexadecimal
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -236,6 +248,9 @@ count: false
 ---
 template: screen
 # Sistema de numeración octal
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -392,6 +407,9 @@ count: false
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 <div style="font-size: 80%;">
 <p>
 $345_{(10)} = 101011001_{(2)}$
@@ -399,8 +417,11 @@ $345_{(10)} = 101011001_{(2)}$
 </div>
 ---
 template: screen
-# Distintos sistemas: números enteros y positivos
-## Pasaje directo
+# Pasaje entre distintos sistemas
+## Pasaje directo de números enteros y positivos
+
+<img src="assets/warning.svg" class="warning">
+
 
 --
 count: false
@@ -420,8 +441,11 @@ Cada cifra del sistema octal se puede representar con 3 del sistema binario.
 ---
 template: screen
 count: false
-# Distintos sistemas: números enteros y positivos
-## Pasaje directo
+# Pasaje entre distintos sistemas
+## Pasaje directo de números enteros y positivos
+
+<img src="assets/warning.svg" class="warning">
+
 
 --
 count: false
@@ -450,8 +474,11 @@ count: false
 ---
 template: screen
 count: false
-# Distintos sistemas: números enteros y positivos
-## Pasaje directo
+# Pasaje entre distintos sistemas
+## Pasaje directo de números enteros y positivos
+
+<img src="assets/warning.svg" class="warning">
+
 
 ## Ejemplo con 32bits
 <p>
@@ -474,8 +501,11 @@ count: false
 ---
 template: screen
 count: false
-# Distintos sistemas: números enteros y positivos
-## Pasaje directo
+# Pasaje entre distintos sistemas
+## Pasaje directo de números enteros y positivos
+
+<img src="assets/warning.svg" class="warning">
+
 
 ## Ejemplo con 32bits
 <p>
@@ -485,8 +515,11 @@ $\small{53048=1100111100111000_{(2)}}$
 ---
 template: screen
 count: false
-# Distintos sistemas: números enteros y positivos
-## Pasaje directo
+# Pasaje entre distintos sistemas
+## Pasaje directo de números enteros y positivos
+
+<img src="assets/warning.svg" class="warning">
+
 
 ## Ejemplo con 32bits
 <p>
@@ -496,9 +529,13 @@ $\small{53048=1100111100111000_{(2)} = CF38_{(16)} = 147470_{(8)}}$
 ---
 template: screen
 # Operaciones aritméticas con números binarios
+
 --
 count:false
 ## Suma
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count:false
 
@@ -560,6 +597,9 @@ template: screen
 --
 count:false
 ## Producto
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count:false
 
@@ -675,6 +715,9 @@ template: screen
 --
 count:false
 ## Resta
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count:false
 
@@ -865,6 +908,9 @@ Nuevamente, doble representación del 0
 ---
 # Convenio de complemento a dos
 
+<img src="assets/warning.svg" class="warning">
+
+
 --
 count: false
 ## Ejemplo con 8 bits
@@ -897,6 +943,9 @@ count: false
 template: screen
 # Convenio de complemento a dos
 
+<img src="assets/warning.svg" class="warning">
+
+
 ## Ejemplo con 8 bits
 --
 count: false
@@ -926,6 +975,9 @@ count: false
 template: screen
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
+<img src="assets/warning.svg" class="warning">
+
+
 --
 count: false
 
@@ -944,6 +996,9 @@ count: false
 template: screen
 count: false
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
+
+<img src="assets/warning.svg" class="warning">
+
 
 <div style="font-size: 80%;">
 <p>
@@ -973,6 +1028,9 @@ template: screen
 count: false
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
+<img src="assets/warning.svg" class="warning">
+
+
 <div style="font-size: 80%;">
 <p>
     \begin{array}{ccccccccc}
@@ -991,6 +1049,9 @@ count: false
 ---
 template: screen
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
+
+<img src="assets/warning.svg" class="warning">
+
 
 --
 count: false
@@ -1031,6 +1092,9 @@ count: false
 template: screen
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
+<img src="assets/warning.svg" class="warning">
+
+
 <div style="font-size: 80%;">
 <p>
     \begin{array}{ccccccccc}
@@ -1050,6 +1114,9 @@ El acarreo se ignora
 ---
 template: screen
 # Representación de números fraccionales
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1131,6 +1198,9 @@ $$
 ---
 template: screen
 # Representación de números fraccionales
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1403,6 +1473,9 @@ $0.195$ tiene una expansión binaria infinita
 ---
 template: screen
 # Representación de números fraccionales
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1440,6 +1513,9 @@ $0.625 \xrightarrow[]{\text{a binario}} 0.101$
 ---
 template: screen
 # Representación de números fraccionales
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1543,6 +1619,9 @@ template: screen
 # Notación punto fijo y punto flotante
 ## Punto fijo
 
+<img src="assets/warning.svg" class="warning">
+
+
 --
 count: false
 
@@ -1633,6 +1712,9 @@ template: screen
 # Notación punto fijo y punto flotante
 ## Punto flotante
 
+<img src="assets/warning.svg" class="warning">
+
+
 --
 count: false
 
@@ -1651,6 +1733,9 @@ En computación se utiliza el estándar IEEE 754.
 ---
 template: screen
 # Representación según formato IEEE 754
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1672,6 +1757,9 @@ Significando o Mantisa (T): 23 bits.
 ---
 template: screen
 # Representación según formato IEEE 754
+
+<img src="assets/warning.svg" class="warning">
+
 
 El estándar determina que se utilizan 32 bits para los números de punto flotante de simple precisión y 64 bits para los de doble precisión.
 
@@ -1984,7 +2072,13 @@ Por este motivo, **nunca** deben compararse por igual dos números de punto flot
 
 ---
 template: screen
-# Representación de caracteres: Decimal Codificado en Binario (BCD).
+# Representación de caracteres
+## Decimal Codificado en Binario (BCD)
+
+<img src="assets/warning.svg" class="warning">
+
+--
+count: false
 
 Representación de números decimales donde cada dígito del número en base 10 se representa en base 2
 
@@ -1997,7 +2091,8 @@ count: false
 
 ---
 template: screen
-# Representación de caracteres: Decimal Codificado en Binario (BCD).
+# Representación de caracteres
+## Decimal Codificado en Binario (BCD)
 
 --
 count: false
@@ -2018,7 +2113,11 @@ $2019 = 0010000000011001$
 
 ---
 template: screen
-# Representación de caracteres: ASCII.
+# Representación de caracteres
+## ASCII
+
+<img src="assets/warning.svg" class="warning">
+
 
 ---
 template: screen
