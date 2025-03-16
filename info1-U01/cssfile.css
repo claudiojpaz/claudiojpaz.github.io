@@ -52,15 +52,16 @@ td:empty {
 .email {font-size: 25px; font-family: 'Source code pro';}
 .remark-slide-content h1 {
   font-size: 50px;
-  color: darkcyan;
+  color: #f3f3f3;
 }
 .remark-slide-content h2 {
   font-size: 30px;
-  color: darkcyan;
+  color: #f3f3f3;
 }
 .remark-slide-content h3 {
   margin-bottom: -10px;
   margin-top: -10px;
+  color: #f3f3f3;
 }
 .remark-slide-content p, ul, ol {
   font-size: 1.5em;
@@ -75,7 +76,7 @@ td:empty {
 .blue {color: blue;}
 .teal {color: teal;}
 .olive {color: olive;}
-.title-color {color: darkcyan;}
+.title-color {color: #f3f3f3;}
 .top {vertical-align: top;}
 .inline-code {font-family: 'Source code pro'; font-size: 1em}
 .header {
@@ -131,7 +132,7 @@ td:empty {
 }
 
 #slide-intermediate .title {
-  color: darkslategray;
+  color: #f3f3f3;
 }
 
 .remark-code, .remark-inline-code { font-family: 'source code pro','lucida console',Monaco,monospace; font-size: 85%; border-radius: .3em }

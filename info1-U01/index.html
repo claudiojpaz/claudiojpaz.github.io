@@ -58,6 +58,10 @@
         var url = this;
         return '<img src="' + url + '" style="width: ' + percentage + '" />';
       };
+      remark.macros.fullwidth = function () {
+        var url = this;
+        return '<img src="' + url + '" style="width: 100%; height: auto; object-fit: contain; position: absolute; left: 50%; transform: translateX(-50%);" />';
+      };
       var slideshow = remark.create({
         sourceUrl: 'slides.md',
         highlightStyle: 'solarized-dark',

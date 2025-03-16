@@ -19,7 +19,7 @@ Marzo 2025
 
 ---
 class: middle, center, intermediate
-.title-dark[Unidad 1]
+.title[Unidad 1]
 # Estructura de una computadora
 ---
 name: historia
@@ -186,7 +186,7 @@ template: computer-system
 count: false
 
 .center[![una imagen](assets/computer-system-2011-pag8.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
@@ -195,7 +195,7 @@ count: false
 .header[.title-color[Memoria Principal]]
 
 .center[![una imagen](assets/computer-system-2011-pag8.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
@@ -204,13 +204,13 @@ count: false
 .header[.title-color[Memoria Principal]]
 
 .center[![una imagen](assets/computer-system-2011-pag8-memory.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
 
 .center[![una imagen](assets/computer-system-2011-pag8.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
@@ -219,7 +219,7 @@ count: false
 .header[.title-color[Dispositivos de Entrada/Salida]]
 
 .center[![una imagen](assets/computer-system-2011-pag8.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
@@ -228,13 +228,13 @@ count: false
 .header[.title-color[Dispositivos de Entrada/Salida]]
 
 .center[![una imagen](assets/computer-system-2011-pag8-io.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
 
 .center[![una imagen](assets/computer-system-2011-pag8.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
@@ -242,7 +242,7 @@ template: computer-system
 .header[.title-color[Unidad Central de Procesamiento]]
 
 .center[![una imagen](assets/computer-system-2011-pag8.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
@@ -252,13 +252,13 @@ count: false
 
 .center[![una imagen](assets/computer-system-2011-pag8-cpu.svg)]
 
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
 
 .center[![una imagen](assets/computer-system-2011-pag8.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
@@ -267,7 +267,7 @@ count: false
 .header[.title-color[Buses]]
 
 .center[![una imagen](assets/computer-system-2011-pag8.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 template: computer-system
@@ -276,7 +276,7 @@ count: false
 .header[.title-color[Buses]]
 
 .center[![una imagen](assets/computer-system-2011-pag8-bus.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ???
 Que son los buses? Cables, un pedazo de cobre
@@ -528,7 +528,7 @@ Pero el sistema operativo presenta el tamaño en base 2
 count: false
 
 .center[![una imagen](assets/computer-system-2011-pag8-memory.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 # Memoria Principal
@@ -561,7 +561,7 @@ Almacena los programas que están en ejecución.
 count: false
 
 .center[![una imagen](assets/computer-system-2011-pag8-register.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.44 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.44 ]]
 
 ---
 # Registros
@@ -620,7 +620,7 @@ El tamaño del archivo de registros es muy pequeño, típicamente del orden del 
 count: false
 
 .center[![una imagen](assets/computer-system-2011-pag45_.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.49 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.49 ]]
 
 ---
 # Memoria caché
@@ -670,7 +670,7 @@ La caché L3 tiene una capacidad del orden de los MB. (Ej. en mi laptop L3 6MB)
 count: false
 
 .center[![una imagen](assets/computer-system-2015-pag61.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.61 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.61 ]]
 
 ---
 # Jerarquía de memoria.
@@ -681,7 +681,7 @@ count: false
 count: false
 
 .center[![una imagen](assets/computer-system-2011-pag50.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.50 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.50 ]]
 
 ---
 # Unidad Central de Procesamiento o CPU
@@ -689,7 +689,7 @@ count: false
 count: false
 
 .center[![una imagen](assets/computer-system-2011-pag45-clean.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.49 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.49 ]]
 
 ---
 # Unidad Central de Procesamiento o CPU
@@ -910,7 +910,7 @@ Por suerte, en Informática 1 vamos a aprender Lenguaje C
 count: false
 
 .center[![una imagen](assets/computer-system-2015-pag51-so.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.51 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.51 ]]
 
 --
 count: false
@@ -921,7 +921,7 @@ Los programas no reciben directamente la información ingresada desde el teclado
 # Sistemas Operativos
 
 .center[![una imagen](assets/computer-system-2015-pag51-so.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.51 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.51 ]]
 
 --
 count: false
@@ -953,7 +953,7 @@ Para lograr estos objetivos el SO utiliza tres abstracciones: _procesos_, _memor
 count: false
 
 .center[![una imagen](assets/computer-system-2015-pag51-so-tools.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.51 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.51 ]]
 
 ---
 # Sistemas Operativos
@@ -982,6 +982,15 @@ Normalmente, hay más procesos que CPUs.
 --
 count: false
 
+.center[![:scale 80%](assets/process.svg)]
+
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.53]]
+
+---
+# Sistemas Operativos
+--
+count: false
+
 La **memoria virtual** es una abstracción que provee a cada proceso la ilusión que tiene uso exclusivo de la memoria principal, conocida como _espacio virtual de memoria_
 
 --
@@ -989,6 +998,14 @@ count: false
 
 El espacio de memoria virtual tiene áreas bien definidas cada una con su propósito específico
 
+---
+# Sistemas Operativos
+--
+count: false
+
+.center[![:scale 80%](assets/virtual-memory.svg)]
+
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.54]]
 
 ---
 # Sistemas Operativos
@@ -1406,7 +1423,7 @@ el cual se verá en detalle en la Unidad 3
 count: false
 
 .center[![una imagen](assets/computer-system-2015-pag41.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.41 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.41 ]]
 
 --
 count: false
@@ -1417,7 +1434,7 @@ El **preprocesador** modifica el programa original agregando y quitando texto pa
 # Fases de compilación
 
 .center[![una imagen](assets/computer-system-2015-pag41.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.41 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.41 ]]
 
 --
 count: false
@@ -1428,7 +1445,7 @@ El **compilador** traduce el programa del archivo `.i` a lenguaje _assembly_, de
 # Fases de compilación
 
 .center[![una imagen](assets/computer-system-2015-pag41.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.41 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.41 ]]
 
 --
 count: false
@@ -1440,7 +1457,7 @@ Queda un archivo `.o`
 # Fases de compilación
 
 .center[![una imagen](assets/computer-system-2015-pag41.svg)]
-.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2015, Cap.1, pág.41 ]]
+.smaller50[.footnote[Ilustración tomada de _Computer Systems_, Bryant-O’Hallaron, Ed. 2016, Cap.1, pág.41 ]]
 
 --
 count: false
@@ -1524,6 +1541,6 @@ count: false
 
 Randal E. Bryant and David R. O’Hallaron
 
-_2015_ Third edition.
+_2016_ Third edition.
 
 Cap. 1
