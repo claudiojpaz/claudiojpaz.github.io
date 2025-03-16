@@ -131,7 +131,7 @@ Para **Aprobar Directamente** la materia se necesita que las partes (teórica y 
 --
 count: false
 
-También hay que realizar un trabajo práctico extra (TP10)
+También hay que realizar un trabajo práctico extra (TP Integrador)
 
 ---
 template: parciales
