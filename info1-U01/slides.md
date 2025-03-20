@@ -975,7 +975,7 @@ count: false
 --
 count: false
 
-Normalmente, hay más procesos que CPUs.
+Normalmente, hay más procesos que núcleos.
 
 ---
 # Sistemas Operativos
