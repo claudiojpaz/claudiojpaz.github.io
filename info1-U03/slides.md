@@ -7,7 +7,7 @@ Claudio Paz
 
 <!-- .email[claudiojpaz@gmail.com] -->
 
-Abril 2024
+Abril 2025
 
 ![:scale 50%](assets/this.png)
 
@@ -60,6 +60,8 @@ count: false
 ---
 # Elementos del lenguaje C
 
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -82,6 +84,9 @@ count: false
 </div>
 ---
 # Elementos del lenguaje C
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -95,6 +100,9 @@ count: false
 ---
 count:false
 # Elementos del lenguaje C
+
+<img src="assets/warning.svg" class="warning">
+
 
 ## Palabras clave
 
@@ -118,6 +126,9 @@ count: false
 
 ---
 # Elementos del lenguaje C
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -151,6 +162,9 @@ No pueden tener espacios ni operadores aritméticos.
 ---
 # Elementos del lenguaje C
 
+<img src="assets/warning.svg" class="warning">
+
+
 ## Identificadores
 
 --
@@ -178,6 +192,9 @@ $\mathtt{i}$<br>
 ---
 count: false
 # Elementos del lenguaje C
+
+<img src="assets/warning.svg" class="warning">
+
 
 ## Identificadores
 
@@ -214,6 +231,9 @@ $\mathtt{max\;temp}$<br>
 ---
 # Elementos del lenguaje C
 
+<img src="assets/warning.svg" class="warning">
+
+
 --
 count: false
 
@@ -237,6 +257,9 @@ Pueden ser números, caracteres individuales o cadenas de texto.
 ---
 # Elementos del lenguaje C
 ## Constantes
+
+<img src="assets/warning.svg" class="warning">
+
 
 --
 count: false
@@ -278,6 +301,9 @@ count: false
 ---
 # Elementos del lenguaje C
 
+<img src="assets/warning.svg" class="warning">
+
+
 --
 count: false
 
@@ -311,6 +337,9 @@ Lógicos: && y ||
 ---
 # Elementos del lenguaje C
 
+<img src="assets/warning.svg" class="warning">
+
+
 --
 count: false
 
@@ -334,6 +363,9 @@ count: false
 
 ---
 # Elementos del lenguaje C
+
+<img src="assets/warning.svg" class="warning">
+
 
 --
 count: false
@@ -408,6 +440,9 @@ count: false
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 .right-30-column[
 
 Todos los programas deben tener una función ``main``
@@ -462,6 +497,9 @@ int main (void)
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 .right-30-column[
 Las llaves definen _bloques_.
 
@@ -514,6 +552,9 @@ int main (void)
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 .right-30-column[
 
 A partir del estándar C90 en adelante, la función ``main`` debe terminar con un ``return``.
@@ -542,6 +583,9 @@ int main (void)
 
 --
 count: false
+
+<img src="assets/warning.svg" class="warning">
+
 
 .right-30-column[
 
@@ -595,6 +639,9 @@ int main (void)
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 .right-30-column[
 
 Las líneas que comienzan con # se llaman _directivas de preprocesador_.
@@ -622,6 +669,9 @@ int main (void)
 
 --
 count: false
+
+<img src="assets/warning.svg" class="warning">
+
 
 .right-30-column[
 
@@ -709,6 +759,9 @@ int main (void)
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 .right-30-column[
 
 En este caso ``printf`` y ``return 0`` son sentencias simples...
@@ -735,6 +788,9 @@ int main (void)
 
 --
 count: false
+
+<img src="assets/warning.svg" class="warning">
+
 .right-30-column[
 
 Sentencias simples deben terminar con punto y coma (;)
@@ -764,6 +820,9 @@ int main (void)
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 .right-30-column[
 
 ``printf`` es una función definida en ``stdio.h``...
@@ -773,6 +832,9 @@ count: false
 ---
 count: false
 # Primer ejemplo: Hola, Mundo!
+
+<img src="assets/warning.svg" class="warning">
+
 
 .left-70-column[
 ```C
@@ -810,6 +872,9 @@ count: false
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 > **Editor:** Programa con el que se pueden modificar los archivos donde se escriben los programas.
 > Luego de modificarlos se guardan en el disco.
 
@@ -828,6 +893,9 @@ No confundir con los IDE de programación (geany, zinja, eclipse, codeblock, etc
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 > **Preprocesador:** Programa que se ejecuta automáticamente antes del compilador.
 > Modifica el archivo original agregando y quitando texto.
 > Luego guarda el resultado nuevamente en el disco.
@@ -842,6 +910,9 @@ El preprocesador _pega_ el contenido de los archivos solicitados con la directiv
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 > **Compilador:** Programa que traduce el código escrito en C y lo pasa a un código entendible por la máquina.
 > Luego guarda el resultado nuevamente en el disco como código objeto.
 
@@ -855,6 +926,9 @@ En esta fase podemos considerar que el compilador está formado por el compilado
 --
 count: false
 
+<img src="assets/warning.svg" class="warning">
+
+
 > **Linqueador:** Programa que compagina el código objeto realizado por el compilador con el código objeto de las funciones de bibliotecas usadas por el programa.
 > Luego guarda el resultado nuevamente en el disco como un archivo ejecutable.
 
@@ -862,6 +936,9 @@ count: false
 # Ambiente de desarrollo
 --
 count: false
+
+<img src="assets/warning.svg" class="warning">
+
 
 > **Cargador:** Programa que toma el programa del disco y lo coloca en memoria, quedando listo para ejecutarse.
 
@@ -998,6 +1075,9 @@ count: false
 
 ---
 # Funciones de entrada/salida
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1024,6 +1104,9 @@ count: false
 
 ---
 # Funciones de entrada/salida
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1037,6 +1120,9 @@ Algunas funciones son:<br>
 
 ---
 # Funciones de entrada/salida
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1058,6 +1144,9 @@ int main (void)
 
 ---
 # Función printf
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1081,6 +1170,9 @@ La barra invertida (.inline-code[\]) se llama **caracter de escape**, y cambia e
 
 ---
 # Función printf
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1243,6 +1335,9 @@ $
 ---
 layout: false
 # Función printf
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1262,6 +1357,9 @@ count: false
 
 ---
 # Función printf
+
+<img src="assets/warning.svg" class="warning">
+
 
 ## Especificadores de conversión o de formato
 --
@@ -1426,15 +1524,15 @@ layout: false
 --
 count: false
 
-.left-column[
+.left-60-column[
 ]
-.right-column[
+.right-40-column[
 <img src="assets/variable.svg" height="400">
 ]
 ---
 count: false
 # Variables
-.left-column[
+.left-60-column[
 
 Todas las variables tienen:
 - Nombre o identificador
@@ -1443,7 +1541,7 @@ Todas las variables tienen:
 - Tipo
 ]
 
-.right-column[
+.right-40-column[
 <img src="assets/variable.svg" height="400">
 ]
 
@@ -1474,6 +1572,9 @@ count: false
 
 ---
 # Definición de variables
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1493,6 +1594,9 @@ También hay que asignar un **nombre**, con el cual se puede acceder al contenid
 
 ---
 # Definición de variables
+
+<img src="assets/warning.svg" class="warning">
+
 
 --
 count: false
@@ -1524,6 +1628,9 @@ float max_temp;
 ---
 # Definición de variables
 
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1548,6 +1655,9 @@ int main (void)
 count: false
 # Definición de variables
 
+<img src="assets/warning.svg" class="warning">
+
+
 ## Donde?
 
 ```C
@@ -1571,6 +1681,9 @@ Por ahora entre las llaves del cuerpo de .inline-code[.teal[main]]
 count: false
 # Definición de variables
 
+<img src="assets/warning.svg" class="warning">
+
+
 ## Donde?
 
 ```C
@@ -1589,6 +1702,9 @@ int main (void)
 ```
 ---
 # Definición de variables
+
+
+<img src="assets/warning.svg" class="warning">
 
 
 ## Donde?
@@ -1614,6 +1730,9 @@ Cuando se **asigna** un valor a una variable se dice que se **inicializa**
 ---
 # Definición de variables
 
+<img src="assets/warning.svg" class="warning">
+
+
 --
 count: false
 Se puede **inicializar** una variable en el mismo momento que se **define**
@@ -1638,6 +1757,9 @@ int main (void)
 count: false
 # Definición de variables
 
+<img src="assets/warning.svg" class="warning">
+
+
 Se puede **inicializar** una variable en el mismo momento que se **define**
 
 ```C
@@ -1656,6 +1778,9 @@ int main (void)
 
 ---
 # Definición de variables
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1773,6 +1898,9 @@ Y prestar atención a los mensajes del compilador.
 ---
 layout: false
 # Operadores
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1795,6 +1923,9 @@ Los operadores siempre **devuelven** el resultado de la operación.
 
 ---
 # Operadores aritméticos
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count:false
 ## Unarios
@@ -1823,6 +1954,9 @@ count: false
 ---
 layout: false
 # Operadores aritméticos
+
+<img src="assets/warning.svg" class="warning">
+
 ---
 layout: true
 # Operadores aritméticos
@@ -1961,6 +2095,9 @@ El orden en el que se resuelven las operaciones depende de las reglas de precede
 ---
 layout: false
 # Precedencia
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 
@@ -1990,6 +2127,12 @@ Hasta ahora...
     \end{array}
 </p>
 </div>
+
+--
+count: false
+
+<img src="assets/warning.svg" class="warning">
+
 
 ---
 # Precedencia
@@ -2067,6 +2210,9 @@ count: false
 ---
 layout: false
 # Operadores relacionales
+
+<img src="assets/warning.svg" class="warning">
+
 --
 count: false
 <div style="font-size: 90%; "> 
