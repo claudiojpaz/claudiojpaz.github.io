@@ -1677,6 +1677,11 @@ int main (void)
 --
 count: false
 Por ahora entre las llaves del cuerpo de .inline-code[.teal[main]]
+
+--
+count: false
+Siempre **antes de su uso**
+
 ---
 count: false
 # Definición de variables
