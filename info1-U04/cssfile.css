@@ -174,10 +174,6 @@ td:empty {
   width: 70%;
   float: left;
 }
-.left-99-column {
-  width: 99%;
-  float: left;
-}
 .right-30-column {
   width: 30%;
   float: right;
@@ -191,7 +187,11 @@ td:empty {
   font-style: italic;
   white-space: pre;
 }
-.up {
-  position: relative;
-  top: -1.0em;
+
+.warning {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
 }
