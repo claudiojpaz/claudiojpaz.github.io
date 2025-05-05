@@ -7,7 +7,7 @@ Claudio Paz
 
 <!-- .email[claudiojpaz@gmail.com] -->
 
-Mayo 2024
+Mayo 2025
 
 ![:scale 50%](assets/this.png)
 
