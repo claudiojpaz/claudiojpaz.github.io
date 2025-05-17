@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="carpetas-tesis.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="6.1802502"
+       x2="15.514889"
+       y1="31.36775"
+       x1="18.112709"
+       id="linearGradient3104-5"
+       xlink:href="#linearGradient3096"
+       inkscape:collect="always"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,29.877008,103.95134)" />
+    <linearGradient
+       id="linearGradient3096">
+      <stop
+         id="stop3098"
+         offset="0"
+         style="stop-color:#424242;stop-opacity:1;" />
+      <stop
+         id="stop3100"
+         offset="1.0000000"
+         style="stop-color:#777777;stop-opacity:1.0000000;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9766"
+       id="linearGradient9772"
+       x1="22.175976"
+       y1="36.987999"
+       x2="22.065331"
+       y2="32.050499"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,29.877008,103.95134)" />
+    <linearGradient
+       id="linearGradient9766">
+      <stop
+         style="stop-color:#6194cb;stop-opacity:1;"
+         offset="0"
+         id="stop9768" />
+      <stop
+         style="stop-color:#729fcf;stop-opacity:1;"
+         offset="1"
+         id="stop9770" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="46.689312"
+       x2="12.853771"
+       y1="32.567184"
+       x1="13.035696"
+       gradientTransform="matrix(1.7383425,0,0,1.1064946,28.716468,102.16447)"
+       id="linearGradient322-1"
+       xlink:href="#linearGradient8340"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient8340">
+      <stop
+         id="stop8342"
+         stop-color="#ffffff"
+         stop-opacity="0.796078" />
+      <stop
+         id="stop8344"
+         offset="1"
+         stop-color="#ffffff"
+         stop-opacity="0.215686" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3096"
+       id="linearGradient102"
+       gradientUnits="userSpaceOnUse"
+       x1="18.112709"
+       y1="31.36775"
+       x2="15.514889"
+       y2="6.1802502"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,113.74995,103.95134)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9766"
+       id="linearGradient104"
+       gradientUnits="userSpaceOnUse"
+       x1="22.175976"
+       y1="36.987999"
+       x2="22.065331"
+       y2="32.050499"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,113.74995,103.95134)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8340"
+       id="linearGradient106"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7383425,0,0,1.1064946,112.58941,102.16447)"
+       x1="13.035696"
+       y1="32.567184"
+       x2="12.853771"
+       y2="46.689312" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3096"
+       id="linearGradient120"
+       gradientUnits="userSpaceOnUse"
+       x1="18.112709"
+       y1="31.36775"
+       x2="15.514889"
+       y2="6.1802502"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,197.62289,103.95134)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9766"
+       id="linearGradient122"
+       gradientUnits="userSpaceOnUse"
+       x1="22.175976"
+       y1="36.987999"
+       x2="22.065331"
+       y2="32.050499"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,197.62289,103.95134)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8340"
+       id="linearGradient124"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7383425,0,0,1.1064946,196.46235,102.16447)"
+       x1="13.035696"
+       y1="32.567184"
+       x2="12.853771"
+       y2="46.689312" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3096"
+       id="linearGradient162"
+       gradientUnits="userSpaceOnUse"
+       x1="18.112709"
+       y1="31.36775"
+       x2="15.514889"
+       y2="6.1802502"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,29.877008,188.61806)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9766"
+       id="linearGradient164"
+       gradientUnits="userSpaceOnUse"
+       x1="22.175976"
+       y1="36.987999"
+       x2="22.065331"
+       y2="32.050499"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,29.877008,188.61806)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8340"
+       id="linearGradient166"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7383425,0,0,1.1064946,28.716468,186.83119)"
+       x1="13.035696"
+       y1="32.567184"
+       x2="12.853771"
+       y2="46.689312" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3096"
+       id="linearGradient168"
+       gradientUnits="userSpaceOnUse"
+       x1="18.112709"
+       y1="31.36775"
+       x2="15.514889"
+       y2="6.1802502"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,113.74995,188.61806)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9766"
+       id="linearGradient170"
+       gradientUnits="userSpaceOnUse"
+       x1="22.175976"
+       y1="36.987999"
+       x2="22.065331"
+       y2="32.050499"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,113.74995,188.61806)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8340"
+       id="linearGradient172"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7383425,0,0,1.1064946,112.58941,186.83119)"
+       x1="13.035696"
+       y1="32.567184"
+       x2="12.853771"
+       y2="46.689312" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3096"
+       id="linearGradient174"
+       gradientUnits="userSpaceOnUse"
+       x1="18.112709"
+       y1="31.36775"
+       x2="15.514889"
+       y2="6.1802502"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,197.62289,188.61806)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9766"
+       id="linearGradient176"
+       gradientUnits="userSpaceOnUse"
+       x1="22.175976"
+       y1="36.987999"
+       x2="22.065331"
+       y2="32.050499"
+       gradientTransform="matrix(1.3194361,0,0,1.355573,197.62289,188.61806)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8340"
+       id="linearGradient178"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.7383425,0,0,1.1064946,196.46235,186.83119)"
+       x1="13.035696"
+       y1="32.567184"
+       x2="12.853771"
+       y2="46.689312" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.56071358"
+     inkscape:cx="307.81156"
+     inkscape:cy="423.6057"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="false"
+     inkscape:window-width="1362"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-87)">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 35.843208,156.39496 c 0.02876,0.56433 0.606816,1.12866 1.156103,1.12866 h 41.334002 c 0.549284,0 1.069815,-0.56433 1.041056,-1.12866 l -1.235576,-36.90783 c -0.02876,-0.56433 -0.606805,-1.12867 -1.156091,-1.12867 H 59.472633 c -0.640002,0 -1.628809,-0.4278 -1.84938,-1.50012 l -0.806691,-3.92177 c -0.205132,-0.99726 -1.164025,-1.40693 -1.713312,-1.40693 H 35.603489 c -0.549298,0 -1.069826,0.56433 -1.041068,1.12866 z"
+       id="path216-5"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient3104-5);stroke-width:0.10470545;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccssssccc" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;display:block;visibility:visible;fill:url(#linearGradient9772);fill-opacity:1;fill-rule:nonzero;stroke:#3465a4;stroke-width:0.10470545;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       d="m 82.368836,157.51087 c 1.509295,-0.0597 2.590154,-1.48611 2.700932,-3.14629 1.044713,-15.65509 2.18942,-28.78146 2.18942,-28.78146 0.0952,-0.33548 -0.221548,-0.67096 -0.633514,-0.67096 H 41.275129 c 0,0 -2.441378,29.64217 -2.441378,29.64217 -0.151148,1.33126 -0.614867,2.44642 -2.044909,2.96018 l 45.579994,-0.004 z"
+       id="path233-5"
+       sodipodi:nodetypes="cscccscc"
+       inkscape:export-filename="/home/jimmac/ximian_art/icons/nautilus/suse93/gnome-fs-directory.png"
+       inkscape:export-xdpi="74.800003"
+       inkscape:export-ydpi="74.800003" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsscsc"
+       id="path304-3"
+       d="m 42.570306,126.26939 43.265759,0.0879 -2.076853,27.11414 c -0.111255,1.45252 -0.594641,1.93605 -2.47085,1.93605 -2.469327,0 -37.838746,-0.0439 -41.423356,-0.0439 0.308218,-0.43488 0.440369,-1.34015 0.442138,-1.36183 z"
+       style="opacity:0.46590911;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient322-1);stroke-width:0.10470541px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="47.850933"
+       y="173.37312"
+       id="text88"><tspan
+         sodipodi:role="line"
+         id="tspan86"
+         x="47.850933"
+         y="173.37312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335px">Tesis</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccccssssccc"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient102);stroke-width:0.10470545;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path90"
+       d="m 119.71615,156.39496 c 0.0288,0.56433 0.60682,1.12866 1.1561,1.12866 h 41.33401 c 0.54928,0 1.06981,-0.56433 1.04105,-1.12866 l -1.23558,-36.90783 c -0.0288,-0.56433 -0.6068,-1.12867 -1.15609,-1.12867 h -17.51007 c -0.64,0 -1.6288,-0.4278 -1.84938,-1.50012 l -0.80669,-3.92177 c -0.20513,-0.99726 -1.16402,-1.40693 -1.71331,-1.40693 h -19.49976 c -0.5493,0 -1.06982,0.56433 -1.04107,1.12866 z"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="74.800003"
+       inkscape:export-xdpi="74.800003"
+       inkscape:export-filename="/home/jimmac/ximian_art/icons/nautilus/suse93/gnome-fs-directory.png"
+       sodipodi:nodetypes="cscccscc"
+       id="path92"
+       d="m 166.24178,157.51087 c 1.50929,-0.0597 2.59015,-1.48611 2.70093,-3.14629 1.04471,-15.65509 2.18942,-28.78146 2.18942,-28.78146 0.0952,-0.33548 -0.22155,-0.67096 -0.63351,-0.67096 h -45.35055 c 0,0 -2.44138,29.64217 -2.44138,29.64217 -0.15115,1.33126 -0.61486,2.44642 -2.04491,2.96018 l 45.58,-0.004 z"
+       style="color:#000000;display:block;visibility:visible;fill:url(#linearGradient104);fill-opacity:1;fill-rule:nonzero;stroke:#3465a4;stroke-width:0.10470545;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:0.46590911;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient106);stroke-width:0.10470541px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 126.44325,126.26939 43.26576,0.0879 -2.07686,27.11414 c -0.11125,1.45252 -0.59464,1.93605 -2.47085,1.93605 -2.46932,0 -37.83874,-0.0439 -41.42335,-0.0439 0.30822,-0.43488 0.44037,-1.34015 0.44214,-1.36183 z"
+       id="path94"
+       sodipodi:nodetypes="ccsscsc"
+       inkscape:connector-curvature="0" />
+    <text
+       id="text100"
+       y="173.37312"
+       x="120.46707"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335px"
+         y="173.37312"
+         x="120.46707"
+         id="tspan98"
+         sodipodi:role="line">Tesis-hoy</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       d="m 203.58909,156.39496 c 0.0288,0.56433 0.60682,1.12866 1.1561,1.12866 h 41.33401 c 0.54928,0 1.06981,-0.56433 1.04105,-1.12866 l -1.23558,-36.90783 c -0.0288,-0.56433 -0.6068,-1.12867 -1.15609,-1.12867 h -17.51007 c -0.64,0 -1.6288,-0.4278 -1.84938,-1.50012 l -0.80669,-3.92177 c -0.20513,-0.99726 -1.16402,-1.40693 -1.71331,-1.40693 h -19.49976 c -0.5493,0 -1.06982,0.56433 -1.04107,1.12866 z"
+       id="path108"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient120);stroke-width:0.10470545;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccssssccc" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;display:block;visibility:visible;fill:url(#linearGradient122);fill-opacity:1;fill-rule:nonzero;stroke:#3465a4;stroke-width:0.10470545;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       d="m 250.11472,157.51087 c 1.50929,-0.0597 2.59015,-1.48611 2.70093,-3.14629 1.04471,-15.65509 2.18942,-28.78146 2.18942,-28.78146 0.0952,-0.33548 -0.22155,-0.67096 -0.63351,-0.67096 h -45.35055 c 0,0 -2.44138,29.64217 -2.44138,29.64217 -0.15115,1.33126 -0.61486,2.44642 -2.04491,2.96018 l 45.58,-0.004 z"
+       id="path110"
+       sodipodi:nodetypes="cscccscc"
+       inkscape:export-filename="/home/jimmac/ximian_art/icons/nautilus/suse93/gnome-fs-directory.png"
+       inkscape:export-xdpi="74.800003"
+       inkscape:export-ydpi="74.800003" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsscsc"
+       id="path112"
+       d="m 210.31619,126.26939 43.26576,0.0879 -2.07686,27.11414 c -0.11125,1.45252 -0.59464,1.93605 -2.47085,1.93605 -2.46932,0 -37.83874,-0.0439 -41.42335,-0.0439 0.30822,-0.43488 0.44037,-1.34015 0.44214,-1.36183 z"
+       style="opacity:0.46590911;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient124);stroke-width:0.10470541px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="202.93094"
+       y="173.37312"
+       id="text118"><tspan
+         sodipodi:role="line"
+         id="tspan116"
+         x="202.93094"
+         y="173.37312"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335px">Tesis-final</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccccssssccc"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient162);stroke-width:0.10470545;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path126"
+       d="m 35.843208,241.06168 c 0.02876,0.56433 0.606816,1.12866 1.156103,1.12866 h 41.334002 c 0.549284,0 1.069815,-0.56433 1.041056,-1.12866 l -1.235576,-36.90783 c -0.02876,-0.56433 -0.606805,-1.12867 -1.156091,-1.12867 H 59.472633 c -0.640002,0 -1.628809,-0.4278 -1.84938,-1.50012 l -0.806691,-3.92177 c -0.205132,-0.99726 -1.164025,-1.40693 -1.713312,-1.40693 H 35.603489 c -0.549298,0 -1.069826,0.56433 -1.041068,1.12866 z"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="74.800003"
+       inkscape:export-xdpi="74.800003"
+       inkscape:export-filename="/home/jimmac/ximian_art/icons/nautilus/suse93/gnome-fs-directory.png"
+       sodipodi:nodetypes="cscccscc"
+       id="path128"
+       d="m 82.368836,242.17759 c 1.509295,-0.0597 2.590154,-1.48611 2.700932,-3.14629 1.044713,-15.65509 2.18942,-28.78146 2.18942,-28.78146 0.0952,-0.33548 -0.221548,-0.67096 -0.633514,-0.67096 H 41.275129 c 0,0 -2.441378,29.64217 -2.441378,29.64217 -0.151148,1.33126 -0.614867,2.44642 -2.044909,2.96018 l 45.579994,-0.004 z"
+       style="color:#000000;display:block;visibility:visible;fill:url(#linearGradient164);fill-opacity:1;fill-rule:nonzero;stroke:#3465a4;stroke-width:0.10470545;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:0.46590911;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient166);stroke-width:0.10470541px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 42.570306,210.93611 43.265759,0.0878 -2.076853,27.11414 c -0.111255,1.45252 -0.594641,1.93605 -2.47085,1.93605 -2.469327,0 -37.838746,-0.0439 -41.423356,-0.0439 0.308218,-0.43488 0.440369,-1.34015 0.442138,-1.36183 z"
+       id="path130"
+       sodipodi:nodetypes="ccsscsc"
+       inkscape:connector-curvature="0" />
+    <text
+       id="text136"
+       y="258.03986"
+       x="61.22179"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458335px"
+         y="258.03986"
+         x="61.22179"
+         id="tspan134"
+         sodipodi:role="line">Tesis-final</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458335px"
+         y="272.41113"
+         x="61.22179"
+         sodipodi:role="line"
+         id="tspan192">-final</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       d="m 119.71615,241.06168 c 0.0288,0.56433 0.60682,1.12866 1.1561,1.12866 h 41.33401 c 0.54928,0 1.06981,-0.56433 1.04105,-1.12866 l -1.23558,-36.90783 c -0.0288,-0.56433 -0.6068,-1.12867 -1.15609,-1.12867 h -17.51007 c -0.64,0 -1.6288,-0.4278 -1.84938,-1.50012 l -0.80669,-3.92177 c -0.20513,-0.99726 -1.16402,-1.40693 -1.71331,-1.40693 h -19.49976 c -0.5493,0 -1.06982,0.56433 -1.04107,1.12866 z"
+       id="path138"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient168);stroke-width:0.10470545;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="ccccccssssccc" />
+    <path
+       inkscape:connector-curvature="0"
+       style="color:#000000;display:block;visibility:visible;fill:url(#linearGradient170);fill-opacity:1;fill-rule:nonzero;stroke:#3465a4;stroke-width:0.10470545;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       d="m 166.24178,242.17759 c 1.50929,-0.0597 2.59015,-1.48611 2.70093,-3.14629 1.04471,-15.65509 2.18942,-28.78146 2.18942,-28.78146 0.0952,-0.33548 -0.22155,-0.67096 -0.63351,-0.67096 h -45.35055 c 0,0 -2.44138,29.64217 -2.44138,29.64217 -0.15115,1.33126 -0.61486,2.44642 -2.04491,2.96018 l 45.58,-0.004 z"
+       id="path140"
+       sodipodi:nodetypes="cscccscc"
+       inkscape:export-filename="/home/jimmac/ximian_art/icons/nautilus/suse93/gnome-fs-directory.png"
+       inkscape:export-xdpi="74.800003"
+       inkscape:export-ydpi="74.800003" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsscsc"
+       id="path142"
+       d="m 126.44325,210.93611 43.26576,0.0878 -2.07686,27.11414 c -0.11125,1.45252 -0.59464,1.93605 -2.47085,1.93605 -2.46932,0 -37.83874,-0.0439 -41.42335,-0.0439 0.30822,-0.43488 0.44037,-1.34015 0.44214,-1.36183 z"
+       style="opacity:0.46590911;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient172);stroke-width:0.10470541px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="125.53913"
+       y="258.03986"
+       id="text148"><tspan
+         sodipodi:role="line"
+         id="tspan146"
+         x="125.53913"
+         y="258.03986"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335px">Tesis-si</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccccssssccc"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient174);stroke-width:0.10470545;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path150"
+       d="m 203.58909,241.06168 c 0.0288,0.56433 0.60682,1.12866 1.1561,1.12866 h 41.33401 c 0.54928,0 1.06981,-0.56433 1.04105,-1.12866 l -1.23558,-36.90783 c -0.0288,-0.56433 -0.6068,-1.12867 -1.15609,-1.12867 h -17.51007 c -0.64,0 -1.6288,-0.4278 -1.84938,-1.50012 l -0.80669,-3.92177 c -0.20513,-0.99726 -1.16402,-1.40693 -1.71331,-1.40693 h -19.49976 c -0.5493,0 -1.06982,0.56433 -1.04107,1.12866 z"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:export-ydpi="74.800003"
+       inkscape:export-xdpi="74.800003"
+       inkscape:export-filename="/home/jimmac/ximian_art/icons/nautilus/suse93/gnome-fs-directory.png"
+       sodipodi:nodetypes="cscccscc"
+       id="path152"
+       d="m 250.11472,242.17759 c 1.50929,-0.0597 2.59015,-1.48611 2.70093,-3.14629 1.04471,-15.65509 2.18942,-28.78146 2.18942,-28.78146 0.0952,-0.33548 -0.22155,-0.67096 -0.63351,-0.67096 h -45.35055 c 0,0 -2.44138,29.64217 -2.44138,29.64217 -0.15115,1.33126 -0.61486,2.44642 -2.04491,2.96018 l 45.58,-0.004 z"
+       style="color:#000000;display:block;visibility:visible;fill:url(#linearGradient176);fill-opacity:1;fill-rule:nonzero;stroke:#3465a4;stroke-width:0.10470545;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:0.46590911;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient178);stroke-width:0.10470541px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 210.31619,210.93611 43.26576,0.0878 -2.07686,27.11414 c -0.11125,1.45252 -0.59464,1.93605 -2.47085,1.93605 -2.46932,0 -37.83874,-0.0439 -41.42335,-0.0439 0.30822,-0.43488 0.44037,-1.34015 0.44214,-1.36183 z"
+       id="path154"
+       sodipodi:nodetypes="ccsscsc"
+       inkscape:connector-curvature="0" />
+    <text
+       id="text160"
+       y="258.03986"
+       x="194.55798"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.4970274px;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335px"
+         y="258.03986"
+         x="194.55798"
+         id="tspan158"
+         sodipodi:role="line">Tesis-esta-no</tspan></text>
+  </g>
+</svg>
