@@ -243,6 +243,17 @@ $ git config --global core.editor /usr/bin/vim
 ```
 ]
 
+--
+count: false
+
+Para hacer los `merge` a mano cuando git falla
+
+.bigger25[
+```sh
+$ git config --global merge.tool /usr/bin/meld
+```
+]
+
 
 ---
 # Para Configurar
