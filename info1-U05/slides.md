@@ -271,7 +271,7 @@ count: false
 ### Ejemplo
 
 .left-40-column[
-.center[<img src="assets/si-doble-nota-aprobado.svg" width="400" style="position: relative; top: 10px; left: -60px" >]
+.center[<img src="assets/si-doble-nota-aprobado.svg" width="400" style="position: relative; top: 10px; left: -60px; z-index: -1;" >]
 ]
 .right-60-column[
 ```C
