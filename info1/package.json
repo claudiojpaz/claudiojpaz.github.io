@@ -1,0 +1,20 @@
+{
+  "name": "info1",
+  "scripts": {
+    "dev:main": "slidev --open slides.md --port 3030",
+    "dev:u01": "slidev u01/slides.md --port 3031",
+    "dev:u02": "slidev u02/slides.md --port 3032",
+    "dev": "concurrently \"npm:dev:*\"",
+    "build": "npm run build:main && npm run build:u01 && npm run build:u02",
+    "build:main": "slidev build slides.md --out dist",
+    "build:u01": "slidev build u01/slides.md --out dist/u01",
+    "build:u02": "slidev build u02/slides.md --out dist/u02"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.49.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
+
