@@ -23,8 +23,6 @@ duration: 35min
 
 # Informática 1
 
-<!--![Foto](/img/yo.png)-->
-
 Presentation slides for developers
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
