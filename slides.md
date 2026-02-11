@@ -1,8 +1,11 @@
 ---
-theme: default
-background: assets/binary_dark.jpg
+# try also 'default' to start simple
+theme: seriph
+# random image from a curated Unsplash collection by Anthony
+# like them? see https://unsplash.com/collections/94734566/slidev
+background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Informática 1
+title: Personal
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -21,7 +24,11 @@ mdc: true
 duration: 35min
 ---
 
-# Informática 1
+[Informática 1](https://claudiojpaz.github.io/info1/)
+
+---
+
+# Welcome to Slidev
 
 Presentation slides for developers
 

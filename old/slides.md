@@ -1,6 +1,9 @@
 ---
+# try also 'default' to start simple
 theme: default
-background: assets/binary_dark.jpg
+# random image from a curated Unsplash collection by Anthony
+# like them? see https://unsplash.com/collections/94734566/slidev
+background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
 title: Informática 1
 info: |
@@ -17,34 +20,21 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
-# duration of the presentation
-duration: 35min
 ---
 
 # Informática 1
 
-Presentation slides for developers
+Claudio J. Paz
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
-</div>
-
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
-  </a>
-</div>
-
+<WarningDialog text="No tocar el lente durante el proceso de calibración. Puede dañar el sensor." />
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
 ---
 transition: fade-out
 ---
+
+<WarningDialog text="Para probar nomas." />
 
 # What is Slidev?
 
@@ -88,27 +78,9 @@ transition: slide-up
 level: 2
 ---
 
-# Navigation
+Bienvenido al curso 👋  
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
-
-## Keyboard Shortcuts
-
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+- [Unidad 1](./u01/slides.md)
 
 ---
 layout: two-cols
@@ -448,9 +420,9 @@ const final = {
 
 ---
 
-# $\LaTeX$
+# LaTeX
 
-$\LaTeX$ is supported out-of-box. Powered by [$\KaTeX$](https://katex.org/).
+LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
 
 <div h-3 />
 
@@ -549,7 +521,7 @@ Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML D
 ---
 foo: bar
 dragPos:
-  square: 691,32,167,_,-16
+  square: 688,29,167,_,-16
 ---
 
 # Draggable Elements
@@ -589,7 +561,7 @@ Double-click on the draggable elements to edit their positions.
 <v-drag-arrow two-way />
 ```
 
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
+<v-drag-arrow pos="67,452,441,-68" two-way op70 />
 
 ---
 src: ./pages/imported-slides.md
