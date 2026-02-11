@@ -37,8 +37,12 @@ jobs:
         run: |
           mkdir dist
           cp -r build/home/* dist/
-          mkdir dist/info1
-          cp -r build/info1/* dist/info1/
+          cp -r build/info1 dist/info1
+
+      - name: Debug folders
+        run: |
+          echo "=== BUILD CONTENT ==="
+          ls -R build || true
 
       - name: Disable Jekyll
         run: touch dist/.nojekyll
