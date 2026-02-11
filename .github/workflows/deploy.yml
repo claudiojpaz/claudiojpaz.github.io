@@ -2,7 +2,7 @@ name: Deploy Slidev Site
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 permissions:
   contents: read
