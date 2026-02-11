@@ -27,11 +27,18 @@ jobs:
 
       # Build home
       - name: Build home
-        run: npx slidev build slides.md --out dist --emptyOutDir true
+        run: npx slidev build slides.md --out build/home
 
       # Build info1
       - name: Build info1
-        run: npx slidev build info1/slides.md --base /info1/ --out dist/info1 --emptyOutDir false
+        run: npx slidev build info1/slides.md --base /info1/ --out build/info1
+
+      - name: Assemble final dist
+        run: |
+          mkdir dist
+          cp -r build/home/* dist/
+          mkdir dist/info1
+          cp -r build/info1/* dist/info1/
 
       - name: Disable Jekyll
         run: touch dist/.nojekyll
