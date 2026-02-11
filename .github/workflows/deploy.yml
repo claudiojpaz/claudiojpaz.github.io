@@ -40,13 +40,6 @@ jobs:
           cp -r ${{ github.workspace }}/build/home/. ${{ github.workspace }}/dist/
           cp -r ${{ github.workspace }}/build/info1 ${{ github.workspace }}/dist/info1
 
-      - name: Debug folders
-        run: |
-          echo "=== BUILD CONTENT ==="
-          ls -R build || true
-          echo "=== LIST DIRECTORIES ==="
-          ls -R .
-
       - name: Disable Jekyll
         run: touch dist/.nojekyll
 

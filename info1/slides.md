@@ -1,6 +1,6 @@
 ---
 theme: default
-background: assets/binary_dark.jpg
+background: info1/assets/binary_dark.jpg
 # some information about your slides (markdown enabled)
 title: Informática 1
 info: |
