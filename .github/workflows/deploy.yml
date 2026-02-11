@@ -28,11 +28,11 @@ jobs:
       # Build home
       - name: Build home
         run: |
-           npx slidev build slides.md --out ${{ github.workspace }}/build/home
+           npx slidev build slides.md --base / --out ${{ github.workspace }}/build/home
 
       - name: Build info1
         run: |
-          npx slidev build info1/slides.md --out ${{ github.workspace }}/build/info1
+          npx slidev build info1/slides.md --base /info1/ --out ${{ github.workspace }}/build/info1
 
       - name: Assemble final dist
         run: |
