@@ -27,7 +27,7 @@ jobs:
 
       # Build home
       - name: Build home
-         run: |
+        run: |
            npx slidev build slides.md --out ${{ github.workspace }}/build/home
 
       - name: Build info1
