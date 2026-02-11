@@ -1,6 +1,6 @@
 ---
 theme: default
-background: /info1/img/binary_dark.jpg
+background: /img/binary_dark.jpg
 # some information about your slides (markdown enabled)
 title: Informática 1
 info: |
@@ -23,7 +23,7 @@ duration: 35min
 
 # Informática 1
 
-![Foto](/img/yo.png)
+<!--![Foto](/img/yo.png)-->
 
 Presentation slides for developers
 
