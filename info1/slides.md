@@ -22,6 +22,16 @@ layout: center
 # Informática 1
 
 ---
+
+# Contenido
+
+<button @click="$slidev.nav.go(3)">
+Presentación
+</button>
+
+
+
+---
 layout: two-cols
 layoutClass: gap-16
 ---

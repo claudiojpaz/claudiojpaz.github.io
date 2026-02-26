@@ -47,3 +47,18 @@ layoutClass: gap-16
 [Tecnología para rescatistas](http://claudiojpaz.github.io/tecnologia)
 
 ---
+
+<!--
+
+<div mt-10 w-min flex="~ gap-1" items-center justify-center>
+  <div i-ri-user-3-line op50 ma text-xl />
+  <div><a href="https://antfu.me" target="_blank" class="border-none! font-300">antfu.me</a></div>
+  <div i-ri-github-line op50 ma text-xl ml4/>
+  <div><a href="https://github.com/antfu" target="_blank" class="border-none! font-300">antfu</a></div>
+  <div i-ri-twitter-x-line op50 ma text-xl ml4/>
+  <div ws-nowrap><a href="https://twitter.com/antfu7" target="_blank" class="border-none! font-300">antfujp</a><span op50 ws-nowrap text-sm w-max> (日本語)</span></div>
+</div>
+
+<img src="/img/cpaz_gris.png" rounded-full absolute top-38 right-15 w-40 />
+
+-->
