@@ -29,9 +29,11 @@ layout: center
 Presentación
 </button>
 
-<button @click="https://claudiojpaz.github.io/info1/u01">
-Unidad 1
-</button>
+<a href="https://claudiojpaz.github.io/info1/u01">
+  <button>
+    Unidad 1
+  </button>
+</a>
 
 ---
 layout: two-cols
