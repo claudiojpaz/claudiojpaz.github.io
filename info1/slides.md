@@ -25,15 +25,19 @@ layout: center
 
 # Contenido
 
-<button @click="$slidev.nav.go(3)">
-Presentación
-</button>
+<script setup>
+function goUnidad1() {
+  window.location.href = 'https://claudiojpaz.github.io/info1/u01'
+}
+</script>
 
-<a href="https://claudiojpaz.github.io/info1/u01">
-  <button>
-    Unidad 1
-  </button>
-</a>
+<button @click="$slidev.nav.go(3)">
+  Presentación
+</button>
+  
+<button @click="goUnidad1">
+  Unidad 1
+</button>
 
 ---
 layout: two-cols
