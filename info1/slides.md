@@ -29,6 +29,9 @@ layout: center
 function goUnidad1() {
   window.location.href = 'https://claudiojpaz.github.io/info1/u01'
 }
+function goUnidad2() {
+  window.location.href = 'https://claudiojpaz.github.io/info1/u02'
+}
 </script>
 
 <button @click="$slidev.nav.go(3)">
@@ -37,6 +40,10 @@ function goUnidad1() {
   
 <button @click="goUnidad1">
   Unidad 1
+</button>
+  
+<button @click="goUnidad2">
+  Unidad 2
 </button>
 
 ---
