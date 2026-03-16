@@ -23,28 +23,68 @@ layout: center
 
 ---
 
-# Contenido
+## Informática 1 - Contenido
 
 <script setup>
-function goUnidad1() {
-  window.location.href = 'https://claudiojpaz.github.io/info1/u01'
-}
-function goUnidad2() {
-  window.location.href = 'https://claudiojpaz.github.io/info1/u02'
+function goUnidad(n) {
+  window.location.href = `https://claudiojpaz.github.io/info1/u${String(n).padStart(2,'0')}`
 }
 </script>
 
-<button @click="$slidev.nav.go(3)">
-  Presentación
-</button>
-  
-<button @click="goUnidad1">
-  Unidad 1
-</button>
-  
-<button @click="goUnidad2">
-  Unidad 2
-</button>
+### Información Importante
+
+<!-- Presentación sola -->
+<div class="mb-6">
+  <button class="text-white text-lg"
+          @click="$slidev.nav.go(3)">
+    Presentación
+  </button>
+</div>
+
+### Contenido de la materia
+<div class="grid grid-cols-4 gap-10 text-lg">
+  <!-- Columna 1 -->
+  <div class="flex flex-col gap-3 items-start text-left">
+    <span class="font-bold text-lg">
+      Primera parte
+    </span>
+    <button @click="goUnidad(1)">Unidad 1</button>
+    <button @click="goUnidad(2)">Unidad 2</button>
+    <button @click="goUnidad(3)">Unidad 3</button>
+    <button @click="goUnidad(4)">Unidad 4</button>
+  </div>
+
+  <!-- Columna 2 -->
+  <div class="flex flex-col gap-3 items-start text-left">
+    <span class="font-bold text-lg">
+      Segunda parte
+    </span>
+    <button @click="goUnidad(5)">Unidad 5</button>
+    <button @click="goUnidad(6)">Unidad 6</button>
+    <button @click="goUnidad(7)">Unidad 7</button>
+  </div>
+
+  <!-- Columna 3 -->
+  <div class="flex flex-col gap-3 items-start text-left">
+    <span class="font-bold text-lg">
+      Tercera parte
+    </span>
+    <button @click="goUnidad(8)">Unidad 8</button>
+    <button @click="goUnidad(9)">Unidad 9</button>
+    <button @click="goUnidad(10)">Unidad 10</button>
+    <button @click="goUnidad(11)">Unidad 11</button>
+  </div>
+
+  <div class="flex flex-col gap-3 items-start text-left">
+    <span class="font-bold text-lg ">
+      Extra
+    </span>
+    <button @click="goUnidad(12)">Control de Versiones</button>
+    <button @click="goUnidad(13)">Linux</button>
+    <button @click="goUnidad(14)">Electrónica</button>
+    <button @click="goUnidad(15)">MakeFile</button>
+  </div>
+</div>
 
 ---
 layout: two-cols

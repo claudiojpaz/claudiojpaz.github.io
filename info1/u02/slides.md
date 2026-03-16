@@ -20,21 +20,18 @@ mdc: true
 layout: image
 ---
 
-<div class="absolute left-20 bottom-20">
+<div class="absolute left-10 bottom-10">
 
-# Unidad 1
+# Unidad 2
 
 # Sistemas de numeración
 
 </div>
 
 ---
-class: text-2xl
----
 
 # Sistemas de numeración
 
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -48,16 +45,12 @@ Preguntas para hacernos...
 
 </v-clicks>
 
-</div>
 
 ---
-class: text-2xl
 transition: none
 ---
 
 # Sistemas de numeración
-
-<div class="space-y-8">
 
 En la primaria vimos como descomponer un número en unidad, decena, centena, etc.
 
@@ -67,15 +60,9 @@ $1324$
 
 </v-click>
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Sistemas de numeración
-
-<div class="space-y-8">
 
 En la primaria vimos como descomponer un número en unidad, decena, centena, etc.
 
@@ -93,15 +80,9 @@ $1324 = 1 \times 10^3 + 3 \times 10^2 + 2 \times 10^1 + 4 \times 10^0 %$
 
 </v-clicks>
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Sistemas de numeración
-
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -117,10 +98,6 @@ Existen los sistemas posicionales, como el decimal, y no posicionales como el si
 
 </v-clicks>
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Teorema Fundamental de la Numeración
@@ -157,8 +134,6 @@ $1$, $2$, $4$, $8$, $16$, $32$, etc
 </WarningOverlay>
 
 ---
-class: text-2xl
----
 
 # Sistema de numeración decimal
 
@@ -191,8 +166,6 @@ $$
 
 </v-click>
 
----
-class: text-2xl
 ---
 
 # Sistema de numeración binario
@@ -229,8 +202,6 @@ $$
 </v-click>
 
 ---
-class: text-2xl
----
 
 # Sistema de numeración hexadecimal
 
@@ -264,8 +235,6 @@ $$
 </v-click>
 
 ---
-class: text-2xl
----
 
 # Sistema de numeración octal
 
@@ -290,7 +259,6 @@ $$
 $$
 
 ---
-class: text-2xl
 transition: none
 ---
 
@@ -302,8 +270,6 @@ $1000_{(8)} = \;$
 
 $1000_{(16)} = \;$
 
----
-class: text-2xl
 ---
 
 $1000_{(10)} = 1000$
@@ -439,7 +405,6 @@ transition: none
 ![una imagen](/img/pasaje-decimal-binario-division-larga.svg)
 
 ---
-class: text-2xl
 transition: none
 ---
 
@@ -457,14 +422,10 @@ Si el número es impar siempre la primera división da resto 1
 </WarningOverlay>
 
 ---
-class: text-2xl
----
 
 # Pasaje entre distintos sistemas
 
 ## Pasaje directo de números enteros y positivos
-
-<div class="space-y-8">
 
 
 Debido a que <span v-mark.highlight.orange>las bases del sistema binario, octal y hexadecimal </span> son
@@ -478,8 +439,6 @@ Cada cifra del sistema octal se puede representar con 3 del sistema binario.
 
 </v-clicks>
 
-</div>
-
 <WarningOverlay>
 
 Teniendo un número binario, para pasar a hexadesimal se toman de a 4 desde la derecha
@@ -488,8 +447,6 @@ Teniendo un número binario, para pasar a octal se toman de a 3 desde la derecha
 
 </WarningOverlay>
 
----
-class: text-2xl
 ---
 
 ## Pasaje directo de números enteros y positivos
@@ -540,8 +497,6 @@ Como en el ejemplo del octal, si queda una cifra binaria a la izquierda sin comp
 </WarningOverlay>
 
 ---
-class: text-2xl
----
 
 # Pasaje entre distintos sistemas
 ## Pasaje directo de números enteros y positivos
@@ -549,8 +504,6 @@ class: text-2xl
 ## Ejemplo con 32bits
 $53048=1100111100111000_{(2)} = CF38_{(16)} = 147470_{(8)}$
 
----
-class: text-2xl
 ---
 
 # Operaciones aritméticas con números binarios
@@ -570,7 +523,6 @@ $1 + 1 = 0$ (pero hay acarreo), o sea _me llevo uno_
 </v-clicks>
 
 ---
-class: text-2xl
 layout: two-cols-header
 ---
 
@@ -615,8 +567,6 @@ Si las operaciones se hacen con un número determinado de bits el resultado debe
 </WarningOverlay>
 
 ---
-class: text-2xl
----
 
 # Operaciones aritméticas con números binarios
 
@@ -635,7 +585,6 @@ $1 \times 1 = 1$
 </v-clicks>
 
 ---
-class: text-2xl
 layout: two-cols-header
 ---
 
@@ -678,7 +627,6 @@ $$
 </v-clicks>
 
 ---
-class: text-2xl
 layout: two-cols-header
 transition: none
 ---
@@ -722,7 +670,6 @@ $$
 </v-clicks>
 
 ---
-class: text-2xl
 layout: two-cols-header
 ---
 
@@ -765,8 +712,6 @@ La representación binaria será posible dependiendo de la cantidad de bits usad
 </div>
 
 ---
-class: text-2xl
----
 
 # Operaciones aritméticas con números binarios
 
@@ -788,7 +733,6 @@ $1 - 1 = 0$
 </WarningOverlay>
 
 ---
-class: text-2xl
 layout: two-cols-header
 transition: none
 ---
@@ -828,7 +772,6 @@ $$
 </v-clicks>
 
 ---
-class: text-2xl
 layout: two-cols-header
 transition: none
 ---
@@ -860,7 +803,6 @@ $$
 $$
 
 ---
-class: text-2xl
 layout: two-cols-header
 transition: none
 ---
@@ -892,7 +834,6 @@ $$
 $$
 
 ---
-class: text-2xl
 layout: two-cols-header
 transition: none
 ---
@@ -924,7 +865,6 @@ $$
 $$
 
 ---
-class: text-2xl
 layout: two-cols-header
 transition: none
 ---
@@ -956,7 +896,6 @@ $$
 $$
 
 ---
-class: text-2xl
 layout: two-cols-header
 ---
 
@@ -988,14 +927,11 @@ $$
 
 
 ---
-class: text-2xl
----
 
 # Operaciones aritméticas con números binarios
 
 ## Resta
 
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1007,15 +943,11 @@ Soluciones: ?
 
 </v-clicks>
 
-</div>
 
----
-class: text-2xl
 ---
 
 # Convenio de signo y magnitud
 
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1045,16 +977,13 @@ $$
 
 </v-clicks>
 
-</div>
 
 ---
-class: text-2xl
 transition: none
 ---
 
 # Convenio de signo y magnitud
 
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1084,7 +1013,6 @@ $$
 
 </v-clicks>
 
-</div>
 
 <WarningOverlay>
 
@@ -1095,12 +1023,9 @@ Esto hace más complicada la circuitería cuando se usan números con signo
 </WarningOverlay>
 
 ---
-class: text-2xl
----
 
 # Convenio de signo y magnitud
 
-<div class="space-y-8">
 
 ## Ejemplo con 8 bits
 
@@ -1126,7 +1051,6 @@ $$
 \end{array}
 $$
 
-</div>
 
 <WarningOverlay>
 
@@ -1137,12 +1061,9 @@ Esto hace más complicada la circuitería cuando se usan números con signo
 </WarningOverlay>
 
 ---
-class: text-2xl
----
 
 # Convenio de complemento a uno
 
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1172,15 +1093,11 @@ $$
 
 </v-clicks>
 
-</div>
 
----
-class: text-2xl
 ---
 
 # Convenio de complemento a uno
 
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1213,16 +1130,10 @@ Nuevamente, doble representación del 0
 
 </v-clicks>
 
-</div>
-
-
----
-class: text-2xl
 ---
 
 # Convenio de complemento a dos
 
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1243,7 +1154,7 @@ $$
 -13 en binario
 
 
-$$ {none|1|1,2|1,2,3}
+$$
 \begin{array}{|c|c|c|c|c|c|c|c|}
  \hline
  \texttt{1} & \texttt{1} & \texttt{1} & \texttt{1} & \texttt{0} & \texttt{0} & \texttt{1} & \texttt{0} \\
@@ -1256,15 +1167,9 @@ $$
 
 </v-clicks>
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Convenio de complemento a dos
-
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1284,7 +1189,7 @@ $$
 
 -0 en binario
 
-$$ {none|1|1,2|1,2,3}
+$$
 \begin{array}{|c|c|c|c|c|c|c|c|}
  \hline
  \texttt{1} & \texttt{1} & \texttt{1} & \texttt{1} & \texttt{1} & \texttt{1} & \texttt{1} & \texttt{1} \\
@@ -1299,10 +1204,6 @@ $$
 
 </v-clicks>
 
-</div>
-
----
-class: text-2xl
 ---
 
 $$
@@ -1327,7 +1228,6 @@ $$
 $$
 
 ---
-class: text-2xl
 layout: two-cols-header
 ---
 
@@ -1364,8 +1264,6 @@ $$
 
 ::bottom::
 
-<div class="space-y-8">
-
 <v-clicks>
 
 Qué número es?
@@ -1375,8 +1273,6 @@ Si el bit más significativo es 1, sabemos que es un número negativo
 Hay que _deshacer_ el complemento a 2 y se obtiene el valor absoluto del número negativo
 
 </v-clicks>
-
-</div>
 
 <WarningOverlay>
 
@@ -1395,8 +1291,6 @@ $$
 </WarningOverlay>
 
 ---
-class: text-2xl
----
 
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
@@ -1413,8 +1307,6 @@ $$ {1,2|1,2,3|1,2,3,4|1,2,3,4,5|all}
 \end{array}
 $$
 
----
-class: text-2xl
 ---
 
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
@@ -1442,8 +1334,6 @@ $$
 
 
 ---
-class: text-2xl
----
 
 # Operaciones de adición y de sustracción utilizando el convenio de complemento a dos
 
@@ -1460,26 +1350,16 @@ $$
 El acarreo se ignora
 
 ---
-class: text-2xl
----
 
 # Representación de números fraccionales
-
-<div class="space-y-8">
 
 Para pasar un número fraccionario a binario, se van tomando las partes a la izquierda de la coma decimal como cifras binarias y se multiplica por 2 la parte a la derecha de la coma decimal.
 
 Se repite el proceso continuamente hasta obtener cero en la parte decimal o llenar los bits requeridos
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Representación de números fraccionales
-
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1505,8 +1385,6 @@ $$
 
 </v-clicks>
 
-</div>
-
 <WarningOverlay>
 
 Al comenzar el proceso de multiplicar por 2 los _bits_ que se van obteniendo se colocan en orden desde la coma decimal hacia la derecha
@@ -1514,12 +1392,9 @@ Al comenzar el proceso de multiplicar por 2 los _bits_ que se van obteniendo se 
 </WarningOverlay>
 
 ---
-class: text-2xl
----
 
 # Representación de números fraccionales
 
-<div class="space-y-8">
 
 Supongamos que es un $7.6875$
 
@@ -1535,10 +1410,6 @@ $$
 \end{array}
 $$
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Representación de números fraccionales
@@ -1554,8 +1425,6 @@ $$
 donde $m$ es la cantidad de bits que tenemos para representar la parte fraccional.
 
 ---
-class: text-2xl
----
 
 # Representación de números fraccionales
 
@@ -1570,7 +1439,6 @@ $$
 $$
 
 ---
-class: text-2xl
 layout: two-cols-header
 ---
 
@@ -1578,7 +1446,7 @@ layout: two-cols-header
 
 <v-click>
 $$
-\Large{42.195}
+42.195
 $$
 </v-click>
 
@@ -1588,9 +1456,12 @@ $$
 
 &emsp;&emsp;&emsp;Tomando la parte entera
 ![una imagen](/img/pasaje-decimal-binario-division-corta-marathon.svg)
+
+<p class="-translate-y-10">
 $$
 101010
 $$
+</p>
 
 </v-click>
 
@@ -1612,20 +1483,16 @@ $$
 $$
 
 
+<p class="-translate-y-1">
 $$
-\phantom{5}\\
-
 .0011
 $$
+</p>
 </v-click>
 
 ---
-class: text-2xl
----
 
 # Representación de números fraccionales
-
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1649,15 +1516,9 @@ $$
 
 </v-clicks>
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Representación de números fraccionales
-
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1677,15 +1538,9 @@ $0.195$ tiene una expansión binaria infinita
 
 </v-clicks>
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Representación de números fraccionales
-
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1694,26 +1549,20 @@ En binario solo se pueden representar números fraccionarios de manera exacta si
 Por ejemplo: $0.625$ ($10/16$)
 
 $$
-  \begin{align}
+\begin{align*}
 0.625 \times 2 &= {\color{red}1}.25 \\
 0.25 \times 2 &= {\color{red}0}.50 \\
 0.50 \times 2 &= {\color{red}1}.00
-  \end{align}
+\end{align*}
 $$
 
 $0.625 \xrightarrow[]{\text{a binario}} 0.101$
 
 </v-clicks>
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Representación de números fraccionales
-
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1721,30 +1570,23 @@ class: text-2xl
  Ejemplo: $0.1$ ($1/10$)
 
 $$
-  \begin{align}
+\begin{align*}
 0.1 \times 2 &= {\color{red}0}.2 \\
 0.2 \times 2 &= {\color{red}0}.4 \\
 0.4 \times 2 &= {\color{red}0}.8 \\
 0.8 \times 2 &= {\color{red}1}.6 \\
 0.6 \times 2 &= {\color{red}1}.2 \\
 0.2 \times 2 &= {\color{red}0}.4
-  \end{align}
+\end{align*}
 $$
 
 $0.1 \xrightarrow[]{\text{a binario}} 0.0\overline{0011}$
 
 </v-clicks>
 
-</div>
-
-
----
-class: text-2xl
 ---
 
 # Errores en la representación
-
-<div class="space-y-8">
 
 <v-clicks>
 
@@ -1757,10 +1599,6 @@ La representación binaria de un número fraccionario siempre estará limitada p
 
 </v-clicks>
 
-</div>
-
----
-class: text-2xl
 ---
 
 # Errores en la representación
@@ -1777,8 +1615,6 @@ $$
 Entonces, todos los números entre $0.875$ y $0.9375$ tienen la misma representación para 4 bits
 
 ---
-class: text-2xl
----
 
 # Errores en la representación
 
@@ -1786,8 +1622,6 @@ El error absoluto $e_A$ será constante, igual a la mitad de la mínima represen
 
 $e_A = \pm \frac{1}{2} LSB = \pm \frac{1}{2} 2^{-4} = \pm 2^{-5}$
 
----
-class: text-2xl
 ---
 
 # Errores en la representación
@@ -1798,21 +1632,34 @@ El error relativo $e_r$ será el porcentaje del error absoluto respecto del valo
 $e_r \; [\%] = \cfrac{e_A}{N} \times 100$
 
 ---
-class: text-2xl
+transition: none
 ---
 
 # Notación punto fijo y punto flotante
+
+<v-click>
+
 ## Punto fijo
 
-<div class="space-y-8">
+</v-click>
 
-<v-clicks>
-
+<v-click>
 
 Las computadoras, y en particular los espacios en ellas destinados a almacenar números, tienen una capacidad finita.
 
-Para almacenar un número real una opción es destinar una cantidad **fija** de bits para la parte fraccionaria y otra parte fija para la parte entera. Ej.: 12+4
+</v-click>
 
+---
+
+# Notación punto fijo y punto flotante
+
+## Punto fijo
+
+Las computadoras, y en particular los espacios en ellas destinados a almacenar números, tienen una capacidad finita.
+
+Para almacenar un número real una opción es destinar una cantidad <span v-mark.highlight.orange> fija </span> de bits para la parte fraccionaria y otra parte fija para la parte entera. Ej.: 12+4
+
+<v-clicks>
 
 $$
 ~\\
@@ -1825,8 +1672,384 @@ $$
 
 </v-clicks>
 
-</div>
+---
+layout: two-cols-header
+---
+
+# Notación punto fijo y punto flotante
+
+<v-click>
+
+## Punto flotante
+
+Un número real se puede expresar en notación exponencial si se descompone en dos partes, _mantisa_ y _exponente_.
+
+</v-click>
+
+<v-click>
+
+$$
+r = m \times b^e
+$$
+
+</v-click>
+
+<v-click>
+
+Ejemplo:
+
+</v-click>
+
+::left::
+
+<v-click>
+En base 10
+
+$$
+\begin{align*}
+13.25 &= 1.325 \times 10^{1} \\
+13.25 &= 135.2 \times 10^{-1} \\
+13.25 &= 0.1325 \times 10^{2}
+\end{align*}
+$$
+</v-click>
+
+::right::
+
+<v-click>
+En base 2
+
+$$
+\begin{align*}
+1101.01 &= 110.101 \times 2^{1} \\
+1101.01 &= 11010.1 \times 2^{-1} \\
+1101.01 &= 11.0101 \times 2^{2}
+\end{align*}
+$$
+
+</v-click>
 
 ---
+
+# Notación punto fijo y punto flotante
+
+<v-click>
+
+## Punto flotante
+
+En notación científica (una sola cifra entera distinta de cero) sería:
+
+$$
+13.25_{(10)} = 1.10101_{(2)} \times 2^{3}
+$$
+
+</v-click>
+
+<v-clicks>
+
+La idea es poder representar cualquier número en base 10 usando un número en base 2 expresado en notación científica
+
+Una estrategia es guardar por un lado la mantisa, su signo y por otro lado el exponente también con su signo.
+
+El signo de la mantisa determina el signo del número, y el signo del exponente determina si $r$ es mayor o menor que 1.
+
+</v-clicks>
+
+---
+
+# Notación punto fijo y punto flotante
+
+## Punto flotante
+
+$$
+13.25_{(10)} = 1.10101_{(2)} \times 2^{3}
+$$
+
+<v-clicks>
+
+En notación cientifica, en un número binario la parte entera siempre es 1, por lo que se puede omitir.
+
+Las computadoras utilizan el estándar IEEE 754 que implementa este concepto.
+
+</v-clicks>
+
+---
+layout: two-cols-header
+---
+
+# Representación según formato IEEE 754
+
+<v-click>
+
+El estándar determina que se para números de punto flotante se utilizan:
+
+32 bits para los de simple precisión y 64 bits para los de doble precisión.
+
+</v-click>
+
+<br>
+
+::left::
+
+<v-click>
+
+## Para 32 bits
+
+Bits de signo ($\text{S}$): 1 bit.
+
+Exponente ($\text{E}$): 8 bits.
+
+Mantisa ($\text{T}$): 23 bits.
+
+</v-click>
+
+
+::right::
+
+<v-click>
+
+## Para 64 bits
+
+Bits de signo ($\text{S}$): 1 bit.
+
+Exponente ($\text{E}$): 11 bits.
+
+Mantisa ($\text{T}$): 52 bits.
+
+</v-click>
+
+
+<ExamOverlay>
+
+Conteste verdadero o falso. Las respuestas falsas deben estar justificadas para que se consideren:
+
+<v-clicks>
+
+- El estándar IEEE754 usa 32 bits para representar números de punto flotante con doble precisión
+
+Respuesta: Falso. Simple precisión usa 32bits y doble precisión usa 64bits
+
+</v-clicks>
+
+</ExamOverlay>
+
+---
+
+# Representación según formato IEEE 754
+
+<v-clicks>
+
+Si $\text{S}$ es el bit de signo, $\text{E}$ los bits del exponente y $\text{T}$ los bits de la mantisa, la representación de un número real $r$ se puede hacer con:
+
+$$
+r = (-1)^{\text{S}} \times 1.\text{T} \times 2^{E-127}
+$$
+
+
+<figure class="text-center">
+  <img src="/img/Float_example.svg" class="mx-auto w-3/4" />
+  <figcaption class="text-xs mt-2 italic opacity-70">
+    <font size="2">
+    Fresheneesz [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Float_example.svg">via Wikimedia Commons</a>
+    </font>
+  </figcaption>
+</figure>
+
+</v-clicks>
+
+---
+layout: two-cols-header
+---
+
+# Representación según formato IEEE 754
+
+<figure class="text-center">
+  <img src="/img/Float_example.svg" class="mx-auto w-3/4" />
+  <figcaption class="text-xs mt-2 italic opacity-70">
+    <font size="2">
+    Fresheneesz [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Float_example.svg">via Wikimedia Commons</a>
+    </font>
+  </figcaption>
+</figure>
+
+<v-clicks>
+
+Para obtener el número real a partir de los bits del número en IEEE754:
+
+$$ {1|1,2|1,2,3}
+\begin{align*}
+r &= (-1)^{b_{31}} \times \left(1+\sum^{23}_{i=1} b_{23-i} \times 2^{-i} \right) \times 2^{\left(e-127\right)} \\
+r &= (-1)^{0} \times \left( 1 +  2^{-2} \right) \times 2^{\left(124-127\right)} \\
+r &= \left( 1 +  \frac{1}{4} \right) \times \frac{1}{8} = \frac{10}{8} \times \frac{1}{8} = \frac{10}{64} = 0.15625
+\end{align*}
+$$
+
+</v-clicks>
+
+---
+
+# Representación según formato IEEE 754
+
+Para obtener el número real $r$ representado en formato IEEE 754 precisión simple hay que seguir los siguientes pasos:
+
+1 Determinar el bit de signo $\text{S}$
+
+2 Convertir el número a binario.
+
+3 Normalizar a la forma $1.\text{T} \times 2^n$
+
+4 Calcular bits del exponente con $\text{E} = n + \text{bias}$
+
+5 Componer el número de 32 bits de la forma $\text{SET}$
+
+---
+
+# Representación según formato IEEE 754
+
+**Paso 1:** Si el número real $r$ a analizar es positivo, asignar a $\text{S}=0$ y, en caso contrario, $\text{S}=1$.
+
+$r = 0.15625$
+
+$\text{S} = 0$
+
+---
+layout: two-cols-header
+---
+
+# Representación según formato IEEE 754
+
+**Paso 2:** pasar el número $r$ a binario
+
+::left::
+
+$r = 0.15625$
+
+$0.15625 = 2^x$
+
+::right::
+
+$$
+\begin{align*}
+0.15625 \times 2 &= {\color{red}0}.3125 \\
+0.3125 \times 2 &= {\color{red}0}.625 \\
+0.625 \times 2 &= {\color{red}1}.25 \\
+0.25 \times 2 &= {\color{red}0}.5 \\
+0.5 \times 2 &= {\color{red}1}.0
+\end{align*}
+$$
+
+::bottom::
+
+$$
+r = 0.15625_{(10)} = 0.00101_{(2)}
+$$
+
+---
+
+# Representación según formato IEEE 754
+
+**Paso 3:** Normalizar a la forma $1.\text{T} \times 2^n = (1 + \text{t}) \times 2^n$
+
+$$
+r = 0.15625_{(10)} = 0.00101_{(2)} = 1.01_{(2)} \times 2^{-3}
+$$
+
+$\text{t} = 0.01$
+
+$\text{T} = 01000000000000000000000$
+
+---
+
+# Representación según formato IEEE 754
+
+**Paso 4:** Calcular bits del exponente con $\text{E} = n + \text{bias}$
+
+$$
+r = 0.15625_{(10)} = 0.00101_{(2)} = 1.01_{(2)} \times 2^{-3}
+$$
+
+entonces
+
+$n = -3$
+
+Para simple precisión
+
+$E = n + 127 = 124_{(10)} = 01111100_{(2)}$
+
+---
+
+# Representación según formato IEEE 754
+
+**Paso 5** Componer el número de 32 bits de la forma $\text{SET}$
+
+$r = 0.15625$
+
+$\text{S} = 0$
+
+$\text{E} = 01111100$
+
+$\text{T} = 01000000000000000000000$<br><br>
+
+$r = 0.15625 \space\xrightarrow{\text{a IEEE 754}} \space 0 \; 01111100 \; 01000000000000000000000$
+
+---
+
+# Errores en notación de punto flotante
+
+No todos los números fraccionarios pueden ser expresados exactamente en binario.
+
+Por ejemplo se vió que el $0.1$
+
+En punto flotante IEEE 754 de simple precisión sería:
+
+<figure class="text-center">
+  <img src="/img/float-0.1.svg" class="mx-auto w-3/4" />
+  </figure>
+
+Que pasado a decimal nuevamente es:
+
+$0.100000001490116119384765625$
+
+---
+
+# Representación de caracteres
+
+## Decimal Codificado en Binario (BCD)
+
+Representación de números decimales donde cada dígito del número en base 10 se representa en base 2
+
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|}
+ \hline
+ \texttt{0} & \texttt{1} & \texttt{2} & \texttt{3} & \texttt{4} & \texttt{5} & \texttt{6} & \texttt{7} & \texttt{8} & \texttt{9} \\
+ \hline
+\texttt{0000} & \texttt{0001} & \texttt{0010} & \texttt{0011} & \texttt{0100} & \texttt{0101} & \texttt{0110} & \texttt{0111} & \texttt{1000} & \texttt{1001} \\
+ \hline
+\end{array}
+$$
+
+---
+
+# Representación de caracteres
+## Decimal Codificado en Binario (BCD)
+
+## Ejemplo para 16 bits:
+
+en base 2:
+
+$2026 = 0000011111101010$
+
+
+en BCD:
+
+$2026 = 0010000000100110$
+
+
+---
+
+# Representación de caracteres
+
+## ASCII
+
 
 

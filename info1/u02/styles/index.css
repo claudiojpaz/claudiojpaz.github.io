@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Layout general del slide */
+.slidev-layout {
+  font-size: 1.5rem;      /* tamaño base del texto */
+  line-height: 1.6;       /* interlineado general */
+}
+
+/* Contenido markdown */
+.slidev-layout p{
+  line-height: 1.65;
+}
+
+/* Párrafos */
+.slidev-layout .prose p {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+/* Listas */
+.slidev-layout .prose ul,
+.slidev-layout .prose ol {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.slidev-layout .prose li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+/*[> Títulos (más compactos) <]*/
+/*.slidev-layout h1 {*/
+  /*line-height: 1.2;*/
+  /*margin-top: -0.5em;*/
+  /*margin-bottom: 0.8em;*/
+/*}*/
+
+/*.slidev-layout h2,*/
+/*.slidev-layout h3 {*/
+  /*line-height: 1.2;*/
+  /*margin-top: -0.2em;*/
+  /*margin-bottom: 0.2em;*/
+/*}*/
+
+/* Código */
+.slidev-layout code {
+  font-size: 0.9em;
+}
+
+/* Bloques de código */
+.slidev-layout pre {
+  line-height: 1.4;
+}
+
+/* Tablas */
+.slidev-layout table {
+  font-size: 0.9em;
+}
