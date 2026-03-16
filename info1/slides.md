@@ -21,6 +21,12 @@ layout: center
 
 # Informática 1
 
+<QrOverlay title=''>
+
+<img src="/img/info1.png" class="mx-auto w-3/4" />
+
+</QrOverlay>
+
 ---
 
 ## Informática 1 - Contenido

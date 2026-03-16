@@ -28,6 +28,12 @@ image: /img/cover1.jpg
 
 </div>
 
+<QrOverlay title=''>
+
+<img src="/img/info1-u01.png" class="mx-auto w-3/4" />
+
+</QrOverlay>
+
 ---
 transition: none
 ---
