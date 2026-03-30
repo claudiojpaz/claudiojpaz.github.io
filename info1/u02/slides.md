@@ -2044,12 +2044,267 @@ en BCD:
 
 $2026 = 0010000000100110$
 
-
 ---
 
 # Representación de caracteres
 
 ## ASCII
 
+---
+class: text-gl
+---
 
+## ASCII - Caracteres de Control
 
+$$
+{\scriptsize
+    \begin{array}{ccccl}
+\text{Binario}&\text{Decimal}&\text{Hex}&\text{Abreviatura}&\text{Nombre/Significado/Representación}\\
+\hline
+00000000 & 0  & 00 & \text{NUL} &  \text{Carácter Nulo}\\
+00000001 & 1  & 01 & \text{SOH} &  \text{Inicio de Encabezado}\\
+00000010 & 2  & 02 & \text{STX} &  \text{Inicio de Texto}\\
+00000011 & 3  & 03 & \text{ETX} &  \text{Fin de Texto}\\
+00000100 & 4  & 04 & \text{EOT} &  \text{Fin de Transmisión}\\
+00000101 & 5  & 05 & \text{ENQ} &  \text{Consulta}\\
+00000110 & 6  & 06 & \text{ACK} &  \text{Acuse de recibo}\\
+00000111 & 7  & 07 & \text{BEL} &  \text{Timbre}\\
+00001000 & 8  & 08 & \text{BS}  &  \text{Retroceso}\\
+00001001 & 9  & 09 & \text{HT}  &  \text{Tabulación horizontal}\\
+00001010 & 10 & 0A & \text{LF}  &  \text{Salto de línea}\\
+00001011 & 11 & 0B & \text{VT}  &  \text{Tabulación Vertical}\\
+00001100 & 12 & 0C & \text{FF}  &  \text{Avance de página}\\
+00001101 & 13 & 0D & \text{CR}  &  \text{Retorno de carro}\\
+00001110 & 14 & 0E & \text{SO}  &  \text{Desactivar mayúsculas}\\
+00001111 & 15 & 0F & \text{SI}  &  \text{Activar mayúsculas}\\
+    \end{array}
+}
+$$
+
+---
+class: text-gl
+---
+
+## ASCII - Caracteres de Control (continuación)
+
+$$
+{\scriptsize
+    \begin{array}{ccccl}
+      \text{Binario}&\text{Decimal}&\text{Hex}&\text{Abreviatura}&\text{Nombre/Significado/Representación}\\
+      \hline
+      00010000 & 16 & 10 & \text{DLE} & \text{Escape vínculo de datos}\\
+      00010001 & 17 & 11 & \text{DC1} & \text{Control de dispositivo 1 (XON)}\\
+      00010010 & 18 & 12 & \text{DC2} & \text{Control de dispositivo 2}\\
+      00010011 & 19 & 13 & \text{DC3} & \text{Control de dispositivo 3 (XOFF)}\\
+      00010100 & 20 & 14 & \text{DC4} & \text{Control de dispositivo 4}\\
+      00010101 & 21 & 15 & \text{NAK} & \text{Acuse de recibo negativo}\\
+      00010110 & 22 & 16 & \text{SYN} & \text{Síncronía en espera}\\
+      00010111 & 23 & 17 & \text{ETB} & \text{Fin del bloque de transmisión}\\
+      00011000 & 24 & 18 & \text{CAN} & \text{Cancelar}\\
+      00011001 & 25 & 19 & \text{EM } & \text{Fin del medio}\\
+      00011010 & 26 & 1A & \text{SUB} & \text{Substitución}\\
+      00011011 & 27 & 1B & \text{ESC} & \text{ESC o Escape}\\
+      00011100 & 28 & 1C & \text{FS } & \text{Separador de archivo}\\
+      00011101 & 29 & 1D & \text{GS } & \text{Separador de grupo}\\
+      00011110 & 30 & 1E & \text{RS } & \text{Separador de registro}\\
+      00011111 & 31 & 1F & \text{US } & \text{Separador de unidad}\\
+      01111111 & 127& 7F & \text{DEL} & \text{DEL o Suprimir}\\
+    \end{array}
+}
+$$
+
+---
+layout: two-cols-header
+---
+
+## ASCII - Caracteres Imprimibles
+
+::left::
+
+$$
+{\scriptsize
+    \begin{array}{cccl}
+      \text{Binario}&\text{Decimal}&\text{Hex}&\text{Representación}\\
+      \hline
+      00100000 & 32 & 20 & \text{espacio ( )} \\
+      00100001 & 33 & 21 & \text{!} \\
+      00100010 & 34 & 22 & \text{"} \\
+      00100011 & 35 & 23 & \# \\
+      00100100 & 36 & 24 & \text{\$} \\
+      00100101 & 37 & 25 & \% \\
+      00100110 & 38 & 26 & \& \\
+      00100111 & 39 & 27 & \text{'} \\
+      00101000 & 40 & 28 & \text{(} \\
+      00101001 & 41 & 29 & \text{)} \\
+      00101010 & 42 & 2A & \text{*} \\
+      00101011 & 43 & 2B & \text{+} \\
+      00101100 & 44 & 2C & \text{,} \\
+      00101101 & 45 & 2D & \text{-} \\
+      00101110 & 46 & 2E & \text{.} \\
+      00101111 & 47 & 2F & \text{/} \\
+    \end{array}
+}
+$$
+
+::right::
+
+$$
+{\scriptsize
+
+    \begin{array}{cccl}
+      \text{Binario}&\text{Decimal}&\text{Hex}&\text{Representación}\\
+      \hline
+      00110000 & 48 & 30 & \text{0} \\
+      00110001 & 49 & 31 & \text{1} \\
+      00110010 & 50 & 32 & \text{2} \\
+      00110011 & 51 & 33 & \text{3} \\
+      00110100 & 52 & 34 & \text{4} \\
+      00110101 & 53 & 35 & \text{5} \\
+      00110110 & 54 & 36 & \text{6} \\
+      00110111 & 55 & 37 & \text{7} \\
+      00111000 & 56 & 38 & \text{8} \\
+      00111001 & 57 & 39 & \text{9} \\
+      00111010 & 58 & 3A & \text{:} \\
+      00111011 & 59 & 3B & \text{;} \\
+      00111100 & 60 & 3C & < \\
+      00111101 & 61 & 3D & \text{=} \\
+      00111110 & 62 & 3E & > \\
+      00111111 & 63 & 3F & \text{?} \\
+    \end{array}
+}
+$$
+
+---
+layout: two-cols-header
+---
+
+## ASCII - Caracteres Imprimibles
+
+::left::
+
+$$
+{\scriptsize
+    \begin{array}{cccl}
+      \text{Binario}&\text{Decimal}&\text{Hex}&\text{Representación}\\
+      \hline
+      01000000 & 64 & 40 & @ \\
+      01000001 & 65 & 41 & \text{A} \\
+      01000010 & 66 & 42 & \text{B} \\
+      01000011 & 67 & 43 & \text{C} \\
+      01000100 & 68 & 44 & \text{D} \\
+      01000101 & 69 & 45 & \text{E} \\
+      01000110 & 70 & 46 & \text{F} \\
+      01000111 & 71 & 47 & \text{G} \\
+      01001000 & 72 & 48 & \text{H} \\
+      01001001 & 73 & 49 & \text{I} \\
+      01001010 & 74 & 4A & \text{J} \\
+      01001011 & 75 & 4B & \text{K} \\
+      01001100 & 76 & 4C & \text{L} \\
+      01001101 & 77 & 4D & \text{M} \\
+      01001110 & 78 & 4E & \text{N} \\
+      01001111 & 79 & 4F & \text{O} \\
+    \end{array}
+}
+$$
+
+::right::
+
+$$
+{\scriptsize
+    \begin{array}{cccl}
+      \text{Binario}&\text{Decimal}&\text{Hex}&\text{Representación}\\
+      \hline
+      01010000 & 80 & 50 & \text{P} \\
+      01010001 & 81 & 51 & \text{Q} \\
+      01010010 & 82 & 52 & \text{R} \\
+      01010011 & 83 & 53 & \text{S} \\
+      01010100 & 84 & 54 & \text{T} \\
+      01010101 & 85 & 55 & \text{U} \\
+      01010110 & 86 & 56 & \text{V} \\
+      01010111 & 87 & 57 & \text{W} \\
+      01011000 & 88 & 58 & \text{X} \\
+      01011001 & 89 & 59 & \text{Y} \\
+      01011010 & 90 & 5A & \text{Z} \\
+      01011011 & 91 & 5B & [ \\
+      01011100 & 92 & 5C & \backslash \\
+      01011101 & 93 & 5D & ] \\
+      01011110 & 94 & 5E & \wedge \\
+      01011111 & 95 & 5F & \_ \\
+    \end{array}
+}
+$$
+
+---
+layout: two-cols-header
+---
+
+## ASCII - Caracteres Imprimibles
+
+::left::
+
+$$
+{\scriptsize
+    \begin{array}{cccl}
+      \text{Binario}&\text{Decimal}&\text{Hex}&\text{Representación}\\
+      \hline
+      01100000 & 96  & 60 & \text{`} \\
+      01100001 & 97  & 61 & \text{a} \\
+      01100010 & 98  & 62 & \text{b} \\
+      01100011 & 99  & 63 & \text{c} \\
+      01100100 & 100 & 64 & \text{d} \\
+      01100101 & 101 & 65 & \text{e} \\
+      01100110 & 102 & 66 & \text{f} \\
+      01100111 & 103 & 67 & \text{g} \\
+      01101000 & 104 & 68 & \text{h} \\
+      01101001 & 105 & 69 & \text{i} \\
+      01101010 & 106 & 6A & \text{j} \\
+      01101011 & 107 & 6B & \text{k} \\
+      01101100 & 108 & 6C & \text{l} \\
+      01101101 & 109 & 6D & \text{m} \\
+      01101110 & 110 & 6E & \text{n} \\
+      01101111 & 111 & 6F & \text{o} \\
+    \end{array}
+}
+$$
+
+::right::
+
+$$
+{\scriptsize
+    \begin{array}{cccl}
+      \text{Binario}&\text{Decimal}&\text{Hex}&\text{Representación}\\
+      \hline
+      01110000 & 112 & 70 & \text{p} \\
+      01110001 & 113 & 71 & \text{q} \\
+      01110010 & 114 & 72 & \text{r} \\
+      01110011 & 115 & 73 & \text{s} \\
+      01110100 & 116 & 74 & \text{t} \\
+      01110101 & 117 & 75 & \text{u} \\
+      01110110 & 118 & 76 & \text{v} \\
+      01110111 & 119 & 77 & \text{w} \\
+      01111000 & 120 & 78 & \text{x} \\
+      01111001 & 121 & 79 & \text{y} \\
+      01111010 & 122 & 7A & \text{z} \\
+      01111011 & 123 & 7B & \{ \\
+      01111100 & 124 & 7C & | \\
+      01111101 & 125 & 7D & \} \\
+      01111110 & 126 & 7E & \sim \\
+    \end{array}
+}
+$$
+
+---
+class: text-2xl
+---
+
+# Bibliografía
+
+**C: How to Program**
+
+Paul Deitel, Harvey Deitel
+
+_2016_ Eighth edition.
+
+Appendix C
+
+---
