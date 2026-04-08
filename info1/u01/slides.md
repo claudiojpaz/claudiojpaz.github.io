@@ -282,6 +282,7 @@ transition: fade
 
 ---
 transition: none
+class: no-print
 ---
 
 # Registros
@@ -665,7 +666,7 @@ transition: fade
 # Sistemas Operativos
 
 
-![una imagen](/img/process.svg)
+<img src="/img/process.svg" class="mx-auto w-3/4" />
 
 <div class="absolute bottom-2 left-0 w-full text-center text-sm">
 
@@ -775,10 +776,10 @@ class: text-2xl
 
 # GNU
 
-<div style="position: absolute; left: 600px; top: 200px; height: 200px; width: 250px; padding: 1em;">
+<figure style="position: absolute; left: 600px; top: 200px; height: 200px; width: 250px; padding: 1em;">
 <img src="/img/Heckert_GNU_white.svg" height="220">
 <figcaption>GNU's Not Unix</figcaption>
-</div>
+</figure>
 
 <div class="space-y-8">
 

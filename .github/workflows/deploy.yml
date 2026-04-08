@@ -43,6 +43,10 @@ jobs:
         run: |
           npx slidev build info1/u02/slides.md --base /info1/u02/ --out ${{ github.workspace }}/build/info1/u02
 
+      - name: Build u03
+        run: |
+          npx slidev build info1/u03/slides.md --base /info1/u03/ --out ${{ github.workspace }}/build/info1/u03
+
       - name: Assemble final dist
         run: |
           mkdir -p ${{ github.workspace }}/dist
@@ -50,6 +54,7 @@ jobs:
           cp -r ${{ github.workspace }}/build/info1 ${{ github.workspace }}/dist/info1
           cp -r ${{ github.workspace }}/build/info1/u01 ${{ github.workspace }}/dist/info1/u01
           cp -r ${{ github.workspace }}/build/info1/u02 ${{ github.workspace }}/dist/info1/u02
+          cp -r ${{ github.workspace }}/build/info1/u03 ${{ github.workspace }}/dist/info1/u03
 
       - name: Disable Jekyll
         run: touch dist/.nojekyll

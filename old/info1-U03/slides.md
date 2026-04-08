@@ -1208,9 +1208,9 @@ layout: true
 
 int main (void)
 {
-  printf("Uno\nDos\nTres\n");
+printf("Uno\nDos\nTres\n");
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1256,9 +1256,9 @@ layout: true
 
 int main (void)
 {
-  printf("Uno\tDos\tTres\n");
+printf("Uno\tDos\tTres\n");
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1301,9 +1301,9 @@ layout: true
 
 int main (void)
 {
-  printf("Uno\tDos\rTres\n");
+printf("Uno\tDos\rTres\n");
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1345,14 +1345,14 @@ count: false
 
 <div style="font-size: 80%;">
 <p>
-    \begin{array}{ll}
-        \text{Especificadores} & \text{Descripción} \\
-        \hline
-        \%\text{c}       & \text{Caracter}\\
-        \%\text{d} \text{ o } \%\text{i} & \text{Entero decimal con signo}\\
-        \%\text{u}       & \text{Entero decimal sin signo}\\
-        \%\text{f}       & \text{Decimal de punto flotante}\\
-    \end{array}
+\begin{array}{ll}
+    \text{Especificadores} & \text{Descripción} \\
+    \hline
+    \%\text{c}       & \text{Caracter}\\
+    \%\text{d} \text{ o } \%\text{i} & \text{Entero decimal con signo}\\
+    \%\text{u}       & \text{Entero decimal sin signo}\\
+    \%\text{f}       & \text{Decimal de punto flotante}\\
+\end{array}
 </p>
 
 ---
@@ -1371,10 +1371,10 @@ count: false
 
 int main (void)
 {
-  printf("%f\n", 3.14);
-  printf("%d %d %d\n", 1, 2, 4);
+printf("%f\n", 3.14);
+printf("%d %d %d\n", 1, 2, 4);
 
-  return 0;
+return 0;
 }
 ```
 --
@@ -1400,9 +1400,9 @@ La cadena puede tener cualquier caracter válido junto con los especificadores d
 
 int main (void)
 {
-  printf("%d+%d=%d\n", 1, 2, 3);
+printf("%d+%d=%d\n", 1, 2, 3);
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1447,9 +1447,9 @@ Los valores que usan los especificadores pueden ser el resultado de operaciones
 
 int main (void)
 {
-  printf("%d+%d=%d\n", 1, 2, 1+2);
+printf("%d+%d=%d\n", 1, 2, 1+2);
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1489,10 +1489,10 @@ count: false
 
 int main (void)
 {
-  printf("%d\n", 5%2);
-  printf("%d\n", 5/2);
+printf("%d\n", 5%2);
+printf("%d\n", 5/2);
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1552,21 +1552,21 @@ count: false
 
 <div style="font-size: 65%;"> 
 <p>
-    \begin{array}{lrrr}
-      \textsf{Tipo}          & \textsf{Menor}        & \textsf{Mayor}       & \textsf{Bytes} \\
-      \hline
-      \textsf{char}          & -128        & 127           & 1 \\
-      \textsf{unsigned char} & 0           & 255           & 1 \\
-      \textsf{short}         & -32768      & 32767         & 2 \\
-      \textsf{unsigned short}& 0           & 65535         & 2 \\
-      \textsf{int}           & -2147483648 & 2147483647    & 4 \\
-      \textsf{unsigned int}  & 0           & 4294967295    & 4 \\
-      \textsf{long}          & -9223372036854775808 & 9223372036854775807 & 8 \\
-      \textsf{unsigned long} & 0           & 18446744073709551615  & 8 \\
-      \color{red}{\textsf{float}}         & \text{1.18e-38}     & \text{3.4e+38}       & 4 \\
-      \color{red}{\textsf{double}}        & \text{2.23e-308}    & \text{1.8e+308}      & 8 \\
-      \color{red}{\textsf{long double}}   & \text{3.36e-4932}   & \text{1.19e+4932}     & 10
-    \end{array}
+\begin{array}{lrrr}
+  \textsf{Tipo}          & \textsf{Menor}        & \textsf{Mayor}       & \textsf{Bytes} \\
+  \hline
+  \textsf{char}          & -128        & 127           & 1 \\
+  \textsf{unsigned char} & 0           & 255           & 1 \\
+  \textsf{short}         & -32768      & 32767         & 2 \\
+  \textsf{unsigned short}& 0           & 65535         & 2 \\
+  \textsf{int}           & -2147483648 & 2147483647    & 4 \\
+  \textsf{unsigned int}  & 0           & 4294967295    & 4 \\
+  \textsf{long}          & -9223372036854775808 & 9223372036854775807 & 8 \\
+  \textsf{unsigned long} & 0           & 18446744073709551615  & 8 \\
+  \color{red}{\textsf{float}}         & \text{1.18e-38}     & \text{3.4e+38}       & 4 \\
+  \color{red}{\textsf{double}}        & \text{2.23e-308}    & \text{1.8e+308}      & 8 \\
+  \color{red}{\textsf{long double}}   & \text{3.36e-4932}   & \text{1.19e+4932}     & 10
+\end{array}
 </p>
 </div>
 
@@ -1643,12 +1643,12 @@ count: false
 
 int main (void)
 {
-  int la_respuesta;
+int la_respuesta;
 
-  la_respuesta = 42;
-  printf("%d\n", la_respuesta);
+la_respuesta = 42;
+printf("%d\n", la_respuesta);
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1668,10 +1668,10 @@ int main (void)
 {
 * int la_respuesta;
 
-  la_respuesta = 42;
-  printf("%d\n", la_respuesta);
+la_respuesta = 42;
+printf("%d\n", la_respuesta);
 
-  return 0;
+return 0;
 }
 ```
 --
@@ -1699,10 +1699,10 @@ int main (void)
 {
 * int la_respuesta;
 
-  la_respuesta = 42;
-  printf("%d\n", la_respuesta);
+la_respuesta = 42;
+printf("%d\n", la_respuesta);
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1720,12 +1720,12 @@ int main (void)
 
 int main (void)
 {
-  int la_respuesta;
+int la_respuesta;
 
 * la_respuesta = 42;
-  printf("%d\n", la_respuesta);
+printf("%d\n", la_respuesta);
 
-  return 0;
+return 0;
 }
 ```
 --
@@ -1751,11 +1751,11 @@ count: false
 
 int main (void)
 {
-  int la_respuesta = 42;
+int la_respuesta = 42;
 
-  printf("%d\n", la_respuesta);
+printf("%d\n", la_respuesta);
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1775,9 +1775,9 @@ int main (void)
 {
 * int la_respuesta = 42;
 
-  printf("%d\n", la_respuesta);
+printf("%d\n", la_respuesta);
 
-  return 0;
+return 0;
 }
 ```
 
@@ -1795,7 +1795,7 @@ Se pueden definir varias variables del mismo tipo en la misma sentencia.
 count: false
 
 ```C
-  char var1, var2, var3;
+char var1, var2, var3;
 ```
 --
 count: false
@@ -1806,7 +1806,7 @@ Se pueden inicializar varias variables en la misma sentencia.
 count: false
 
 ```C
-  int a=3, b, c=0;
+int a=3, b, c=0;
 ```
 --
 count: false
@@ -1824,11 +1824,11 @@ count: false
 
 int main (void)
 {
-  int a=3, b, c=0;
+int a=3, b, c=0;
 
-  printf("%d %d %d\n", a, b, c);
+printf("%d %d %d\n", a, b, c);
 
-  return 0;
+return 0;
 }
 ```
 ---
@@ -1846,9 +1846,9 @@ count: false
 $ gcc -Wall -std=c99 --pedantic-errors u3-def-sin-ini.c
 u3-def-sin-ini.c: In function ‘main’:
 u3-def-sin-ini.c:8:3: warning: ‘b’ is used uninitialized
-                               in this function [-Wuninitialized]
-   printf("%d %d %d\n", a, b, c);
-   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                           in this function [-Wuninitialized]
+printf("%d %d %d\n", a, b, c);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $
 ```
 ---
@@ -1858,9 +1858,9 @@ count: false
 $ gcc -Wall -std=c99 --pedantic-errors u3-def-sin-ini.c
 u3-def-sin-ini.c: In function ‘main’:
 u3-def-sin-ini.c:8:3: warning: ‘b’ is used uninitialized
-                               in this function [-Wuninitialized]
-   printf("%d %d %d\n", a, b, c);
-   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                           in this function [-Wuninitialized]
+printf("%d %d %d\n", a, b, c);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $./a.out
 ```
 ---
@@ -1870,9 +1870,9 @@ count: false
 $ gcc -Wall -std=c99 --pedantic-errors u3-def-sin-ini.c
 u3-def-sin-ini.c: In function ‘main’:
 u3-def-sin-ini.c:8:3: warning: ‘b’ is used uninitialized
-                               in this function [-Wuninitialized]
-   printf("%d %d %d\n", a, b, c);
-   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                           in this function [-Wuninitialized]
+printf(\"\%d \%d \%d\\n\",a,b,c);
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $./a.out
 3 32767 0
 $

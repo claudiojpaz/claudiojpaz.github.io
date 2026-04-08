@@ -1,5 +1,5 @@
 {
-  "name": "info1",
+  "name": "u03",
   "type": "module",
   "private": true,
   "scripts": {
@@ -8,12 +8,12 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^52.11.5",
+    "@slidev/cli": "^52.14.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
-    "vue": "^3.5.27"
+    "vue": "^3.5.29"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.58.2"
+    "markdown-it-attrs": "^4.3.1"
   }
 }
