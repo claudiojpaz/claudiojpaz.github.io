@@ -618,14 +618,21 @@ $$
 
 En adelante, en los _slides_ emularemos la terminal con cuadros de texto como el siguiente
 
+<v-click>
 <TypingBash
-  code=""
+  :active="$slidev.nav.clicks >= 1"
+  code=" "
 />
+</v-click>
+
+<v-click>
 
 El signo $ se llama _prompt_ y es el inicio de la línea de comandos en SO GNU/Linux.
 
 
 El signo $ NO debe escribirse.
+
+</v-click>
 
 ---
 
