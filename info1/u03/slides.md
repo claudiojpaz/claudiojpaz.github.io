@@ -39,6 +39,41 @@ import './style.css'
 </QrOverlay>
 
 ---
+layout: center
+---
+
+
+![pdp7](/img/512px-Pdp7-oslo-2005.jpeg)
+
+<div class="absolute left-35 bottom-10">
+<font size="3">
+1964 Digital Equipment Corporation - PDP-7 - [<a href="http://creativecommons.org/licenses/sa/1.0/">CC SA 1.0</a>], <a href="https://commons.wikimedia.org/wiki/File:Pdp7-oslo-2005.jpeg">via Wikimedia Commons</a>
+</font>
+</div>
+
+---
+
+# Reseña histórica
+## Fines de los 60's y principios de los 70's
+
+* 1966 - BCPL - Martin Richards.
+* 1969 - B -  Ken Thompson con Dennis Ritchie.
+* 1969-1973 - C -  Dennis Ritchie.
+
+---
+
+# Reseña histórica
+
+## Fines de los 70's hasta fines de los 90's.. y más
+*  1978 - Libro: Lenguaje de Programación C. Kernighan & Ritchie
+*  1989 - American National Standards Institute - ANSI C - C89
+*  1990 - International Organization for Standardization - ISO C - C90
+*  1999 - ANSI adopta el estándar ISO para C - C99
+*  2011 - ISO C - C11
+*  2018 - ISO C - C18
+*  2023 - ISO C - C23
+
+---
 
 # Elementos del lenguaje C
 
