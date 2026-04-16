@@ -1248,3 +1248,378 @@ Para evitar errores inesperados **debe** inicializarse cada variable.
 Y prestar atención a los mensajes del compilador.
 
 ---
+
+# Operadores
+
+En general, los **operadores** son símbolos que indican que debe realizarse una operación sobre algún conjunto de objetos.
+
+Los objetos sobre los que opera un operador se llaman **operandos**.
+
+Según a cuantos operandos afecten, los operadores pueden ser **unarios**, **binarios** o **ternarios**.
+
+Los operadores siempre **devuelven** el resultado de la operación.
+
+---
+
+# Operadores aritméticos
+
+## Unarios
+
+$$
+\begin{array}{cc}
+ \texttt{+} & \texttt{Signo positivo} \\
+ \texttt{-} & \texttt{Signo negativo} \\
+\end{array}
+$$
+
+## Binarios
+
+$$
+\begin{array}{cc}
+ \texttt{+} & \texttt{Suma} \\
+ \texttt{-} & \texttt{Resta} \\
+ \texttt{*} & \texttt{Producto} \\
+ \texttt{/} & \texttt{División} \\
+ \texttt{\%} & \texttt{Módulo} \\
+ \texttt{=} & \texttt{Asignación}
+\end{array}
+$$
+
+---
+
+# Operadores aritméticos
+
+El resultado de la operación se puede imprimir
+
+```c
+#include <stdio.h>
+// u3-operadores-1.c
+
+int main (void)
+{
+  printf("%d\n", 2 + 1);
+
+  return 0;
+}
+```
+---
+
+<v-click>
+<TypingBash
+  :active="$slidev.nav.clicks >= 1"
+  code="gcc -Wall -std=c99 --pedantic-errors u3-operadores-1.c
+./a.out
+>3
+"
+/>
+</v-click>
+
+---
+
+# Operadores aritméticos
+El resultado de la operación se puede **asignar**
+
+```c
+#include <stdio.h>
+// u3-operadores-2.c
+
+int main (void) {
+  int resultado;
+
+  resultado = 2 + 1;
+  printf("%d\n", resultado);
+
+  return 0;
+}
+```
+
+---
+
+<v-click>
+<TypingBash
+  :active="$slidev.nav.clicks >= 1"
+  code="gcc -Wall -std=c99 --pedantic-errors u3-operadores-2.c
+./a.out
+>3
+"
+/>
+</v-click>
+
+---
+
+# Operadores aritméticos
+
+```c
+#include <stdio.h>
+// u3-operadores-3.c
+
+int main (void) {
+  int resultado;
+
+  resultado = 3 * 2 + 1; // ??
+  printf("%d\n", resultado);
+
+  return 0;
+}
+```
+---
+
+```bash
+$ gcc -Wall -std=c99 --pedantic-errors u3-operadores-3.c
+$ ./a.out
+7
+$
+```
+
+<div style="font-size: 80%;">
+<p>
+El orden en el que se resuelven las operaciones depende de las reglas de precedencia
+</p>
+</div>
+
+---
+
+# Precedencia
+
+Se llama precedencia al orden en el que se evalúan las operaciones en una expresión
+
+Mientras más arriba en la tabla, se dice que tiene más (o mayor) precedencia, y se evalúa primero
+
+---
+
+# Precedencia
+
+Hasta ahora...
+
+$$
+    \begin{array}{llll}
+    \textsf{Operador} &    &  & \textsf{Asociatividad} \\\hline
+    \textsf{()}       &    &  & \textsf{Izq. a Der.} \\
+    \textsf{+ - (los de signo)}      &    &  & \textsf{Der. a Izq.} \\
+    \textsf{* / }\%   &    &  & \textsf{Izq. a Der.} \\
+    \textsf{+ -}      &    &  & \textsf{Izq. a Der.} \\
+    \textsf{=}        &    &  & \textsf{Der. a Izq.} \\
+    \end{array}
+$$
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-001.svg){class="mx-auto"}
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-002-4.svg){class="mx-auto"}
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-002-3.svg){class="mx-auto"}
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-002-2.svg){class="mx-auto"}
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-002-1.svg){class="mx-auto"}
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-002.svg){class="mx-auto"}
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-003.svg){class="mx-auto"}
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-004.svg){class="mx-auto"}
+
+---
+transition: none
+---
+
+![](/img/operaciones-precedencia-005.svg){class="mx-auto"}
+
+---
+
+![](/img/operaciones-precedencia-006.svg){class="mx-auto"}
+
+---
+
+# Operadores relacionales
+
+Los operadores relacionales sirven para comparar constantes o variables.
+
+$$
+    \begin{array}{ccl}
+     \textsf{En Mat.} & \textsf{En C} & \textsf{Descripción} \\ \hline
+     >   & >  & \textsf{Mayor} \\
+     <   & <  & \textsf{Menor} \\
+     \geq& >= & \textsf{Mayor o igual} \\
+     \leq& <= & \textsf{Menor o igual} \\
+     =   & == & \textsf{Igual}\\
+     \neq& != & \textsf{Distinto}
+    \end{array}
+$$
+
+Como todos los operadores, devuelve el resultado de la operación
+
+---
+
+# Operadores relacionales
+
+```c
+#include <stdio.h>
+// u3-relacion-1.c
+
+int main (void)
+{
+  printf("%d\n", 3>2);
+
+  return 0;
+}
+```
+
+---
+
+<v-click>
+<TypingBash
+  :active="$slidev.nav.clicks >= 1"
+  code="gcc -Wall -std=c99 --pedantic-errors u3-relacion-1.c
+./a.out
+>1
+"
+/>
+</v-click>
+
+---
+
+# Operadores relacionales
+
+Si la relación **no** se cumple, devuelve un `0`
+
+```c
+#include <stdio.h>
+// u3-relacion-2.c
+
+int main (void)
+{
+  printf("%d\n", 2>3);
+
+  return 0;
+}
+```
+
+---
+
+<v-click>
+<TypingBash
+  :active="$slidev.nav.clicks >= 1"
+  code="gcc -Wall -std=c99 --pedantic-errors u3-relacion-2.c
+./a.out
+>1
+"
+/>
+</v-click>
+
+<v-click>
+Estos operadores son utilizados en los condicionales.
+</v-click>
+
+---
+
+# Funciones de entrada/salida
+
+Cuando se necesita que el usuario ingrese algún valor se puede usar la función `scanf`
+
+`scanf` es otra de las funciones de la **biblioteca estándar**
+
+---
+
+# Función scanf
+
+`scanf` espera _al menos_ dos argumentos.
+
+```c
+  scanf("%d", &variable);
+```
+
+El primero es una cadena de texto con especificadores de formato semejantes a `printf`.
+
+Luego espera tantos argumentos como especificadores de formato tenga la cadena.
+
+Por ahora, estos argumentos son las variables (con un & delante) donde se guardarán los valores ingresados por el usuario.
+
+---
+
+# Función scanf
+
+```c
+#include <stdio.h>
+// u3-entrada-1.c
+
+int main (void)
+{
+  int sum1, sum2;
+  int res;
+
+  printf("Ingrese un número: ");
+  scanf("%d", &sum1);
+  printf("Ingrese otro número: ");
+  scanf("%d", &sum2);
+
+  res = sum1 + sum2;
+
+  printf("%d+%d=%d\n", sum1, sum2, res);
+
+  return 0;
+}
+```
+
+---
+
+# Función scanf
+
+```bash
+$ gcc -Wall -std=c99 --pedantic-errors u3-relacion-2.c
+$ ./a.out
+Ingrese un número: 12
+Ingrese otro número: 13
+12+13=25
+$
+```
+
+Si una variable va a ser utilizada por primera vez en un `scanf` no hace falta inicializarla
+
+---
+
+# Función scanf
+
+Al igual que `printf` tiene distintos especificadores de formato
+
+$$
+    \begin{array}{ll}
+        \text{Especificadores} & \text{Descripción} \\
+        \hline
+        \%\text{c}       & \text{Caracter}\\
+        \%\text{d} \text{ o } \%\text{i} & \text{Entero decimal con signo}\\
+        \%\text{u}       & \text{Entero decimal sin signo}\\
+        \%\text{f}       & \text{Decimal de punto flotante}\\
+    \end{array}
+$$
