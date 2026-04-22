@@ -1568,14 +1568,10 @@ Por ahora, estos argumentos son las variables (con un & delante) donde se guarda
 
 ---
 
-# Función scanf
-
-```c
+```c {class="maxHeight:'300pxmaxHeight:'300px'erflow-auto"}
 #include <stdio.h>
-// u3-entrada-1.c
 
-int main (void)
-{
+int main (void) {
   int sum1, sum2;
   int res;
 
@@ -1585,7 +1581,6 @@ int main (void)
   scanf("%d", &sum2);
 
   res = sum1 + sum2;
-
   printf("%d+%d=%d\n", sum1, sum2, res);
 
   return 0;
@@ -1623,3 +1618,491 @@ $$
         \%\text{f}       & \text{Decimal de punto flotante}\\
     \end{array}
 $$
+
+
+---
+
+# Función scanf
+
+También se pueden ingresar más valores por sentencia
+
+
+```c
+  scanf("%d %d", &var1, &var2);
+```
+
+donde para diferenciar los valores desde el teclado se ingresan con un espacio, un tab o un enter entre ellos.
+
+
+---
+
+# Función putchar
+
+```c
+#include <stdio.h>
+
+int main (void)
+{
+  int numero;
+
+  printf("Ingrese un número (1-127): ");
+  scanf("%d", &numero);
+
+  printf("En la tabla ASCII: ");
+  putchar(numero);
+
+  return 0;
+}
+```
+
+---
+
+```bash
+$ gcc -Wall -std=c99 --pedantic-errors u3-putchar.c
+$ ./a.out
+Ingrese un número (1-127): 65
+En la tabla ASCII: A
+$
+```
+
+---
+
+# Función putchar
+
+La función `putchar` tiene el mismo efecto que `printf` si solo se imprime un caracter con `"%c"`
+
+La sentencia
+
+```c
+  putchar(65);
+```
+
+Tiene el mismo efecto que la sentencia
+
+```c
+  printf("%c", 65);
+```
+
+---
+
+# Función putchar
+
+Además de la diferente complejidad de las sentencias, la diferencia fundamental reside en el valor devuelto.
+
+La función `putchar` devuelve el valor entero del carater impreso.
+
+La función `printf` devuelve la cantidad de caracteres impresos.
+
+---
+
+# Función getchar
+
+Se puede ingresar cualquier caracter desde el teclado utilizando la función `getchar`
+
+`getchar` devuelve un entero correspondiente al caracter ingresado
+
+---
+
+# Función getchar
+
+```c
+#include <stdio.h>
+
+int main (void) {
+  int numero;
+
+  printf("Ingrese un caracter de la tabla ASCII: ");
+  numero = getchar();
+
+  printf("En la tabla ASCII es el %d\n", numero);
+
+  return 0;
+}
+```
+
+---
+
+```bash
+$ gcc -Wall -std=c99 --pedantic-errors u3-getchar.c
+$ ./a.out
+Ingrese un caracter de la tabla ASCII: A
+En la tabla ASCII es el 65
+$
+```
+
+---
+
+# Operador de Conversión de tipo (cast)
+
+En ocaciones se necesita obtener resultados de un tipo de datos a partir de variables de tipos diferentes.
+
+Por ejemplo un promedio (punto flotante) a partir calificaciones (enteras)
+
+```c
+  promedio = suma_notas / cuantas_notas;
+```
+
+---
+
+# Operador de Conversión de tipo (cast)
+
+```c
+#include <stdio.h>
+
+int main (void) {
+  int suma_notas, cuantas_notas;
+  float promedio;
+
+  printf("Ingrese la suma de todas las notas: ");
+  scanf("%d", &suma_notas);
+  printf("Ingrese cuantas notas son: ");
+  scanf("%d", &cuantas_notas);
+
+  promedio = suma_notas / cuantas_notas;
+
+  printf("Promedio: %.2f\n", promedio);
+
+  return 0;
+}
+```
+
+---
+
+```bash
+$ gcc -Wall -std=c99 --pedantic-errors u3-sin-cast.c
+$ ./a.out
+Ingrese la suma de todas las notas: 13
+Ingrese cuantas notas son: 2
+Promedio: 6.00
+$
+```
+
+El problema es que cuando la división es entre dos enteros, se realiza de la manera básica, devolviendo un entero y dejando resto...
+
+...asignando un valor entero a la variable `promedio` (aunque quede almacenado como de punto flotante)
+
+Para esto se usa el operador de conversión de tipo
+
+---
+
+# Operador de Conversión de tipo (cast)
+
+El operador de conversión de tipo o simplemente _cast_ es un operador **unario** que cambia temporalmente el tipo de datos de su operando.
+
+Consiste en colocar entre parentesis el tipo de datos al que se quiere _convertir_ el operando, delante del mismo.
+
+---
+
+# Operador de Conversión de tipo (cast)
+
+```c
+#include <stdio.h>
+
+int main (void) {
+  int suma_notas, cuantas_notas;
+  float promedio;
+
+  printf("Ingrese la suma de todas las notas: ");
+  scanf("%d", &suma_notas);
+  printf("Ingrese cuantas notas son: ");
+  scanf("%d", &cuantas_notas);
+
+  promedio = (float) suma_notas / cuantas_notas;
+
+  printf("Promedio: %.2f\n", promedio);
+
+  return 0;
+}
+```
+
+---
+
+```bash
+$ gcc -Wall -std=c99 --pedantic-errors u3-con-cast.c
+$ ./a.out
+Ingrese la suma de todas las notas: 13
+Ingrese cuantas notas son: 2
+Promedio: 6.50
+$
+```
+
+---
+
+# Precedencia (actualizada)
+
+$$
+    \begin{array}{llll}
+    \textsf{Operador}                        &   &  & \textsf{Asociatividad} \\\hline
+    ()                                       &   &  & \textsf{Izq. a Der.} \\
+    + \quad - \quad (\text{tipo})            &   &  & \textsf{Der. a Izq.} \\
+    * \quad / \quad \%                       &   &  & \textsf{Izq. a Der.} \\
+    + \quad -                                &   &  & \textsf{Izq. a Der.} \\
+    < \quad <= \quad > \quad >=              &   &  & \textsf{Izq. a Der.} \\
+    == \quad !=                              &   &  & \textsf{Izq. a Der.} \\
+    =                                        &   &  & \textsf{Der. a Izq.} \\
+    \end{array}
+$$
+
+---
+
+# Operadores
+
+Otros operadores son el `++` (llamado incremento) y  
+el `--` (llamado decremento)
+
+
+Son operadores **unarios** porque solo funcionan con un operando.
+
+
+Solo pueden usarse con variables.
+
+El `++` incrementa en 1 el operando al que opera
+
+El `--` decrementa en 1 el operando al que opera
+
+---
+
+# Operadores
+
+ Ejemplo con `++`
+
+```c
+#include <stdio.h>
+
+int main (void) {
+  int var = 3;
+
+  var++;
+
+  printf("%d\n", var);
+
+  return 0;
+}
+```
+
+la variable `var` se inicializa con un 3, pero luego en la siguiente línea aparece el `var++;`
+
+---
+
+# Operadores
+
+Ejemplo con `++`
+
+```c
+#include <stdio.h>
+// u3-op-inc.c
+
+int main (void) {
+  int var = 3;
+
+  var++;
+
+  printf("%d\n", var);
+
+  return 0;
+}
+```
+
+---
+
+```bash
+$ gcc -Wall -std=c99 --pedantic-errors u3-op-inc.c
+$ ./a.out
+4
+$
+```
+
+---
+
+el operador `++` aquí funciona igual que
+```c
+var = var + 1;
+```
+
+---
+
+# Operadores
+
+ Ejemplo con `++`
+
+```c
+#include <stdio.h>
+// u3-op-inc.c
+
+int main (void)
+{
+  int var = 3;
+
+* var++;
+
+  printf("%d\n", var);
+
+  return 0;
+}
+```
+
+O sea, tomar el valor que tiene la variable, incrementarla en una unidad, y volver a guardar el resultado en la misma variable.
+
+---
+
+# Operadores
+
+El operador `++` también se puede usar antes de la variable
+
+```c
+++var;
+```
+
+En este caso tiene el mismo efecto que en el caso anterior
+
+---
+
+# Operadores
+
+Los operadores `++` y `--` también se pueden usar dentro de otra expresión...
+
+```c
+int var = 3
+
+printf("%d\n", ++var);
+```
+
+```bash
+4
+```
+pero con un detalle...
+
+---
+layout: two-cols-header
+---
+
+# Operadores
+
+Suponga 2 fragmentos de código (se omite todo el resto y se pone la salida sin compilar para simplificar)
+
+::left::
+
+**pre** incremento
+
+```c
+int var = 3
+
+printf("%d\n", ++var);
+```
+
+```bash
+4
+```
+
+::right::
+
+**post** incremento
+
+```c
+int var = 3
+
+printf("%d\n", var++);
+```
+
+```bash
+3
+```
+
+::bottom::
+
+<v-click>
+¿Qué pasó?
+</v-click>
+
+---
+
+# Operadores
+
+La función `printf` en este caso reemplaza el `%d` con lo que hay luego de la coma
+
+```c
+printf("`%d`\n", `++var`);
+```
+
+como es una operación, debe resolverse primero (como en el caso de 1+2 hace unos slides atrás)
+
+El `++` delante de la variable se llama **pre** incremento, porque se incrementa **previamente** a su _uso_ (el uso de la variable).
+
+El _uso_ es ser reemplazada por el `%d`
+
+---
+
+# Operadores
+
+En cambio, cuando el `++` se coloca después de la variable se llama **post** incremento, porque incrementa a la variable **después** de su _uso_.
+
+Entonces, primero se usa el valor actual de `var` en el `printf` y **luego** se incrementa
+
+```c
+printf("%d\n", var++);
+```
+
+Lo mismo sucede con el `--`, se puede hacer pre o post decremento
+
+---
+
+# Operadores
+
+Otro operador útil es el `+=` y sus variantes
+
+```c
+var += 3;
+```
+
+es equivalente a
+
+```c
+var = var + 3;
+```
+
+en lugar de 3 se podría poner cualquier valor numérico
+
+
+---
+
+# Operadores
+
+Las variantes son:
+
+$$
+    \begin{array}{ll}
+        += & \textsf{Suma y asignación} \\
+        -= & \textsf{Resta y asignación} \\
+        *= & \textsf{Producto y asignación} \\
+        /= & \textsf{División y asignación} \\
+        \%= & \textsf{Módulo y asignación} \\
+    \end{array}
+$$
+
+---
+
+# Precedencia de operadores (actualizada)
+
+$$
+    \begin{array}{llll}
+    \textsf{Operador}                                           &   &  & \textsf{Asociatividad} \\\hline
+    ()                                                          &   &  & \textsf{Izq. a Der.} \\
+    + \quad - \quad (\text{tipo}) \quad ++ \quad --      &   &  & \textsf{Der. a Izq.} \\
+    * \quad / \quad \%                                          &   &  & \textsf{Izq. a Der.} \\
+    + \quad -                                                   &   &  & \textsf{Izq. a Der.} \\
+    < \quad <= \quad > \quad >=                                 &   &  & \textsf{Izq. a Der.} \\
+    == \quad !=                                                 &   &  & \textsf{Izq. a Der.} \\
+    = \quad += \quad -=  \quad /= \quad *= \quad \%=            &   &  & \textsf{Der. a Izq.} \\
+    \end{array}
+$$
+
+---
+
+<!--# Material-->
+
+<!--Todos los códigos de esta unidad (y las próximas) se pueden ver/bajar de:-->
+
+<!--https://github.com/claudiojpaz/code-->
+
+
+
