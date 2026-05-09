@@ -203,7 +203,7 @@ Si no se alcanza esa condición en más de uno los parciales no se puede Aprobar
 
 - 1er Parcial: Miércoles 27/5/2026 20h
 - 2do parcial: Miércoles 26/8/2026 20h
-- 3er parcial: Miércoles 4/11/2026 20h
+- 3er parcial: Miércoles 11/11/2026 20h
 - Recuperatorios: Miércoles 25/11/2026 20h
 
 <br/>
