@@ -35,6 +35,9 @@ layout: center
 function goUnidad(n) {
   window.location.href = `https://claudiojpaz.github.io/info1/u${String(n).padStart(2,'0')}`
 }
+function goGit() {
+  window.location.href = `https://claudiojpaz.github.io/git`
+}
 </script>
 
 ### Información Importante
@@ -85,7 +88,7 @@ function goUnidad(n) {
     <span class="font-bold text-lg ">
       Extra
     </span>
-    <button @click="goUnidad(12)">Control de Versiones</button>
+    <button @click="goGit()">Control de Versiones</button>
     <button @click="goUnidad(13)">Linux</button>
     <button @click="goUnidad(14)">Electrónica</button>
     <button @click="goUnidad(15)">MakeFile</button>

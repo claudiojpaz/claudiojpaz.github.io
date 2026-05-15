@@ -1933,7 +1933,7 @@ int main (void)
 {
   int var = 3;
 
-* var++;
+  var++;
 
   printf("%d\n", var);
 
