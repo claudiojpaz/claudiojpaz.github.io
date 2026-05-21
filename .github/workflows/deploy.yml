@@ -51,9 +51,9 @@ jobs:
         run: |
           npx slidev build info1/u03/slides.md --base /info1/u03/ --out ${{ github.workspace }}/build/info1/u03
 
-      - name: Build u04
+      - name: Build u05
         run: |
-          npx slidev build info1/u04/slides.md --base /info1/u04/ --out ${{ github.workspace }}/build/info1/u04
+          npx slidev build info1/u05/slides.md --base /info1/u05/ --out ${{ github.workspace }}/build/info1/u05
 
       - name: Assemble final dist
         run: |
