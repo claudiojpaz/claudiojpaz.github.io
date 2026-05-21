@@ -59,8 +59,8 @@ Pueden ser:
 - Simples (las terminadas en `;`)
 - Compuestas (simples encerradas entre `{}`)
 - de Selección (`if`, `if-else` y `switch`)
-- de Repetición (.inline-code`while`, `do-while` y `for`)
-- de Salto (.inline-code`break`, `continue`, `return` y `~~goto~~`)
+- de Repetición (`while`, `do-while` y `for`)
+- de Salto (`break`, `continue`, `return` y ~~goto~~)
 
 ---
 class: text-2xl
