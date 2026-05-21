@@ -4,9 +4,9 @@ import { ref, watch, onUnmounted, computed } from 'vue'
 const props = defineProps({
   prompt: { type: String, default: '$ ' },
   code: { type: String, default: '' }, 
-  speed: { type: Number, default: 0 },
+  speed: { type: Number, default: 100 },
   delay: { type: Number, default: 1000 },
-  active: { type: Boolean, default: true }
+  active: { type: Boolean, default: false }
 })
 
 const rawText = ref('')
@@ -49,28 +49,10 @@ const typeWriter = async (text) => {
 watch(() => props.active, (isNowActive) => {
   clearTimeout(timeoutId)
   rawText.value = ''
-
-  if (!isNowActive) return
-
-  // impresión instantánea
-  if (props.speed <= 0) {
-    const lines = props.code.split('\n')
-
-    rawText.value = lines.map(line => {
-      if (line.startsWith('>')) {
-        return line.substring(1)
-      }
-      return props.prompt + line
-    }).join('\n')
-
-    return
+  if (isNowActive) {
+    timeoutId = setTimeout(() => typeWriter(props.code), props.delay)
   }
-
-  // efecto normal
-  timeoutId = setTimeout(() => typeWriter(props.code), props.delay)
-
 }, { immediate: true })
-
 
 onUnmounted(() => clearTimeout(timeoutId))
 </script>
