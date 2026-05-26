@@ -441,7 +441,7 @@ Cada cifra del sistema octal se puede representar con 3 del sistema binario.
 
 <WarningOverlay>
 
-Teniendo un número binario, para pasar a hexadesimal se toman de a 4 desde la derecha
+Teniendo un número binario, para pasar a hexadecimal se toman de a 4 desde la derecha
 
 Teniendo un número binario, para pasar a octal se toman de a 3 desde la derecha
 
