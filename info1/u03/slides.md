@@ -575,7 +575,7 @@ Queda un archivo `.o`
 
 ![compilacion](/img/computer-system-2015-pag41.svg){class="mx-auto"}
 
-Finalmente, el **linqueador** o **enlazador** compone un único archivo ejecutable con el `.o` que se creo a partir del código del usuario, junto con los `.o` de las funciones de las bibliotecas elegidas
+Finalmente, el **linqueador** o **enlazador** compone un único archivo ejecutable con el `.o` que se creó a partir del código del usuario, junto con los `.o` de las funciones de las bibliotecas elegidas
 
 ---
 layout: center
