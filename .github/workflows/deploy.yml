@@ -55,6 +55,13 @@ jobs:
         run: |
           npx slidev build info1/u05/slides.md --base /info1/u05/ --out ${{ github.workspace }}/build/info1/u05
 
+
+	- name: Create SPA fallbacks
+	run: |
+	  find dist -name index.html | while read f; do
+          cp "$f" "$(dirname "$f")/404.html"
+          done
+
       - name: Assemble final dist
         run: |
           mkdir -p ${{ github.workspace }}/dist
