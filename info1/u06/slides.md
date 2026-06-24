@@ -692,6 +692,9 @@ int cuadrado (int x) {
 ```
 
 ---
+class: text-2xl
+---
+
 # Prototipo de una función
 
 <v-clicks>
