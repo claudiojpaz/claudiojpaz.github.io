@@ -14,5 +14,8 @@
     "@slidev/theme-seriph": "latest",
     "markdown-it-attrs": "^4.3.1",
     "vue": "^3.5.27"
+  },
+  "devDependencies": {
+    "@shikijs/transformers": "^4.2.0"
   }
 }
