@@ -30,7 +30,7 @@ class: text-2xl
 
 <QrOverlay title=''>
 
-<img src="./img/info1-u06.png" class="mx-auto w-3/4" />
+<img src="/img/info1-u06.png" class="mx-auto w-3/4" />
 
 </QrOverlay>
 
@@ -45,12 +45,12 @@ La programación modular consiste en resolver problemas dividiéndolos en proble
 
 ::left::
 
-<img src="./img/funcion-un-modulo.svg" style="transform: scale(0.8); display:block; margin:auto;position: relative; top: 0px">
+<img src="/img/funcion-un-modulo.svg" style="transform: scale(0.8); display:block; margin:auto;position: relative; top: 0px">
 
 
 ::right::
 
-<img src="./img/funcion-un-tres-modulo.svg" style="transform: scale(0.8); display:block; margin:auto; position: relative; top: -10px">
+<img src="/img/funcion-un-tres-modulo.svg" style="transform: scale(0.8); display:block; margin:auto; position: relative; top: -10px">
 
 
 ---
