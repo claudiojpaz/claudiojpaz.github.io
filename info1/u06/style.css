@@ -2,6 +2,14 @@ pre code {
   font-size: 1.2rem !important;
 }
 
+pre.shiki,
+pre.shiki code,
+pre.shiki code *,
+pre.shiki .line {
+  font-size: 1.2rem !important;
+  line-height: 1.5 !important;
+}
+
 .typewriter {
   overflow: hidden;
   border-right: 2px solid;
