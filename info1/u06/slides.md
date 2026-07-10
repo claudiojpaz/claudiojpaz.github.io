@@ -7,7 +7,7 @@ info: |
     Unidad 6  
     Slides del teórico de la Materia  
     Informática 1 del Departamento de Ingeniería Electrónica  
-    Facultad Regional Córdoba de la Universidad Tcnológica Nacional
+    Facultad Regional Córdoba de la Universidad Tecnológica Nacional
 # apply UnoCSS classes to the current slide
 # https://sli.dev/features/drawing
 drawings:
@@ -134,7 +134,7 @@ class: text-2xl
 En ocasiones las funciones devuelven un valor
 
 
-El tipo del valor devuelto, debe estar explicito en la definición de la función
+El tipo del valor devuelto debe estar explícito en la definición de la función
 
 
 </v-clicks>
@@ -334,7 +334,7 @@ float media (int n1, int n2) // [!code word-once:float]
 
 <v-clicks>
 
-Al final del cuerpo de la función la sentencia `return` indica cual es el valor devuelto
+Al final del cuerpo de la función la sentencia `return` indica cuál es el valor devuelto
 
 </v-clicks>
 
@@ -636,11 +636,11 @@ class: text-2xl
 
 <v-clicks>
 
-Si valor devuelto por la función no se usa, se pierde
+Si el valor devuelto por la función no se usa, se pierde
 
 Esto no da errores ni advertencias del compilador
 
-Hay funciones se usan cotidianamente, que devuelven valor que generalmente se descarta
+Hay funciones que se usan cotidianamente, que devuelven un valor que generalmente se descarta
 
 Por ejemplo: `printf`, `scanf`
 
@@ -656,7 +656,7 @@ class: text-2xl
 
 Para que los programas no den errores o advertencias de _linqueo_, las funciones deben estar definidas antes de su uso en el programa (de arriba hacia abajo).
 
-Se puede definir la función debajo de su llamado si se usa los _prototipos_
+Se puede definir la función debajo de su llamado si se usan los _prototipos_
 
 El _prototipo_ de una función es una sentencia que indica el valor de retorno, el nombre y los _tipos_ de la lista de parámetros y finaliza con un punto y coma (;)
 
@@ -698,10 +698,10 @@ class: text-2xl
 
 <v-clicks>
 
-Los prototipos indican al compilador cuantos y de que tipo son los argumentos que hay que pasarle a cada función y el tipo de valor de retorno
+Los prototipos indican al compilador cuántos y de qué tipo son los argumentos que hay que pasarle a cada función y el tipo de valor de retorno
 
 
-La ventaja de usar prototipos es que no hace falta preocuparse cual función es llamada antes que otra, o que función llama a cual y que las definiciones estén en el orden correcto
+La ventaja de usar prototipos es que no hace falta preocuparse por cuál función es llamada antes que otra, o qué función llama a cuál y que las definiciones estén en el orden correcto
 
 
 Los prototipos van antes de las definiciones de las funciones, usualmente los prototipos van antes que `main` y las definiciones después de `main`
@@ -1170,7 +1170,7 @@ class: text-2xl
 
 ## Variables estáticas Vs Globales
 
-Entonces hay que diferenciar entre el alcance (desde donde se puede acceder) y la duración (por cuanto tiempo se mantienen los datos)
+Entonces hay que diferenciar entre el alcance (desde dónde se puede acceder) y la duración (por cuánto tiempo se mantienen los datos)
 
 Las variables locales (automáticas por defecto) solo pueden ser accedidas desde la función donde _"viven"_ y cuando la función termina, las variables _"dejan de existir"_
 
@@ -1272,13 +1272,13 @@ class: text-2xl
 
 # Recursividad
 
-Existen algunos problemas en los que es útil tener funciones **que se llaman a si mismas**
+Existen algunos problemas en los que es útil tener funciones **que se llaman a sí mismas**
 
 Reciben el nombre de **funciones recursivas**
 
 Cada llamado a la función (incluso desde la misma función) crea un nuevo "contexto" de la función, con nuevas variables
 
-Cuando una función se llama a si misma es equivalente a cuando llama a cualquier otra, esto es, suspende la ejecución hasta que la función llamada termina.
+Cuando una función se llama a sí misma es equivalente a cuando llama a cualquier otra, esto es, suspende la ejecución hasta que la función llamada termina.
 
 ---
 layout: two-cols-header
@@ -1368,7 +1368,7 @@ $$
     \text{cumsum}(n) = n + \text{cumsum}(n-1)
 $$
 
-Se puede tomar está expresión como el paso recursivo
+Se puede tomar esta expresión como el paso recursivo
 
 y $\text{cumsum}(1) = 1$ como caso base
 
@@ -1444,7 +1444,7 @@ class: text-2xl
 
 Ambos métodos usan sentencias de control: La _iteración_ usa la sentencia repetitiva, la _recursividad_ usa la sentencia selectiva
 
-La _recursión_ realiza numerosos llamados a una función, creando con cada llamado nuevas copias de variables para cada instancia de la función, usando tiempo de computo y **memoria**.
+La _recursión_ realiza numerosos llamados a una función, creando con cada llamado nuevas copias de variables para cada instancia de la función, usando tiempo de cómputo y **memoria**.
 
 La _iteración_ generalmente está confinada en una función y no hace mayor uso de memoria que 1 ciclo
 
