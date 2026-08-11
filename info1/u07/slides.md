@@ -17,6 +17,7 @@ transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 layout: image
+image: /img/cover.png
 class: text-2xl
 ---
 
