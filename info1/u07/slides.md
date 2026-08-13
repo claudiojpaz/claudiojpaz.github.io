@@ -1034,7 +1034,65 @@ Entonces, los parámetros de la función son: el arreglo, con corchetes sin valo
 class: text-2xl
 ---
 
+```c
+#include <stdio.h>
+#define N 10
+
+void carga (int vec[], int n) {
+  for (int i = 0; i < n; i++)
+    vec[i] = i;
+}
+
+int main (void) {
+  int vec[N] = {0};
+
+  carga(vec, N);
+  for (int i = 0; i < N; i++)
+    printf("%d ", vec[i]);
+
+  return 0;
+}
+```
+
+---
+transition: none
+class: text-2xl
+---
+
+# Pasaje de arreglos a funciones
+
+<v-clicks>
+
+En el caso de arreglos de más dimensiones, el procedimiento es el mismo, con la salvedad que solo puede omitirse el primer límite del arreglo en la definición
+
+```c
+void carga (int mat[][M], int n, int m) {
+  int c = 0;
+
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < m; j++)
+      mat[i][j] = c++;
+
+}
+```
+
+</v-clicks>
+
+---
+layout: center
+class: text-center
+---
+
+# Algoritmos
+
 ---
 class: text-2xl
 ---
 
+---
+class: text-2xl
+---
+
+---
+class: text-2xl
+---
