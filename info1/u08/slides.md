@@ -2019,6 +2019,7 @@ No se puede hacer algo como `*(pnotas + 1) = 10` ni nada que modifique el valor 
 ---
 layout: two-cols-header
 class: text-2xl
+transition: none
 ---
 
 # Punteros a puntero
@@ -2029,3 +2030,584 @@ class: text-2xl
 
 <img src="/img/memoria-0100.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
 
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+```
+
+::right::
+
+<img src="/img/memoria-0100.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+```
+
+::right::
+
+<img src="/img/memoria-0100.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+```
+
+::right::
+
+<img src="/img/memoria-0101.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+```
+
+::right::
+
+<img src="/img/memoria-0102.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+
+```c
+ char var;
+ char *p;
+ char **q;
+```
+
+::right::
+
+<img src="/img/memoria-0102.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+```
+
+::right::
+
+<img src="/img/memoria-0103.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+```
+
+Si `p` apunta a un tipo `char`,
+el puntero `q` así definido podrá apuntar a un tipo `char *`
+
+<v-clicks>
+
+Se dice que `q` es un _puntero a puntero_
+
+</v-clicks>
+
+
+::right::
+
+<img src="/img/memoria-0103.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+```
+::right::
+
+<img src="/img/memoria-0103.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+```
+::right::
+
+<img src="/img/memoria-0103.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+```
+::right::
+
+
+<img src="/img/memoria-0104.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+```
+
+::right::
+
+<img src="/img/memoria-0104.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+```
+
+::right::
+
+<img src="/img/memoria-0105.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+```
+
+::right::
+
+<img src="/img/memoria-0105.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+```
+
+::right::
+
+
+<img src="/img/memoria-0106.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ **q = 14;
+```
+
+::right::
+
+<img src="/img/memoria-0106.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ **q = 14;
+```
+
+::right::
+
+
+<img src="/img/memoria-0107.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ **q = 14;
+```
+
+::right::
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ **q = 14; // [!code line-highlight]
+```
+
+::right::
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ **q = 14; // [!code line-highlight]
+```
+
+En esta línea, el operador de desreferencia que tiene mayor precedencia es el de la derecha, que opera sobre el puntero `q`
+
+::right::
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ **q = 14; // [!code line-highlight]
+```
+
+::right::
+
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ *(*q) = 14; // [!code line-highlight]
+```
+
+::right::
+
+
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ *(*q) = 14; // [!code line-highlight]
+```
+
+
+Equivale a encerrarlos entre paréntesis
+
+<v-clicks>
+
+desreferenciar `q`, o sea (`*q`), trae el contenido del puntero `p` (que es la dirección de `var`)
+
+</v-clicks>
+
+::right::
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ *(*q) = 14; // [!code line-highlight]
+```
+
+::right::
+
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ *(*q) = 14; // [!code line-highlight]
+```
+
+Entonces al hacer la doble desreferencia de `q` se accede a la variable `var`
+
+::right::
+
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+---
+# Punteros a puntero
+
+::left::
+```c
+ char var;
+ char *p;
+ char **q;
+
+ p = &var;
+ q = &p;
+
+ printf("%p", *q);
+ **q = 14; // [!code line-highlight]
+```
+
+::right::
+
+<img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
