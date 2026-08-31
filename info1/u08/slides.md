@@ -2591,7 +2591,6 @@ Entonces al hacer la doble desreferencia de `q` se accede a la variable `var`
 ---
 layout: two-cols-header
 class: text-2xl
-transition: none
 ---
 # Punteros a puntero
 
@@ -2611,3 +2610,1435 @@ transition: none
 ::right::
 
 <img src="/img/memoria-0108.svg" width="200" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+---
+
+# Arreglos de caracteres (debería estar en la U07)
+
+<v-clicks>
+
+En general, en programación, las cadenas son conjuntos de caracteres.
+
+Hay que diferenciar los caracteres individuales como `'a'` de una cadena como `"hola, mundo!"`
+
+Los caracteres individuales están rodeados con comillas simples y las cadenas con comillas dobles
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Arreglos de caracteres (debería estar en la U07)
+
+<v-clicks>
+
+En lenguaje C, los caracteres individuales que se pueden almacenar en un `char`
+
+```c
+char caracter = 'a';
+
+printf("%c", caracter);
+```
+
+y las cadenas como `"Hola, mundo!"` se pueden guardar en un arreglo de tipo `char`
+
+```c
+char cadena[13] = {'h','o','l','a',',',' ','m','u','n','d','o','!','\0'}
+
+printf("%s", cadena);
+```
+
+El caracter `'\0'` es el caracter nulo, no es imprimible y en la tabla ASCII vale `0`
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Arreglos de caracteres (debería estar en la U07)
+
+<v-clicks>
+
+```c
+char cadena[13] = {'h','o','l','a',',',' ','m','u','n','d','o','!','\0'}
+
+printf("%s", cadena);
+```
+
+Las cadenas se pueden imprimir con el especificador de formato `%s`
+
+Como cualquier arreglo, su paso a funciones es sin los corchetes.
+
+Las cadenas deben finalizar en `0` o `'\0'` para poder ser impresas sin errores por `printf`
+
+Este caracter se conoce como _terminador nulo_ o _null terminator_
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Arreglos de caracteres (debería estar en la U07)
+
+<v-clicks>
+
+No es necesario inicializar las cadenas elemento por elemento como los arreglos comunes
+
+en cambio se permite (solo para arreglos de char que sean cadenas) que el arreglo sea inicializado con una cadena (entre comillas dobles) sin llaves.
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Arreglos de caracteres (debería estar en la U07)
+
+No es necesario inicializar las cadenas elemento por elemento como los arreglos comunes
+
+en cambio se permite (solo para arreglos de char que sean cadenas) que el arreglo sea inicializado con una cadena (entre comillas dobles) sin llaves.
+
+````md magic-move
+```c
+char cadena[13] = {'h','o','l','a',',',' ','m','u','n','d','o','!','\0'}
+
+```
+```c
+char cadena[13] = "hola, mundo!\0";
+
+```
+````
+
+---
+class: text-2xl
+---
+
+# Arreglos de caracteres (debería estar en la U07)
+
+<v-clicks>
+
+Como el _terminador nulo_ es un `0` permite que al ser inicializado, el arreglo ya termine con ese valor siempre y cuando el tamaño sea suficiente para que al final haya al menos un caracter más.
+
+```c
+char cadena[13] = "hola, mundo!";
+
+for (int i = 0; i < 13; i++)
+  printf("%d ", cadena[i]);
+```
+
+```
+104 111 108 97 44 32 109 117 110 100 111 33 0
+```
+
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Arreglos de caracteres (debería estar en la U07)
+
+<v-clicks>
+
+Incluso si se omite el tamaño del arreglo, al inicializarse como cadena, automáticamente se deja un elemento extra para el _terminador nulo_
+
+```c
+char cadena[] = "hola, mundo!";
+long unsigned int n = sizeof cadena;
+
+printf("Tamaño de la cadena: %lu\n", n);
+
+for (int i = 0; i < n; i++)
+  printf("%d ", cadena[i]);
+```
+
+```
+Tamaño de la cadena: 13
+104 111 108 97 44 32 109 117 110 100 111 33 0
+```
+
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Arreglos de caracteres (de vuelta a la U08)
+
+<v-clicks>
+
+Para almacenar cadenas se vieron los arreglos de caracteres, su inicialización y su uso
+
+```c
+char saludo[] = "hola, mundo!";
+
+saludo[6] = 'M';
+printf("%s\n", saludo);
+```
+
+La cadena `saludo` así definida tiene el tamaño justo para la frase _hola, mundo!_ + un caracter para el cero de final de línea
+
+La cadena se puede modificar siempre y cuando no se supere el tamaño original
+
+</v-clicks>
+
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a cadenas constantes
+
+<v-clicks>
+
+Otra manera de almacenar cadenas es con los punteros a cadenas de caracteres
+
+```c
+char *saludo = "hola, mundo!";
+
+printf("%s\n", saludo);
+```
+
+La diferencia fundamental es que **no** se pueden modificar. Se pueden considerar cadenas constantes
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a cadenas constantes
+
+Otra manera de almacenar cadenas es con los punteros a cadenas de caracteres
+
+````md magic-move
+```c
+char *saludo = "hola, mundo!";
+
+printf("%s\n", saludo);
+```
+```c
+char *saludo = "hola, mundo!";
+
+saludo[6] = 'M';
+printf("%s\n", saludo);
+```
+````
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a cadenas constantes
+
+Otra manera de almacenar cadenas es con los punteros a cadenas de caracteres
+
+```c
+char *saludo = "hola, mundo!";
+
+saludo[6] = 'M';
+printf("%s\n", saludo);
+```
+
+Intentar modificar una cadena apuntada por un puntero no es detectado por el compilador como un error, sin embargo falla en la ejecución
+
+<v-clicks>
+
+```
+$ gcc -Wall -std=c99 --pedantic-errors pcad.c
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Punteros a cadenas constantes
+
+Otra manera de almacenar cadenas es con los punteros a cadenas de caracteres
+
+```c
+char *saludo = "hola, mundo!";
+
+saludo[6] = 'M';
+printf("%s\n", saludo);
+```
+
+Intentar modificar una cadena apuntada por un puntero no es detectado por el compilador como un error, sin embargo falla en la ejecución
+
+
+```
+$ gcc -Wall -std=c99 --pedantic-errors pcad.c
+$ ./a.out
+[1]    154887 segmentation fault (core dumped)  ./a.out
+```
+
+---
+class: text-2xl
+---
+
+# Punteros a cadenas constantes
+
+
+Una mejora que se puede implementar es usar el calificador `const`
+
+````md magic-move
+```c
+char *saludo = "hola, mundo!";
+
+saludo[6] = 'M';
+printf("%s\n", saludo);
+```
+```c
+const char *saludo = "hola, mundo!";
+
+saludo[6] = 'M';
+printf("%s\n", saludo);
+```
+````
+
+<v-clicks>
+Ahora intentar modificar la cadena tampoco está permitido, pero el compilador da mensaje de error si se intenta
+
+```
+$ gcc -Wall -std=c99 --pedantic-errors pcad.c
+pcad.c: En la función ‘main’:
+pcad.c:6:13: error: asignación de la ubicación de sólo lectura
+                                                ‘*(saludo + 6)’
+    6 |   saludo[6] = 'M';
+      |             ^
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Arreglos de cadenas (U07 de nuevo?)
+
+<v-clicks>
+
+Para almacenar varias cadenas se puede tener un arreglo bidimensional de caracteres
+
+```c
+char numeros[5][10] = {"cero", "uno", "dos", "tres", "cuatro"};
+
+for(int i = 0; i < 5; i++)
+  printf("%s\n", numeros[i]);
+```
+```
+cero
+uno
+dos
+tres
+cuatro
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Arreglos de cadenas (U07 de nuevo?)
+
+
+```c
+char numeros[5][10] = {"cero", "uno", "dos", "tres", "cuatro"};
+
+for(int i = 0; i < 5; i++)
+  printf("%s\n", numeros[i]);
+```
+```
+cero
+uno
+dos
+tres
+cuatro
+```
+<v-clicks>
+
+Esto define un arreglo de 5 filas, donde el tamaño máximo de cada fila es 10 caracteres (una cadena de 10 caracteres)
+
+La expresión `numeros[i]` devuelve la dirección de memoria del primer elemento de la fila `i` (o sea la i-ésima cadena)
+
+</v-clicks>
+
+
+
+---
+class: text-2xl
+---
+
+# Arreglos de cadenas (U07 de nuevo?)
+
+<v-clicks>
+
+<img src="/img/memoria-200.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+Las _casillas_ vacías en realidad contienen un cero (el terminador nulo `'\0'` no el caracter `'0'`) pero se omiten para hacer más claro el gráfico
+
+</v-clicks>
+
+
+---
+class: text-2xl
+---
+
+# Arreglo de punteros
+
+<v-clicks>
+
+Para almacenar varias cadenas también se podría usar un arreglo de punteros a cadenas de caracteres
+
+```c
+char *numeros[5] = {"cero", "uno", "dos", "tres", "cuatro"};
+
+for(int i = 0; i < 5; i++)
+  printf("%s\n", *(numero+i));
+```
+
+```
+cero
+uno
+dos
+tres
+cuatro
+```
+
+Esto es arreglo de 5 elementos de tipo _puntero a char_
+
+Cada puntero apunta a una cadena de texto, que no puede ser modificada
+
+</v-clicks>
+
+
+---
+class: text-2xl
+transition: none
+---
+
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+
+<img src="/img/memoria-300.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-301.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-302.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-303.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-304.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-305.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-306.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-307.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-308.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+# Organización de los datos con arreglos de punteros
+
+La organización de los datos cuando se utiliza un arreglo de punteros es diferente
+
+<img src="/img/memoria-309.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+
+---
+class: text-2xl
+---
+# Punteros vs. Arreglos multidimensionales
+
+<v-clicks>
+
+La principal diferencia entre los arreglos de punteros y los arreglos multidimensionales es que, volviendo al ejemplo de los números, es que en el caso de los arreglos multidimensionales las expresiones:
+
+```
+numeros
+numeros[0]
+&numeros[0]
+&numeros[0][0]
+```
+
+hacen referencia todas a la **misma dirección**
+
+Sin embargo, en el caso de los arreglos de punteros esto no es así
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Punteros vs. Arreglos multidimensionales
+
+<v-clicks>
+
+En el caso de
+
+```c
+  char *numeros[5] = {"cero", "uno", "dos", "tres", "cuatro"};
+```
+
+el arreglo consta de 5 punteros, es decir, cada elemento tiene un tamaño de 8 bytes
+
+```c
+  for (int i=0; i<5; i++)
+    printf("%p\n", &numeros[i]);
+```
+
+```
+0x7ffcf1587840
+0x7ffcf1587848
+0x7ffcf1587850
+0x7ffcf1587858
+0x7ffcf1587860
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Punteros vs. Arreglos multidimensionales
+
+<v-clicks>
+
+Además, como en todos los arreglos, la dirección del primer elemento es igual a la dirección devuelta por la expresión que corresponde solo al nombre del arreglo, entonces se puede decir que en cualquier caso `numeros` es igual a `&numeros[0]`
+
+Si bien `numeros[0]` corresponde al primer elemento del arreglo, el valor contenido es la dirección de memoria donde se encuentra la cadena. Entonces la expresión `numeros[0]` es igual a `&numeros[0][0]`
+
+
+Sin embargo los primeros dos son diferentes de los segundos
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Ordenamiento de estructuras utilizando arreglo de punteros
+
+<v-clicks>
+
+Se puede aprovechar el hecho de que los punteros se pueden intercambiar para intercambiar _filas_ de un arreglo en lugar del intercambio elemento por elemento de un arreglo bidimensional
+
+
+```c
+  char *numeros[5] = {"cero", "uno", "dos", "tres", "cuatro"};
+
+  char *p = numeros[0];
+  numeros[0] = numeros[1];
+  numeros[1] = p;
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Ordenamiento de estructuras utilizando arreglo de punteros
+
+
+<img src="/img/memoria-310.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+transition: none
+---
+
+# Ordenamiento de estructuras utilizando arreglo de punteros
+
+<img src="/img/memoria-311.svg" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+Las cadenas no cambian su valor ni posición, cambia el orden de sus apuntadores
+
+---
+class: text-2xl
+transition: none
+---
+
+# malloc, calloc, realloc y free
+
+<v-clicks>
+
+Así como la sentencia
+
+```c
+int var;
+```
+
+hace una reserva de un espacio de memoria de 4 bytes (en mi máquina los enteros tienen 4 bytes), y la sentencia
+
+```c
+int *q = &var;
+```
+
+define e inicializa un puntero _apuntando_ a esa posición de memoria...
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# malloc, calloc, realloc y free
+
+<v-clicks>
+
+...es posible hacer la reserva de memoria sin hacer la declaración de una variable usando la función `malloc` declarada en `stdlib.h`.
+
+```c
+  int *p;
+  p = malloc(4);
+```
+
+Se llama con la cantidad de memoria que se necesita reservar como argumento, expresada en bytes
+
+La función devuelve un puntero a la primera posición de la memoria reservada o un `NULL` si no se pudo hacer la reserva
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# malloc, calloc, realloc y free
+
+<v-clicks>
+
+Para no cometer errores en el tamaño _pedido_ o poder usar el programa en distintas arquitecturas, en lugar de pasar un valor _literal_ de memoria solicitada se pasa la expresión `sizeof (int)` o del tipo necesario
+
+
+```c
+  int *p;
+  p = malloc(sizeof (int));
+```
+
+o también usando el puntero desreferenciado
+
+```c
+  int *p;
+  p = malloc(sizeof *p);
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# malloc, calloc, realloc y free
+
+<v-clicks>
+
+Cada vez que se asigne memoria mediante la función `malloc` debe tenerse en cuenta que una vez finalizado el uso de la memoria, debe liberarse la misma con la función `free`
+
+Debe ser llamada pasando como argumento el puntero devuelto en su momento por `malloc`
+
+```c
+  int *p;
+  p = malloc(sizeof (int));
+
+  // aquí uso de la memoria
+  // desreferenciando p
+
+  free(p);
+```
+
+También puede reservarse memoria para un arreglo de tamaño `n`
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+```c
+  int n;
+  int *p;
+
+  printf("Ingrese cuantos elementos necesita: ");
+  scanf("%d", &n);
+
+  p = malloc(n * sizeof (int));
+
+  for (int i = 0; i < n; i++)
+    *(p+i) = i*i;
+
+  for (int i = 0; i < n; i++)
+    printf("%d ", *(p+i));
+
+  free(p);
+```
+
+---
+class: text-2xl
+---
+
+```c
+  int n;
+  int *p;
+
+  printf("Ingrese cuantos elementos necesita: ");
+  scanf("%d", &n);
+
+  p = malloc(n * sizeof (int)); // [!code line-highlight]
+
+  for (int i = 0; i < n; i++)
+    *(p+i) = i*i;
+
+  for (int i = 0; i < n; i++)
+    printf("%d ", *(p+i));
+
+  free(p);
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# malloc, calloc, realloc y free
+
+<v-clicks>
+
+Esto es más eficiente que declarar un arreglo de tamaño sobredimensionado para el problema en cuestión y después solo atender a las necesidades del usuario
+
+Esto también es preferible entes que usar los _arreglos de dimensión variable_ los cuales **no** están admitidos en esta materia
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# malloc, calloc, realloc y free
+
+<v-clicks>
+
+La asignación de memoria realizada por `malloc` **no** modifica el contenido de esa memoria y hay que tenerlo en cuenta para usar estas direcciones sin inicializar.
+
+En cambio, la función `calloc` también asigna memoria, pero inicializando en cero a los espacios de memoria reservados
+
+La función `calloc` también devuelve el puntero a la primera posición de memoria reservada, pero necesita dos argumentos: la cantidad de elementos y, el tamaño de cada elemento
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+```c
+  int n;
+  int *p;
+
+  printf("Ingrese cuantos elementos necesita: ");
+  scanf("%d", &n);
+
+  p = calloc(n, sizeof (int));
+
+  for (int i = 0; i < n; i++)
+    *(p+i) = i*i;
+
+  for (int i = 0; i < n; i++)
+    printf("%d ", *(p+i));
+
+  free(p);
+```
+
+---
+class: text-2xl
+---
+
+```c
+  int n;
+  int *p;
+
+  printf("Ingrese cuantos elementos necesita: ");
+  scanf("%d", &n);
+
+  p = calloc(n, sizeof (int)); // [!code line-highlight]
+
+  for (int i = 0; i < n; i++)
+    *(p+i) = i*i;
+
+  for (int i = 0; i < n; i++)
+    printf("%d ", *(p+i));
+
+  free(p);
+```
+
+---
+class: text-2xl
+---
+
+# malloc, calloc, realloc y free
+
+<v-clicks>
+
+En ocasiones es necesario cambiar el tamaño del arreglo
+
+La biblioteca estándar también cuenta con la función `realloc` la cual puede _redimensionar_ el arreglo
+
+Como las otras funciones de asignación, `realloc` devuelve el puntero a la posición de memoria (re)asignada
+
+Debe ser llamada con el puntero de la memoria que se quiere modificar como primer argumento, y el nuevo tamaño como segundo argumento
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+```c
+int n;
+int *p;
+
+printf("Ingrese cuantos elementos necesita: ");
+scanf("%d", &n);
+
+p = calloc(n, sizeof(int));
+
+for (int i = 0; i < n; i++)
+  *(p + i) = i * i;
+
+printf("Arreglo original:\n");
+for (int i = 0; i < n; i++)
+  printf("%d ", *(p + i));
+
+printf("\n");
+// continúa en el siguiente slide
+
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+```c
+// Aumentamos el arreglo
+n += 3;
+p = realloc(p, n * sizeof(int));
+
+// Cargamos los nuevos elementos
+for (int i = n - 3; i < n; i++)
+  *(p + i) = i * i;
+
+printf("Arreglo después de realloc:\n");
+for (int i = 0; i < n; i++)
+  printf("%d ", *(p + i));
+
+free(p);
+```
+
+---
+class: text-2xl
+---
+
+```c
+// Aumentamos el arreglo
+n += 3;
+p = realloc(p, n * sizeof(int)); // [!code line-highlight]
+
+// Cargamos los nuevos elementos
+for (int i = n - 3; i < n; i++)
+  *(p + i) = i * i;
+
+printf("Arreglo después de realloc:\n");
+for (int i = 0; i < n; i++)
+  printf("%d ", *(p + i));
+
+free(p);
+```
+
+---
+class: text-2xl
+---
+
+# malloc, calloc, realloc y free
+
+<v-clicks>
+
+Siempre es conveniente chequear que el valor del puntero devuelto por `malloc`, `calloc` o `realloc` no sea `NULL` lo que indicaría que no fue posible la asignación, de lo contrario podría ser un error en tiempo de ejecución
+
+Liberar por segunda vez un puntero da un error en tiempo de ejecución
+
+
+Desreferenciar un puntero que apunta a memoria ya liberada también es un error en tiempo de ejecución
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+<v-clicks>
+
+Los punteros también pueden apuntar a direcciones de memoria donde están implementadas las funciones
+
+
+Los punteros a funciones pueden ser pasados a otras funciones o ser devueltos por funciones
+
+
+Los punteros a funciones también pueden almacenarse en arreglos y asignarse a otros punteros a funciones
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+<v-clicks>
+
+Al igual que con los punteros a variables, los punteros a funciones deben ser definidos antes de su uso
+
+En las declaraciones de los punteros a funciones, debe aclararse que tipos de valores recibirá la función apuntada y que tipo de valor devolverá
+
+Por ejemplo:
+
+```c
+int (*p)(int, int);
+```
+
+es la definición un puntero a una función que espera dos enteros y devuelve un entero
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+Es importante diferenciar el prototipo de una función común y corriente que devuelve un puntero a un entero
+
+```c
+  int *funcion(int, int);
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+Es importante diferenciar el prototipo de una función común y corriente que devuelve un puntero a un entero
+
+```c
+  int *funcion(int, int); // [!code range:int *]
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+Es importante diferenciar el prototipo de una función común y corriente que devuelve un puntero a un entero
+
+```c
+  int *funcion(int, int);
+```
+
+de un puntero a una función que devuelve un entero
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+Es importante diferenciar el prototipo de una función común y corriente que devuelve un puntero a un entero
+
+```c
+  int *funcion(int, int);
+```
+
+de un puntero a una función que devuelve un entero
+
+```c
+  int (*pfuncion)(int, int);
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+Es importante diferenciar el prototipo de una función común y corriente que devuelve un puntero a un entero
+
+```c
+  int *funcion(int, int);
+```
+
+de un puntero a una función que devuelve un entero
+
+```c
+  int (*pfuncion)(int, int); // [!code range: *pfuncion ]
+```
+
+---
+class: text-2xl
+---
+
+# Punteros a función
+
+Es importante diferenciar el prototipo de una función común y corriente que devuelve un puntero a un entero
+
+```c
+  int *funcion(int, int);
+```
+
+de un puntero a una función que devuelve un entero
+
+```c
+  int (*pfuncion)(int, int);
+```
+
+El uso de los paréntesis es la única forma de diferenciar entre los dos casos
+
+---
+class: text-2xl
+---
+
+# Punteros a función
+
+<v-clicks>
+
+Al igual que los arreglos, **el nombre de la función indica la posición de memoria donde comienza su implementación**
+
+Entonces si se tiene una definición de función como
+
+```c
+int add (int a, int b) {
+  return a+b;
+}
+```
+
+Se puede hacer una asignación como
+
+```c
+  int (*p)(int, int);
+  p = add;
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+<v-clicks>
+
+El llamado a las funciones apuntadas por medio de la desreferencia se puede hacer con
+
+```c
+  int (*p)(int, int);
+  p = add;
+
+  printf("%d\n", (*p) (5,3) );
+```
+
+En lugar de usar el nombre de la función se usa el puntero desreferenciado
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+El llamado a las funciones apuntadas por medio de la desreferencia se puede hacer con
+
+```c
+  int (*p)(int, int);
+  p = add;
+
+  printf("%d\n", (*p) (5,3) ); // [!code range: *p]
+```
+
+En lugar de usar el nombre de la función se usa el puntero desreferenciado
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+El llamado a las funciones apuntadas por medio de la desreferencia se puede hacer con
+
+```c
+  int (*p)(int, int);
+  p = add;
+
+  printf("%d\n", (*p) (5,3) );
+```
+
+En lugar de usar el nombre de la función se usa el puntero desreferenciado
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+El llamado a las funciones apuntadas por medio de la desreferencia se puede hacer con
+
+```c
+  int (*p)(int, int);
+  p = add;
+
+  printf("%d\n", (*p) (5,3) );
+```
+
+En lugar de usar el nombre de la función se usa el puntero desreferenciado
+
+El paso de argumentos se hace encerrando la lista entre paréntesis como en una función común
+
+---
+class: text-2xl
+---
+
+# Punteros a función
+
+El llamado a las funciones apuntadas por medio de la desreferencia se puede hacer con
+
+```c
+  int (*p)(int, int);
+  p = add;
+
+  printf("%d\n", (*p) (5,3) );  // [!code range: (5,3)]
+```
+
+
+En lugar de usar el nombre de la función se usa el puntero desreferenciado
+
+El paso de argumentos se hace encerrando la lista entre paréntesis como en una función común
+
+---
+layout: two-cols-header
+layoutClass: gap-4
+class: text-2xl
+---
+
+::left::
+
+```c
+#include <stdio.h>
+
+int suma (int a, int b) {
+  return a+b;
+}
+int resta (int a, int b) {
+  return a-b;
+}
+
+```
+
+::right::
+
+```c
+int main (void) {
+  int (*p)(int,int);
+  int r;
+
+  p = suma;
+  r = (*p)(5,4);
+  printf("%d\n",  r);
+
+  p = resta;
+  r = (*p)(5,4);
+  printf("%d\n",  r);
+
+  return 0;
+}
+
+```
+
+---
+class: text-2xl
+---
+
+# Punteros a función
+
+<v-clicks>
+
+La expresión `r = (*p)(5,4);` podría escribirse
+```c
+  r = p(5,4);
+```
+sin usar el operador de desreferencia
+
+Sin embargo esto no es aconsejable porque se _pierde_ la información a cerca de `p`...
+
+Alguien podría pensar que es una función que no está definida
+
+Se aconseja usar la versión con el operador de desreferencia
+
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Punteros a función
+
+Un ejemplo un poco más complejo es el siguiente. Supongamos las dos funciones ya vistas que resuelven una operación, ambas reciben dos enteros y devuelven un entero
+
+```c
+int suma (int a, int b) {
+  return a+b;
+}
+
+int resta (int a, int b) {
+  return a-b;
+}
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+En lugar de definir el puntero en la función `main`, se lo pone en la lista de parámetros de una función, que recibe además los operandos que se le pasan al puntero a función
+
+```c
+void pregunta (int (*p)(int,int), int a, int b, char signo){
+  int r;
+  printf("¿Cuánto es %d%c%d? ", a, signo, b);
+  scanf("%d", &r);
+
+  if (r == (*p)(a,b))
+    printf("Correcto\n");
+  else
+    printf("Incorrecto\n");
+}
+```
+
+---
+class: text-2xl
+---
+
+# Punteros a función
+
+En lugar de definir el puntero en la función `main`, se lo pone en la lista de parámetros de una función, que recibe además los operandos que se le pasan al puntero a función
+
+```c
+void pregunta (int (*p)(int,int), int a, int b, char signo){ // [!code range: int (*p)(int,int)]
+  int r;
+  printf("¿Cuánto es %d%c%d? ", a, signo, b);
+  scanf("%d", &r);
+
+  if (r == (*p)(a,b))
+    printf("Correcto\n");
+  else
+    printf("Incorrecto\n");
+}
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+El llamado a la función, se hace simplemente pasando el nombre de la función
+
+```c
+int main (void) {
+
+  pregunta(suma, 5, 4, '+');
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+El llamado a la función, se hace simplemente pasando el nombre de la función
+
+```c
+int main (void) {
+
+  pregunta(suma, 5, 4, '+'); // [!code range: suma]
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+El llamado a la función, se hace simplemente pasando el nombre de la función
+
+```c
+int main (void) {
+
+  pregunta(suma, 5, 4, '+');
+
+  return 0;
+}
+```
+
+<v-clicks>
+
+También se puede enviar otra función
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Punteros a función
+
+El llamado a la función, se hace simplemente pasando el nombre de la función
+
+````md magic-move
+```c
+int main (void) {
+
+  pregunta(suma, 5, 4, '+');
+
+  return 0;
+}
+```
+```c
+int main (void) {
+
+  pregunta(suma, 5, 4, '+');
+  pregunta(resta, 5, 4, '-');
+
+  return 0;
+}
+```
+````

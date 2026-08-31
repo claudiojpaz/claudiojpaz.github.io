@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="memoria-303.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    id="svg50"
    version="1.1"
-   viewBox="0 0 151 75.999999"
-   height="76mm"
-   width="151mm">
+   viewBox="0 0 153.96866 79.308509"
+   height="79.30851mm"
+   width="153.96866mm"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs44" />
   <sodipodi:namedview
      inkscape:window-maximized="1"
-     inkscape:window-y="18"
+     inkscape:window-y="28"
      inkscape:window-x="0"
-     inkscape:window-height="748"
-     inkscape:window-width="1362"
+     inkscape:window-height="1050"
+     inkscape:window-width="1916"
      showgrid="false"
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="151.45113"
-     inkscape:cx="261.50822"
+     inkscape:cy="157.21787"
+     inkscape:cx="267.03673"
      inkscape:zoom="1.4979213"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base" />
+     id="base"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <metadata
      id="metadata47">
     <rdf:RDF>
@@ -43,15 +46,22 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-27.077949,-49.034568)"
+     transform="translate(-25.59362,-47.380314)"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Capa 1">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0.1;stroke-linecap:square;paint-order:markers stroke fill"
+       id="rect1"
+       width="153.96866"
+       height="79.30851"
+       x="25.59362"
+       y="47.380314"
+       ry="0" />
     <rect
        y="49.167068"
        x="27.210449"
