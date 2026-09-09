@@ -3847,6 +3847,14 @@ int suma (int a, int b) {
 int resta (int a, int b) {
   return a-b;
 }
+int mult (int a, int b) {
+  return a*b;
+}
+int divi (int a, int b) {
+  if (b != 0)
+    return a/b;
+  return 0;
+}
 
 ```
 
@@ -4016,7 +4024,6 @@ También se puede enviar otra función
 
 ---
 class: text-2xl
-transition: none
 ---
 
 # Punteros a función
@@ -4042,3 +4049,210 @@ int main (void) {
 }
 ```
 ````
+
+---
+class: text-2xl
+---
+
+# Arreglo de punteros a función
+
+<v-clicks>
+
+También podemos definir arreglos de punteros a función
+
+Pero como los punteros a variables, los punteros a función debe ser del _tipo_ de la función...
+
+Pero con tipo nos referimos a tipo de valor de retorno, cantidad y tipo de parámetros que recibe.
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Arreglo de punteros a función
+
+<v-clicks>
+
+Volviendo a
+
+```c
+int suma (int a, int b) {
+  return a+b;
+}
+
+int resta (int a, int b) {
+  return a-b;
+}
+```
+
+para definir un arreglo hay que agregar corchetes y tamaño al lado del puntero, dentro de los paréntesis
+
+```c
+int (*p[4])(int,int);
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Arreglo de punteros a función
+
+Entonces
+
+```c
+int main (void) {
+  int (*p[4])(int,int);
+  int r;
+
+  p[0] = suma;
+  p[1] = resta;
+  p[2] = mult;
+  p[3] = divi;
+
+  for (int i = 0; i < 4; i++) {
+    r = (*p[i])(6,2);
+    printf("%d\n",  r);
+  }
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+transition: none
+---
+# Arreglo de punteros a función
+
+O _simplemente_ inicializando en la definición del arreglo
+
+```C
+int main (void) {
+  int (*p[])(int,int) = {suma, resta, mult, divi};
+  int r;
+
+  for (int i = 0; i < 4; i++) {
+    r = (*p[i])(6,2);
+    printf("%d\n",  r);
+  }
+
+  return 0;
+}
+
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Arreglo de punteros a función
+
+## Ejemplo de menú con arreglo de punteros a función
+
+Se trata de reemplazar la estructura se selección múltiple `switch` por una estructura repetitiva con punteros a funciones
+
+Para simplificar, en el ejemplo las opciones solo imprimen como se llama la función que la ejecuta
+
+---
+class: text-2xl
+transition: none
+---
+
+# Arreglo de punteros a función
+## Ejemplo de menú con arreglo de punteros a función
+
+Las funciones son
+```c
+void alta (void) {
+  printf("alta\n");
+}
+void baja (void) {
+  printf("baja\n");
+}
+void modificacion (void) {
+  printf("modificación\n");
+}
+void impresion (void) {
+  printf("impresión\n");
+}
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Arreglo de punteros a función
+## Ejemplo de menú con arreglo de punteros a función
+
+```c
+int main (void) {
+  void (*p[4])(void) = {alta, baja, modificacion, impresion};
+  int op;
+
+  do {
+    printf("0-Alta\n1-Baja\n2-Modificación\n");
+    printf("3-Impresión\nCualquier otra-Salir\n");
+    printf("Ingrese que opción desea: ");
+    scanf("%d", &op);
+    if (op >= 0 && op < 4)
+      (*p[op])();
+  } while (op >= 0 && op < 4);
+
+  return 0;
+}
+```
+
+Dependiendo de la variable `op` se ejecutará la función que corresponda del arreglo
+
+---
+class: text-2xl
+transition: none
+---
+
+# Arreglo de punteros a función
+## Ejemplo de menú con arreglo de punteros a función
+
+```c
+int main (void) {
+  void (*p[4])(void) = {alta, baja, modificacion, impresion};
+  int op;
+
+  do {
+    printf("0-Alta\n1-Baja\n2-Modificación\n");
+    printf("3-Impresión\nCualquier otra-Salir\n");
+    printf("Ingrese que opción desea: ");
+    scanf("%d", &op);
+    if (op >= 0 && op < 4)
+*     (*p[op])();
+  } while (op >= 0 && op < 4);
+
+  return 0;
+}
+```
+Dependiendo de la variable `op` se ejecutará la función que corresponda del arreglo
+
+---
+class: text-2xl
+transition: none
+---
+
+# Argumentos por línea de comandos
+
+El estándar de C permite que los parámetros de `main` sean: `void` o como en el siguiente ejemplo
+
+```c
+#include <stdio.h>
+
+int main (int argc, char *argv[]) {
+
+  return 0;
+}
+```
+
+El primer parámetro, `argc`, es igual a la cantidad de argumentos usados en la llamada al programa
