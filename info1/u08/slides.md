@@ -4130,7 +4130,7 @@ transition: none
 
 O _simplemente_ inicializando en la definición del arreglo
 
-```C
+```c
 int main (void) {
   int (*p[])(int,int) = {suma, resta, mult, divi};
   int r;
@@ -4229,7 +4229,7 @@ int main (void) {
     printf("Ingrese que opción desea: ");
     scanf("%d", &op);
     if (op >= 0 && op < 4)
-*     (*p[op])();
+      (*p[op])();
   } while (op >= 0 && op < 4);
 
   return 0;
