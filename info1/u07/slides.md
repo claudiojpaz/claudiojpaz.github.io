@@ -881,3 +881,127 @@ class: text-2xl
 class: text-2xl
 ---
 
+# Pasaje de arreglos a funciones
+
+A diferencia de las variables, al pasar los arreglos a las funciones, los cambios que se hagan sobre el arreglo, **afectan** al arreglo original
+
+En el llamado **no** deben usarse los corchetes, solo el nombre del arreglo
+
+En la definición el arreglo, en la lista de parámetros, debe tener corchetes
+
+---
+class: text-2xl
+---
+
+```c
+#include <stdio.h>
+
+#define N 10
+
+void carga (int vec[N])
+{
+  for (int i = 0; i < N; i++)
+    vec[i] = i;
+}
+
+int main (void)
+{
+  int vec[N] = {0};
+
+  carga(vec);
+  for (int i = 0; i < N; i++)
+    printf("%d ", vec[i]);
+
+  return 0;
+}
+```
+
+```sh
+0 1 2 3 4 5 6 7 8 9
+```
+
+---
+class: text-2xl
+---
+
+# Pasaje de arreglos a funciones
+
+Por motivos que se ampliarán en la unidad 8, se puede definir el arreglo en la lista de parámetros sin ningún valor entre corchetes
+
+
+```c
+void carga (int vec[])
+{
+  for (int i = 0; i < N; i++)
+    vec[i] = i;
+}
+```
+
+---
+class: text-2xl
+---
+
+# Pasaje de arreglos a funciones
+
+Una buena práctica de programación consiste en **no** incluir ningún valor "global" en la función
+
+
+```c
+void carga (int vec[], int n)
+{
+  for (int i = 0; i < n; i++)
+    vec[i] = i;
+}
+```
+
+Entonces, los parámetros de la función son: el arreglo, con corchetes sin valores, y la dimensión del mismo, pero como variable
+
+---
+class: text-2xl
+---
+
+# Pasaje de arreglos a funciones
+
+```c
+#include <stdio.h>
+
+#define N 10
+
+void carga (int vec[], int n)
+{
+  for (int i = 0; i < n; i++)
+    vec[i] = i;
+}
+
+int main (void)
+{
+  int vec[N] = {0};
+
+  carga(vec, N);
+  for (int i = 0; i < N; i++)
+    printf("%d ", vec[i]);
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+---
+
+# Pasaje de arreglos a funciones
+
+En el caso de arreglos de más dimensiones, el procedimiento es el mismo, con la salvedad que solo puede omitirse el primer límite del arreglo en la definición
+
+```c
+void carga (int mat[][M], int n, int m)
+{
+  int c = 0;
+
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < m; j++)
+      mat[i][j] = c++;
+
+}
+```
+
