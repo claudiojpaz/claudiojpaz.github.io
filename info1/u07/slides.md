@@ -890,8 +890,11 @@ En el llamado **no** deben usarse los corchetes, solo el nombre del arreglo
 En la definición el arreglo, en la lista de parámetros, debe tener corchetes
 
 ---
+layout: two-cols-header
 class: text-2xl
 ---
+
+::left::
 
 ```c
 #include <stdio.h>
@@ -903,6 +906,11 @@ void carga (int vec[N])
   for (int i = 0; i < N; i++)
     vec[i] = i;
 }
+```
+
+::right::
+
+```c
 
 int main (void)
 {
@@ -916,7 +924,7 @@ int main (void)
 }
 ```
 
-```sh
+```
 0 1 2 3 4 5 6 7 8 9
 ```
 
@@ -957,10 +965,11 @@ void carga (int vec[], int n)
 Entonces, los parámetros de la función son: el arreglo, con corchetes sin valores, y la dimensión del mismo, pero como variable
 
 ---
+layout: two-cols-header
 class: text-2xl
 ---
 
-# Pasaje de arreglos a funciones
+::left::
 
 ```c
 #include <stdio.h>
@@ -972,6 +981,12 @@ void carga (int vec[], int n)
   for (int i = 0; i < n; i++)
     vec[i] = i;
 }
+
+```
+
+::right::
+
+```c
 
 int main (void)
 {
