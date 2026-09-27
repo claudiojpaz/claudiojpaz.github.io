@@ -4096,10 +4096,7 @@ int (*p[4])(int,int);
 
 ---
 class: text-2xl
-transition: none
 ---
-
-# Arreglo de punteros a función
 
 Entonces
 
@@ -4124,9 +4121,7 @@ int main (void) {
 
 ---
 class: text-2xl
-transition: none
 ---
-# Arreglo de punteros a función
 
 O _simplemente_ inicializando en la definición del arreglo
 
@@ -4147,7 +4142,6 @@ int main (void) {
 
 ---
 class: text-2xl
-transition: none
 ---
 
 # Arreglo de punteros a función
@@ -4160,7 +4154,6 @@ Para simplificar, en el ejemplo las opciones solo imprimen como se llama la func
 
 ---
 class: text-2xl
-transition: none
 ---
 
 # Arreglo de punteros a función
@@ -4184,7 +4177,6 @@ void impresion (void) {
 
 ---
 class: text-2xl
-transition: none
 ---
 
 # Arreglo de punteros a función
@@ -4208,34 +4200,6 @@ int main (void) {
 }
 ```
 
-Dependiendo de la variable `op` se ejecutará la función que corresponda del arreglo
-
----
-class: text-2xl
-transition: none
----
-
-# Arreglo de punteros a función
-## Ejemplo de menú con arreglo de punteros a función
-
-```c
-int main (void) {
-  void (*p[4])(void) = {alta, baja, modificacion, impresion};
-  int op;
-
-  do {
-    printf("0-Alta\n1-Baja\n2-Modificación\n");
-    printf("3-Impresión\nCualquier otra-Salir\n");
-    printf("Ingrese que opción desea: ");
-    scanf("%d", &op);
-    if (op >= 0 && op < 4)
-      (*p[op])();
-  } while (op >= 0 && op < 4);
-
-  return 0;
-}
-```
-Dependiendo de la variable `op` se ejecutará la función que corresponda del arreglo
 
 ---
 class: text-2xl
@@ -4256,3 +4220,111 @@ int main (int argc, char *argv[]) {
 ```
 
 El primer parámetro, `argc`, es igual a la cantidad de argumentos usados en la llamada al programa
+
+---
+class: text-2xl
+---
+
+# Argumentos por línea de comandos
+
+El estándar de C permite que los parámetros de `main` sean: `void` o como en el siguiente ejemplo
+
+```c
+#include <stdio.h>
+
+int main (int argc, char *argv[]) { // [!code range: int argc, char *argv[]]
+
+  return 0;
+}
+```
+
+El primer parámetro, `argc`, es igual a la cantidad de argumentos usados en la llamada al programa
+
+---
+class: text-2xl
+transition: none
+---
+
+# Argumentos por línea de comandos
+
+Si se tiene el archivo `argumentos-main-01.c` con
+```c
+#include <stdio.h>
+
+int main (int argc, char *argv[]) {
+
+  printf("%d argumentos en la llamada al programa\n", argc);
+
+  return 0;
+}
+```
+
+Se lo compila con
+```
+$ gcc -Wall -std=c99 -pedantic-errors argumentos-main-01.c -o test
+```
+
+El ejecutable ahora se llama `test`
+
+---
+class: text-2xl
+---
+
+# Argumentos por línea de comandos
+
+Si se lanza el programa con palabras extras como _argumentos_ su salida será
+
+```
+$ ./test uno dos tres
+4 argumentos en la llamada al programa
+$
+```
+Se puede ver que `test` se ejecutó de manera correcta, y en `argc` se cargó un 4 correspondiente a los 3 argumentos pasados en el llamado al programa y el programa mismo
+
+---
+class: text-2xl
+---
+
+# Argumentos por línea de comandos
+
+El parámetro `char *argv[]` es un arreglo de punteros a cadenas y cada una es uno de los argumentos pasados a la llamada del programa
+
+
+Si tenemos el archivo `argumentos-main-02.c` con
+
+```c
+#include <stdio.h>
+
+int main (int argc, char *argv[]) {
+
+  for (int i = 0; i < argc; i++)
+    printf("%s\n", argv[i]);
+
+  return 0;
+}
+```
+Se puede imprimir cada uno de los parámetros
+
+---
+class: text-2xl
+---
+
+# Argumentos por línea de comandos
+
+Compilando con
+```
+$ gcc -Wall -std=c99 -pedantic-errors argumentos-main-02.c -o test
+```
+
+si se lanza este programa de la misma manera que la vez anterior...
+
+```
+$ ./test uno dos tres
+./test
+uno
+dos
+tres
+$
+```
+
+
