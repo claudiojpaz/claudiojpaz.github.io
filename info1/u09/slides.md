@@ -1260,7 +1260,7 @@ class: text-2xl -translate-y-8
 $$
     \begin{array}{llll}
     \textsf{Operador}                                           &   &  & \textsf{Asociatividad} \\\hline
-    () \quad [] \quad \dot \quad\quad \text{->}                    &   &  & \textsf{Izq. a Der.} \\
+    () \quad [] \quad \cdot \quad\quad \text{->}                    &   &  & \textsf{Izq. a Der.} \\
     + \quad - \quad (\text{tipo}) \quad ++ \quad -- \quad ! \quad \& \quad *    &   &  & \textsf{Der. a Izq.} \\
     * \quad / \quad \%                                          &   &  & \textsf{Izq. a Der.} \\
     + \quad -                                                   &   &  & \textsf{Izq. a Der.} \\
