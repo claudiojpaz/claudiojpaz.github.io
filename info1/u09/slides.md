@@ -2016,3 +2016,1565 @@ La gran diferencia...
 
 
 ---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Uniones
+
+::left::
+
+::right::
+
+<img src="/img/memoria-union-000.svg" width="280" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Uniones
+
+::left::
+
+Cada miembro de la unión **comparte** la posición memoria con los otros
+
+::right::
+
+<img src="/img/memoria-union-000.svg" width="280" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Uniones
+
+::left::
+
+Cada miembro de la unión **comparte** la posición memoria con los otros
+
+```c
+union dato {
+  int a;
+  char b;
+};
+
+union dato u;
+```
+
+::right::
+
+<img src="/img/memoria-union-000.svg" width="280" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Uniones
+
+::left::
+
+Cada miembro de la unión **comparte** la posición memoria con los otros
+
+```c
+union dato {
+  int a;
+  char b;
+};
+
+union dato u;
+```
+
+::right::
+
+<img src="/img/memoria-union-001.svg" width="280" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Uniones
+
+::left::
+
+Cada miembro de la unión **comparte** la posición memoria con los otros
+
+```c
+union dato {
+  int a;
+  char b;
+};
+
+union dato u;
+```
+
+::right::
+
+
+<img src="/img/memoria-union-000.svg" width="280" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Uniones
+
+::left::
+
+Cada miembro de la unión **comparte** la posición memoria con los otros
+
+```c
+union dato {
+  int a;
+  char b;
+};
+
+union dato u;
+```
+
+::right::
+
+<img src="/img/memoria-union-002.svg" width="280" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Uniones
+
+::left::
+
+Cada miembro de la unión **comparte** la posición memoria con los otros
+
+```c
+union dato {
+  int a;
+  char b;
+};
+
+union dato u;
+```
+
+::right::
+
+<img src="/img/memoria-union-003.svg" width="280" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+layout: two-cols-header
+class: text-2xl
+layoutClass: gap-4
+---
+
+# Uniones
+
+::left::
+
+Cada miembro de la unión **comparte** la posición memoria con los otros
+
+```c
+union dato {
+  int a;
+  char b;
+};
+
+union dato u;
+```
+
+::right::
+
+<img src="/img/memoria-union-004.svg" width="280" class="ml-auto" style="margin: auto; position: relative; top: 0px" >
+
+---
+class: text-2xl
+layoutClass: gap-4
+---
+
+# Uniones
+
+<v-clicks>
+
+<img src="/img/sin-memoria-union-002.svg" width="500" style="margin: auto; position: relative; top: 10px" >
+
+El tamaño en memoria de la unión es suficiente para almacenar el miembro que ocupe mayor espacio
+
+Pero compartir memoria trae problemas si se accesa de forma equivocada
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+## (repaso de Unidad 2)
+
+<v-clicks>
+
+Si se tiene un número real, por ej. `3.125` almacenado en formato IEEE754 de simple precisión, en bits sería
+
+<img src="/img/ieee-3.125.svg" width="75%" style="margin: auto; position: relative; top: 10px" >
+
+pero si se interpretan esos mismos bits
+
+<img src="/img/int-3.125.svg" width="75%" style="margin: auto; position: relative; top: 10px" >
+
+como un entero...
+
+se lee `1078460416`
+
+ya que
+
+$2^{30}+2^{22}+2^{19} =  1078460416$
+
+</v-clicks>
+
+
+---
+class: text-2xl
+---
+
+# Uniones
+
+<v-clicks>
+
+Entonces, para definir una unión se sigue el mismo formato que la estructura pero con la palabra clave `union`
+
+Puede tener cualquier tipo y cantidad de _miembros_, los cuales se definen cada uno con su tipo y nombre finalizando cada línea con punto y coma (`;`)
+
+La _etiqueta_ y los nombres de los miembros deben respetar las reglas de los identificadores
+
+Toda la definición debe terminar con punto y coma (`;`)
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones
+
+<v-clicks>
+
+Entonces, con
+
+```c
+#include <stdio.h>
+
+union int_float {
+  int entero;
+  float real;
+};
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones
+
+```c
+int main (void) {
+  union int_float u;
+
+  printf("Asignando a float\n") ;
+  u.real = 3.125;
+  printf("Imprimiendo float  => %.3f\n", u.real) ;
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones
+
+```c
+int main (void) {
+  union int_float u;
+
+  printf("Asignando a float\n") ;
+  u.real = 3.125; // [!code line-highlight]
+  printf("Imprimiendo float  => %.3f\n", u.real) ;
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+<v-clicks>
+
+```
+Asignando a float
+Imprimiendo float  => 3.125
+Imprimiendo entero => 1078460416
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones
+
+````md magic-move
+```c
+int main (void) {
+  union int_float u;
+
+  printf("Asignando a float\n") ;
+  u.real = 3.125;
+  printf("Imprimiendo float  => %.3f\n", u.real) ;
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+```c
+int main (void) {
+  union int_float u;
+
+  printf("Asignando a int\n") ;
+  u.entero = 42;
+  printf("Imprimiendo float  => %.3f\n", u.real) ;
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+````
+
+---
+class: text-2xl
+---
+
+# Uniones
+
+```c
+int main (void) {
+  union int_float u;
+
+  printf("Asignando a int\n") ;
+  u.entero = 42; // [!code line-highlight]
+  printf("Imprimiendo float  => %.3f\n", u.real) ;
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+<v-clicks>
+
+```
+Asignando a int
+Imprimiendo float  => 0.000
+Imprimiendo entero => 42
+```
+
+¿Por qué imprimir el `float` da 0?
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones
+
+<v-clicks>
+
+El entero 42 se almacena como
+
+<img src="/img/int-42.svg" width="75%" style="margin: auto;" >
+
+Si se lee como un `float`
+
+<img src="/img/ieee-42.svg" width="75%" style="margin: auto;" >
+
+al convertir este número se obtiene
+
+`5.88545355016e-44`
+
+y en notación decimal se escribe `0.` y cuarenta y tres ceros antes del 5
+
+Se puede ver el valor almacenado real con `%e`
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones
+
+```c
+int main (void) {
+  union int_float u;
+
+  printf("Asignando a int\n") ;
+  u.entero = 42;
+  printf("Imprimiendo float  => %.11e\n", u.real) ;
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones
+
+```c
+int main (void) {
+  union int_float u;
+
+  printf("Asignando a int\n") ;
+  u.entero = 42;
+  printf("Imprimiendo float  => %.11e\n", u.real) ; // [!code range: %.11e]
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+<v-clicks>
+
+```
+Asignando a int
+Imprimiendo float  => 5.88545355016e-44
+Imprimiendo entero => 42
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones
+
+<v-clicks>
+
+En resumen, si se asigna un valor a un miembro de la unión, este se guarda siguiendo las _reglas_ de ese tipo de datos
+
+Pero siempre recordar que todos los valores, del tipo que sean, se guardan en bits
+
+Si se lee desde un miembro de un tipo diferente, se interpretan los bits almacenados con las _reglas_ de este último tipo de miembro que se lee
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones. Inicialización
+
+<v-clicks>
+
+```c
+#include <stdio.h>
+
+union int_float {
+  int entero;
+  float real;
+};
+
+int main (void) {
+  union int_float u = {42};
+
+  printf("Imprimiendo float  => %.3f\n", u.real) ; // probar %.11e
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+</v-clicks>
+
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones. Inicialización
+
+```c
+#include <stdio.h>
+
+union int_float {
+  int entero;
+  float real;
+};
+
+int main (void) {
+  union int_float u = {42}; // [!code range: {42}]
+
+  printf("Imprimiendo float  => %.3f\n", u.real) ; // probar %.11e
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+
+---
+class: text-2xl
+---
+
+# Uniones. Inicialización
+
+<v-clicks>
+
+Pero hay un detalle...
+
+Solo se puede inicializar un valor, ya que es compartido por todos los miembros
+
+El _formato_ de carga depende de cual sea el valor que esté primero en la definición de la unión
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Uniones. Inicialización
+
+```c
+int main (void) {
+  union int_float u = {42.195};
+
+  printf("Imprimiendo float  => %.3f\n", u.real) ;
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+---
+
+# Uniones. Inicialización
+
+```c
+int main (void) {
+  union int_float u = {42.195}; // [!code range: {42.195}]
+
+  printf("Imprimiendo float  => %.3f\n", u.real) ;
+  printf("Imprimiendo entero => %d\n", u.entero) ;
+
+  return 0;
+}
+```
+
+<v-clicks>
+
+Aunque se inicialice con un número real, como el primer miembro es entero, se produce un truncamiento en la inicialización, y solo se inicializa la variable entera con un `42`
+
+```
+Imprimiendo float  => 0.000
+Imprimiendo entero => 42
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Inicialización
+
+<v-clicks>
+
+Se puede inicializar un miembro que no sea el primero en la definición usando los _inicializadores designados_
+
+```c
+union int_float u = {.real=42.195};
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Operaciones permitidas
+
+<v-clicks>
+
+Se permite asignar uniones a otras uniones del mismo tipo
+
+Se puede usar el operador _dirección de memoria_ (`&`) para devolver la dirección de la unión (que es la misma que la de cualquiera de sus miembros)
+
+El operador punto (`.`) y el operador flecha (`->`) se usan de la misma manera que en las estructuras
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Operaciones NO permitidas
+
+<v-clicks>
+
+No se permiten las comparaciones (`==`,  `!=`,  `<`,  `>` etc.)
+
+No se permiten operaciones aritméticas (`+`, `-`, `*`, `/`)
+
+</v-clicks>
+
+
+---
+class: text-2xl
+---
+
+# Uniones. Posibles usos
+
+<v-clicks>
+
+Las uniones pueden tener arreglos como miembros (los cuales son pasados
+por valor a las funciones)
+
+
+```c
+union int_4char {
+  int entero;
+  char ch[4];
+};
+```
+
+No es necesario que el arreglo tenga el mismo tamaño que el otro u otros miembros
+
+En cualquier caso el tamaño de la unión será igual al tamaño en memoria de miembro que ocupe más espacio
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Posibles usos
+
+Se pueden hacer arreglos de uniones
+
+```c
+union int_float {
+  int entero;
+  float real;
+};
+
+union int_float u[10];
+```
+
+---
+class: text-2xl
+---
+
+# Uniones. Posibles usos
+
+Las uniones pueden tener estructuras como miembros
+
+
+```c
+union numero {
+  int entero;
+  float real;
+  struct {
+    short int r;
+    short int i;
+  } complejo;
+};
+```
+
+---
+class: text-2xl
+---
+
+# Uniones. Posibles usos
+
+Las estructuras pueden tener uniones como miembros
+
+```c
+struct int_float {
+  int es_entero;
+  union {
+    int entero;
+    float real;
+  } num;
+};
+
+if (n.es_entero == 1)
+  printf ("Imprimiendo int => %d\n", n.num.entero);
+else
+  printf ("Imprimiendo float => %.2f\n" , n.num.real);
+
+```
+
+---
+class: text-2xl
+---
+
+# Uniones. Usos. Ahorro de memoria
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+union mensajes {
+  char info[80];
+  char aviso[80];
+  char error[80];
+};
+
+int main (void) {
+  union mensajes msg;
+
+  strcpy(msg.info, "Uso para ahorro de memoria");
+  printf("%s\n" , msg.info);
+  printf("Uso de memoria: %lu bytes\n", sizeof msg);
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+---
+
+# Uniones. Usos. Ejemplo: Comunicación serie
+
+<v-clicks>
+
+Visualizar en la PC datos provenientes de un sistema embebido con sensores de magnitudes reales (temperatura, humedad, aceleración, etc.) enviando los valores mediante serie configurado como 8N1
+
+<img src="/img/Workstation.svg" width="75%" style="margin: auto;" >
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Usos. Ejemplo: Comunicación serie
+
+<v-clicks>
+
+El problema radica en que el número real almacenado como IEEE754 de simple precisión tiene 4 bytes
+
+Sin embargo el bus de comunicación tiene solo 1 byte de ancho
+
+En este caso se puede usar una unión entre un `float` y un arreglo de cuatro `char`
+
+El procedimiento sería: cargar el valor real en el miembro `float` y enviar byte por byte del arreglo por el puerto serie
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Usos. Ejemplo: Comunicación serie
+
+<v-clicks>
+
+Del otro lado, en la PC, se recibe byte por byte y se los va colocando en el arreglo `char`
+
+Luego, para visualizar, se accede al miembro `float`
+
+Los valores de cada `char` no tendrían sentido, sin embargo al leerlos como `float` se recupera el valor original
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Usos. Ejemplo: Comunicación serie
+
+<v-clicks>
+
+A ambos lados del bus se usará la misma unión  
+
+```c
+union byte_float {
+  float dato;
+  char dato_b[4];
+};
+```
+
+y una función para enviar bytes llamada `send_byte` y para recibir bytes llamada `receive_byte`
+
+Del lado de los sensores se hace el envío suponiendo que hay una función que lee el sensor llamada `read_sensor`
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Usos. Ejemplo: Comunicación serie
+
+<v-clicks>
+
+Entonces, la forma más sencilla sería, del lado del sensor...
+
+```c
+union byte_float bf;
+
+while (1) {
+  bf.dato = read_sensor(sensor_port);
+  send_byte('$', bus_port);
+  for (int i = 0; i < 4; i++)
+    send_byte(bf.dato_b[i], bus_port);
+}
+
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Uniones. Usos. Ejemplo: Comunicación serie
+
+<v-clicks>
+
+y del lado del receptor
+
+
+```c
+union byte_float bf;
+
+while (1) {
+  char b = receive_byte(bus_port);
+  if (b == '$') {
+    for (int i = 0; i < 4; i++)
+      bf.dato_b[i] = receive_byte(bus_port);
+
+    printf("Sensor reading: %f\n", bf.dato);
+  }
+}
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Campos de bit
+
+<v-clicks>
+
+Las variables en general, y las estructuras en particular, pueden ser capaces de contener valores más grandes de lo que realmente necesitan
+
+```c
+struct time {
+  unsigned int h;           // 0-23
+  unsigned int m;           // 0-59
+  unsigned int s;           // 0-59
+};
+```
+
+El rango de `unsigned int` es 0 a 4294967295
+
+```c
+printf("Tamaño de la estructura: %lu bytes", sizeof(struct time));
+```
+
+```c
+Tamaño de la estructura: 12 bytes
+```
+
+</v-clicks>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Campos de bit. Definición
+
+::left::
+
+<v-click>
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+
+</v-click>
+
+::right::
+
+<v-click>
+
+se usan (:) para definir cuantos bits se deben usar
+
+</v-click>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Campos de bit. Definición
+
+::left::
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+::right::
+
+<v-click>
+
+el tamaño en bits no debe exceder el tamaño del tipo usado
+
+</v-click>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Campos de bit. Definición
+
+::left::
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+::right::
+
+<v-click>
+
+solo se pueden declarar miembros `int` o `unsigned int`
+
+</v-click>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Campos de bit. Definición
+
+::left::
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+::right::
+
+<v-click>
+
+el tamaño de bits puede ser cero, pero en ese caso no se coloca el _declarador_ (el nombre del miembro)
+
+</v-click>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Campos de bit. Definición
+
+::left::
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+::right::
+
+<v-click>
+
+no se puede usar el operador `&` para tomar la dirección de los bits
+
+</v-click>
+
+---
+layout: two-cols-header
+class: text-2xl
+layoutClass: gap-4
+---
+
+# Campos de bit. Definición
+
+::left::
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+::right::
+
+<v-click>
+
+la organización de un campo de bits en la memoria depende del compilador
+
+</v-click>
+
+::bottom::
+
+<v-clicks>
+
+```c
+printf("Tamaño de la estructura: %lu bytes", sizeof(struct time));
+```
+
+```
+Tamaño de la estructura: 4 bytes
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Definición
+
+<v-clicks>
+
+También existe los _campos de bit sin nombre_ que se utilizan para agregar _padding_ (completar lugares para alinear datos en la memoria).
+
+
+Se utiliza un miembro de la estructura sin nombre, y luego de los dos puntos (:) el _padding_
+
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int :27;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Definición
+
+También existe los _campos de bit sin nombre_ que se utilizan para agregar _padding_ (completar lugares para alinear datos en la memoria).
+
+
+Se utiliza un miembro de la estructura sin nombre, y luego de los dos puntos (:) el _padding_
+
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int :27; // [!code line-highlight]
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Definición
+
+<v-clicks>
+
+También se puede poner _ancho cero_ a un campo de bit sin nombre.
+
+Esto genera el padding necesario para alinear el siguiente campo de bit en la siguiente _unidad de almacenamiento_.
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int  :0;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Definición
+
+También se puede poner _ancho cero_ a un campo de bit sin nombre.
+
+Esto genera el padding necesario para alinear el siguiente campo de bit en la siguiente _unidad de almacenamiento_.
+
+```c
+struct time {
+  unsigned int h:5;
+  unsigned int  :0; // [!code line-highlight]
+  unsigned int m:6;
+  unsigned int s:6;
+};
+```
+
+---
+class: text-2xl
+transition: none
+---
+
+# Inicialización y acceso a un campo de bits
+
+<v-clicks>
+
+```c
+#include <stdio.h>
+
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+
+int main (void) {
+  struct time t = {23, 59, 59};
+
+  printf("%02d:%02d:%02d\n", t.h, t.m, t.s);
+
+  return 0;
+}
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+transition: none
+---
+
+# Inicialización y acceso a un campo de bits
+
+```c
+#include <stdio.h>
+
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+
+int main (void) {
+  struct time t = {23, 59, 59}; // [!code line-highlight]
+
+  printf("%02d:%02d:%02d\n", t.h, t.m, t.s);
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+---
+
+# Inicialización y acceso a un campo de bits
+
+```c
+#include <stdio.h>
+
+struct time {
+  unsigned int h:5;
+  unsigned int m:6;
+  unsigned int s:6;
+};
+
+int main (void) {
+  struct time t = {23, 59, 59};
+
+  printf("%02d:%02d:%02d\n", t.h, t.m, t.s); // [!code line-highlight]
+
+  return 0;
+}
+```
+
+---
+class: text-2xl
+---
+
+# Inicialización y acceso a un campo de bits
+
+<v-clicks>
+
+Los campos de bit se inicializan igual que las estructuras usando llaves.
+
+Incluso usando _inicializadores designados_.
+
+El acceso se realiza mediante el operador punto (o flecha si es un puntero)
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Constantes de Enumeración
+
+<v-clicks>
+
+Son un conjunto de constantes enteras representadas por identificadores.
+
+Su definición es semejante a las estructuras...
+
+```c
+enum dias_laborales {
+  LUNES,
+  MARTES,
+  MIERCOLES,
+  JUEVES,
+  VIERNES
+};
+```
+
+a menos que se explicite lo contrario, se _enumeran_ las constantes desde el 0 (cero)
+
+</v-clicks>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Constantes de Enumeración
+
+::left::
+
+<v-click>
+
+```c
+ enum dias_laborales {
+   LUNES,
+   MARTES,
+   MIERCOLES,
+   JUEVES,
+   VIERNES
+ };
+```
+
+</v-click>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Constantes de Enumeración
+
+::left::
+
+```c
+ enum dias_laborales { // [!code range: enum]
+   LUNES,
+   MARTES,
+   MIERCOLES,
+   JUEVES,
+   VIERNES
+ };
+```
+
+::right::
+
+<v-click>
+
+la palabra clave es ``enum``
+
+</v-click>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Constantes de Enumeración
+
+::left::
+
+```c
+ enum dias_laborales {
+   LUNES,
+   MARTES,
+   MIERCOLES,
+   JUEVES,
+   VIERNES
+ };
+```
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Constantes de Enumeración
+
+::left::
+
+```c
+ enum dias_laborales { // [!code range: dias_laborales]
+   LUNES,
+   MARTES,
+   MIERCOLES,
+   JUEVES,
+   VIERNES
+ };
+```
+
+::right::
+
+<v-clicks>
+
+a continuación se coloca la _etiqueta_ (opcional)
+
+</v-clicks>
+
+---
+layout: two-cols-header
+class: text-2xl
+transition: none
+layoutClass: gap-4
+---
+
+# Constantes de Enumeración
+
+::left::
+
+```c
+ enum dias_laborales {
+   LUNES,
+   MARTES,
+   MIERCOLES,
+   JUEVES,
+   VIERNES
+ };
+```
+
+::right::
+
+---
+layout: two-cols-header
+class: text-2xl
+layoutClass: gap-4
+---
+
+# Constantes de Enumeración
+
+::left::
+
+```c
+ enum dias_laborales {
+   LUNES, // [!code line-highlight]
+   MARTES, // [!code line-highlight]
+   MIERCOLES, // [!code line-highlight]
+   JUEVES, // [!code line-highlight]
+   VIERNES // [!code line-highlight]
+ };
+```
+
+::right::
+
+<v-clicks>
+
+las constantes van separadas de comas (,)
+
+se recomienda el uso de mayúsculas para las constantes
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Constantes de Enumeración
+
+<v-clicks>
+
+En la definición se puede asignar cualquier valor entero usando el igual (=)...
+
+...a partir de ahí, los siguientes se incrementan de a 1
+
+```c
+enum colores {
+  ROJO,             // 0
+  VERDE,            // 1
+  AZUL = 10,        // 10
+  BLANCO = 20,      // 20
+  AMARILLO,         // 21
+  NARANJA = 5,      // 5
+  NEGRO             // 6
+};
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Constantes de Enumeración
+## Usos
+
+<v-clicks>
+
+```c
+#include <stdio.h>
+
+enum dias {LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO};
+
+int main (void) {
+  enum dias hoy;
+
+  hoy = VIERNES;
+
+  if (hoy == LUNES)
+    printf("Hay Informática I\n");
+  else
+    printf("No hay Informática I\n");
+
+  return 0;
+}
+
+```
+
+</v-clicks>
+
+
+---
+class: text-2xl
+---
+
+# Constantes de Enumeración
+## Usos
+
+<v-clicks>
+
+```c
+#include <stdio.h>
+
+enum dias {LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO};
+
+char *nombre_dia[] = {
+  "lunes",
+  "martes",
+  "miércoles",
+  "jueves",
+  "viernes",
+  "sábado",
+  "domingo"
+};
+
+```
+
+</v-clicks>
+
+---
+class: text-2xl
+---
+
+# Constantes de Enumeración
+## Usos
+
+<v-clicks>
+
+```c
+int main (void) {
+  enum dias hoy;
+
+  for (hoy = LUNES; hoy <= DOMINGO; hoy++ )
+    printf("Hoy es %s\n", nombre_dia[hoy]);
+
+  return 0;
+}
+
+```
+
+</v-clicks>
+
