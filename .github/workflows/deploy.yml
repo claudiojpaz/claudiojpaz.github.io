@@ -75,6 +75,10 @@ jobs:
         run: |
           npx slidev build info1/u10/slides.md --base /info1/u10/ --out ${{ github.workspace }}/build/info1/u10
 
+      - name: Build u11
+        run: |
+          npx slidev build info1/u11/slides.md --base /info1/u11/ --out ${{ github.workspace }}/build/info1/u11
+
       - name: Create SPA fallbacks
         run: |
           find dist -name index.html | while read f; do
@@ -96,6 +100,7 @@ jobs:
           cp -r ${{ github.workspace }}/build/info1/u08 ${{ github.workspace }}/dist/info1/u08
           cp -r ${{ github.workspace }}/build/info1/u09 ${{ github.workspace }}/dist/info1/u09
           cp -r ${{ github.workspace }}/build/info1/u10 ${{ github.workspace }}/dist/info1/u10
+          cp -r ${{ github.workspace }}/build/info1/u11 ${{ github.workspace }}/dist/info1/u11
 
       - name: Disable Jekyll
         run: touch dist/.nojekyll
